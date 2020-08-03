@@ -52,11 +52,12 @@
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
     "animate.css": "^4.1.0",
-    "popper.js": "^1.16.1",
     "bootstrap": "^5.0.0-alpha1",
     "inputmask": "^5.0.3",
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "select2": "^4.0.13",
     "swiper": "^5.4.5",
     "wowjs": "^1.1.3"
   }

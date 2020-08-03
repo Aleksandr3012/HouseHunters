@@ -20,3 +20,8 @@ $file-format: woff2 woff;
 // 700 Bold
 // 800 Extra Bold
 // 900 Ultra Bold
+
+.example{
+  @extend .btn;
+  @extend .btn-lg;
+}

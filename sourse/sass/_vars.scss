@@ -12,14 +12,14 @@ $rfs-breakpoint: 1200px !default;
 // Color system
 
 $white: #fff !default;
-$gray-100: #f8f9fa !default;
+$gray-100: #f8f7f7 !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
+$gray-600: #C4C4C4 !default;
 $gray-700: #495057 !default;
-$gray-800: #343a40 !default;
+$gray-800: #949494 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 
@@ -42,7 +42,7 @@ $pink: #d63384 !default;
 $red: #dc3545 !default;
 $orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
-$green: #28a745 !default;
+$green: #2a7d03 !default;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
 
@@ -63,7 +63,7 @@ $cyan: #17a2b8 !default;
 //   "gray-dark": $gray-800) !default;
 // // scss-docs-end colors-map
 
-$primary: $blue !default;
+$primary: $green !default;
 $secondary: $gray-600 !default;
 $success: $green !default;
 $info: $cyan !default;
@@ -210,7 +210,7 @@ $escaped-characters: (("<", "%3c"),
 
 $enable-caret: true !default;
 $enable-rounded: true !default;
-$enable-shadows: false !default;
+$enable-shadows: true !default;
 $enable-gradients: false !default;
 $enable-transitions: true !default;
 $enable-reduced-motion: true !default;
@@ -250,7 +250,10 @@ $negative-spacers: if($enable-negative-margins, negativify-map($spacers), null) 
 // Settings for the `<body>` element.
 
 $body-bg: $white !default;
-$body-color: $gray-900 !default;
+$body-color: #363636 !default;
+$body-color2: #2F2D2D !default;
+$body-color3: #4b4b4b !default;
+
 $body-text-align: null !default;
 
 
@@ -286,7 +289,7 @@ $grid-breakpoints: (xs: 0,
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px) !default;
+  ) !default;
 // scss-docs-end grid-breakpoints
 
 // @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -302,7 +305,7 @@ $container-max-widths: (sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  xxl: 1320px) !default;
+  ) !default;
 // scss-docs-end container-max-widths
 
 // @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -330,7 +333,7 @@ $container-padding-x: $grid-gutter-width / 2 !default;
 $border-width: 1px !default;
 $border-color: $gray-300 !default;
 
-$border-radius: .25rem !default;
+$border-radius: rem(5) !default;
 $border-radius-sm: .2rem !default;
 $border-radius-lg: .3rem !default;
 
@@ -412,8 +415,8 @@ $line-height-base: 1.5 !default;
 $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
-$h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
+$h1-font-size: rem(37) !default;
+$h2-font-size: rem(37) !default;
 $h3-font-size: $font-size-base * 1.75 !default;
 $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: $font-size-base * 1.25 !default;
@@ -529,9 +532,9 @@ $table-variants: ("primary": color-level($primary, $table-bg-level),
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y: .375rem !default;
-$input-btn-padding-x: .75rem !default;
-$input-btn-font-family: null !default;
+$input-btn-padding-y: rem(20) !default;
+$input-btn-padding-x: rem(60) !default;
+$input-btn-font-family: $default-font !default;
 $input-btn-font-size: $font-size-base !default;
 $input-btn-line-height: $line-height-base !default;
 
@@ -555,8 +558,8 @@ $input-btn-border-width: $border-width !default;
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
-$btn-padding-y: $input-btn-padding-y !default;
-$btn-padding-x: $input-btn-padding-x !default;
+$btn-padding-y: rem(20px) !default;
+$btn-padding-x: rem(60px) !default;
 $btn-font-family: $input-btn-font-family !default;
 $btn-font-size: $input-btn-font-size !default;
 $btn-line-height: $input-btn-line-height !default;
@@ -632,7 +635,7 @@ $input-disabled-border-color: null !default;
 
 $input-color: $gray-700 !default;
 $input-border-color: $gray-400 !default;
-$input-border-width: $input-btn-border-width !default;
+$input-border-width: 1px !default;
 $input-box-shadow: $box-shadow-inset !default;
 
 $input-border-radius: $border-radius !default;
@@ -645,7 +648,7 @@ $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
 $input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 
-$input-placeholder-color: $gray-600 !default;
+$input-placeholder-color: $body-color !default;
 $input-plaintext-color: $body-color !default;
 
 $input-height-border: $input-border-width * 2 !default;

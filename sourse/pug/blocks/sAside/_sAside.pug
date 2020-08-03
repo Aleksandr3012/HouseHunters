@@ -1,0 +1,34 @@
+mixin BlackAside()
+	// start sAside
+	+b.ASIDE.sAside.black-aside#sAside&attributes(attributes)
+		//-+e.A.logo(href="/")
+			img.lazy(src="#" data-src="img/@2x/logo-w.png" alt="")
+		+e.iconed-menu
+			ul
+				+iconedMenuItem('buy', 'Купить')
+				+iconedMenuItem('sell', 'Продать')
+				+iconedMenuItem('give-rent', 'Сдать')
+				+iconedMenuItem('get-rent', 'Снять')
+				+iconedMenuItem('no-agent', 'Без агента')
+		+mnu()
+	// end sAside
+
+mixin WhiteAside()
+	// start sAside
+	+b.ASIDE.sAside.white-aside#sAside&attributes(attributes)
+		+e.iconed-menu
+			ul
+				+iconedMenuItem('buy-black', 'Купить')
+				+iconedMenuItem('sell-black', 'Продать')
+				+iconedMenuItem('give-rent-black', 'Сдать')
+				+iconedMenuItem('get-rent-black', 'Снять')
+				+iconedMenuItem('no-agent-black', 'Без агента')
+		+mnu()
+	// end sAside
+
+mixin iconedMenuItem(iconName, txt)
+	li
+		a(href="#")
+			+e.icon-cont
+				img.img-svg-js(src=`img/@2x/aside-${iconName}.png` alt="")
+			+e.iconed-txt=txt
