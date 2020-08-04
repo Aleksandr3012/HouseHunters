@@ -1,4 +1,10 @@
 .top-nav {
+	display: flex;
+	align-items: center;
+	@include media-breakpoint-up(xl){
+		display: block;
+	}
+
 	position: fixed;
 	z-index: 101;
 	width: 100%;
@@ -6,67 +12,138 @@
 
 	padding: rem(16px) 0 rem(15) 0;
 
+
+
+	&__menu-btn{
+		//background-color: rgba($blue, .1);
+
+		height: 100%;
+		padding-left: 15px;
+		padding-right: 13px;
+		display: flex;
+		align-items: center;
+
+		span,
+		span:before,
+		span:after{
+			background-color: $dark;
+			width: 20px;
+			height: 1px;
+			@include mt();
+		}
+
+		//
+		span:before,
+		span:after{
+			content: '';
+			position: absolute;
+			left: 0;
+		}
+		//
+
+		span{
+			position: relative;
+		}
+		span:before{
+			top: 5px;
+		}
+		span:after{
+			bottom: 5px;
+		}
+
+		&.active{
+			span{
+				background-color: transparent;
+			}
+			span:before,
+			span:after{
+				width: 20px;
+				height: 2px;
+				border-radius: 1px;
+			}
+			span:before{
+				transform: rotate(45deg) translateY(1.5px);
+			}
+			span:after{
+				transform: rotate(-45deg) translateY(-1.5px);
+			}
+
+		}
+
+	}
 	//black aside
 	&.with-black-aside{
-		&:before{
-			content: '';
-			position: fixed;
-			z-index: 100;
-			top: 0;
-			left: var(--asideW);
-			width: calc(100% - var(--asideW));
-			height: 70px;
-			background: $white;
-			box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+		.top-nav__logo{
+			background-color: rgba($red, .1);
 		}
 
+		background: $white;
+		box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+		@include media-breakpoint-up(xl){
+			background-color: transparent;
+			box-shadow: none;
+			&:before{
+				content: '';
+				position: fixed;
+				z-index: 100;
+				top: 0;
+				left: var(--asideW);
+				width: calc(100% - var(--asideW));
+				height: 70px;
+				background: $white;
+				box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+			}
 
-		.top-nav__logo{
-			position: fixed;
-			left: 0;
-			top: 0;
-			z-index: 101;
-			box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
-			width: var(--asideW);
+			.top-nav__logo{
+				position: fixed;
+				left: 0;
+				top: 0;
+				z-index: 101;
+				box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+				width: var(--asideW);
 
-			display: block;
-			padding: rem(22px) 0 0 rem(5px);
+				display: block;
+				padding: rem(22px) 0 0 rem(5px);
 
-			height: 71px;
-			border-bottom: 1px solid $secondary;
+				height: 71px;
+				border-bottom: 1px solid $secondary;
 
 
-			background: rgba($black, 0.4);
-			backdrop-filter: blur(15px);
-			img{
-				max-width: 100%;
-				width: auto;
-				height: auto;
+				background: rgba($black, 0.4);
+				backdrop-filter: blur(15px);
+				img{
+					max-width: 100%;
+					width: auto;
+					height: auto;
+				}
 			}
 		}
+
 	}
 	//white aside
 	&.with-white-aside{
 		background: $white;
 		box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
 
-		.top-nav__logo{
-			position: fixed;
-			left: 0;
-			top: 0;
-			z-index: 100;
-			width: var(--asideW);
-			display: block;
-			padding-top: rem(14);
+		@include media-breakpoint-up(xl){
+			.top-nav__logo{
+				position: fixed;
+				left: 0;
+				top: 0;
+				z-index: 100;
+				width: var(--asideW);
+				display: block;
+				padding-top: rem(14);
 
-			height: 71px;
-			border-bottom: 1px solid $secondary;
-			background-color: $white;
-			img{
-				max-width: 100%;
-				max-height: 100%;
-				width: auto;
-				height: auto;
+				height: 71px;
+				border-bottom: 1px solid $secondary;
+				background-color: $white;
+				img{
+					max-width: 100%;
+					max-height: 100%;
+					width: auto;
+					height: auto;
+				}
 			}
 		}
 	}
@@ -78,6 +155,21 @@
 
 		display: flex;
 		align-items: center;
+
+		flex-grow: 1;
+
+		justify-content: flex-end;
+		@include media-breakpoint-up(lg){
+			justify-content: space-between;
+		}
+		@include media-breakpoint-up(xl){
+			flex-grow: 0;
+			justify-content: flex-start;
+		}
+
+		@include media-breakpoint-down(xl){
+			max-width: 100% !important;
+		}
 	}
 	&__location-link{
 		display: flex;
@@ -125,6 +217,10 @@
 			}
 		}
 
+		margin-right: rem(30);
+		@include media-breakpoint-up(lg){
+			margin-right: rem(0);
+		}
 		@include media-breakpoint-up(xl){
 			margin-right: rem(70);
 			margin-left: auto;
@@ -135,6 +231,7 @@
 			margin-right: rem(15);
 		}
 		span{
+			white-space: nowrap;
 			@include mt();
 			color: $body-color2;
 			font-size: rem(16);
@@ -153,6 +250,10 @@
 			}
 		}
 
+		margin-right: rem(20);
+		@include media-breakpoint-up(lg){
+			margin-right: rem(0);
+		}
 		@include media-breakpoint-up(xl){
 			margin-right: rem(33);
 		}
@@ -163,6 +264,7 @@
 			color: $dark;
 		}
 		span{
+			white-space: nowrap;
 			@include mt();
 			font-size: rem(16);
 		}
@@ -248,12 +350,72 @@
 }
 
 .info-strip{
+	position: fixed;
+	z-index: 100;
+	top: 70px;
+	height: 70px;
+
+	width: 100vw;
+	left: 0;
+	@include media-breakpoint-up(lg){
+		width: 900px;
+		left: calc(-1 * (900px - 100vw) / 2);
+		border-radius: 0px 0px $border-radius $border-radius;
+	}
+	@include media-breakpoint-up(xl){
+		width: auto;
+		left: var(--asideW);
+	}
+	@include media-breakpoint-up(xxl){
+		width: 1110px;
+		left: calc(-1 * (1128px - 100vw) / 2);
+	}
+
 	background-color: $white;
-	border-radius: 0px 0px $border-radius $border-radius;
 	display: flex;
 	padding: rem(17) rem(30);
 	align-items: center;
-	margin-bottom: rem(157);
+
+
+	//
+	&__location-link{
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-up(xl){
+			margin-right: rem(10);
+		}
+
+		color: $body-color2;
+		@include mt();
+
+		.icon-location{
+			@include mt();
+			font-size: rem(20);
+			margin-right: rem(15);
+			color: $dark;
+		}
+		span{
+			font-size: rem(16);
+		}
+		.icon-chevron-down{
+			@include mt();
+			font-size: rem(10);
+			color: $body-color2;
+			margin-left: rem(10);
+		}
+
+		&:hover{
+			color: $black;
+			.icon-location, .icon-chevron-down{
+				color: $black;
+			}
+		}
+	}
+
+	//address-block
+	&__address-block{
+		align-items: center;
+	}
 
 	&__address-gray{
 		font-size: rem(14px);
@@ -271,19 +433,25 @@
 		font-size: rem(14px);
 		line-height: (18/14);
 		color: $body-color;
+		margin-right: rem(30);
 	}
 	&__add-btn{
 		@extend .btn-pr;
 		margin-left: auto;
 
-		padding: rem(9) rem(21) rem(9) rem(21);
+		padding: 5px 11px 5px 12px;
+		@include media-breakpoint-up(sm){
+			padding: rem(9) rem(21) rem(9) rem(21);
+		}
 		display: flex;
 		align-items: center;
 		.icon{
 			color: transparent;
 			stroke: $white;
 			font-size: rem(10);
-			margin-right: rem(10);
+			@include media-breakpoint-up(sm){
+				margin-right: rem(10);
+			}
 		}
 
 		font-weight: bold;

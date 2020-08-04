@@ -1,0 +1,23 @@
+mixin topBuy()
+	// start topBuy
+	+b.buy-sel-form.top-buy#topBuy&attributes(attributes)
+		.container
+			+form-wrap()
+				+e.buy-btn Купить
+				+e.inputs-bl
+					+e.inputs-strip
+						+e.select2-cont.house-select
+							+select2PHLess('house', ['Квартиру на вторичке', '2', '3'])
+						+e.select2-cont.room-select
+							+select2PHLess('room', ['2-комнатную', '3-комнатную', '4-комнатную'])
+						+e.select2-cont.price-select
+							+select2PHLess('room', ['Цена', 'Цена2', 'Цена3 Цена3'])
+						+input('Адрес', 'text', undefined, 'price')
+					+e.BUTTON.submit-btn(type='submit')
+						+icon('search')
+						span Показать 2327 объектов
+				+e.A.more-filters-btn(href="#")
+					span Больше фильтров
+					+icon('chevron-down')
+			block
+	// end topBuy

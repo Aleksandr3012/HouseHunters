@@ -13,14 +13,15 @@ block title
 	title= title
 block pagecontent
 	.main-wrapper()
-		+BlackAside
-		+b.MAIN.main-content.has-black-aside
-		+mob-mnu()
+		+Aside()(class='black-aside')
+		//-.white-aside
 		+header()
-			+top-nav()(class='with-black-aside')
-				img.lazy(src="#" data-src="img/@2x/logo-w.png" alt="")
-		+sMainPage
 			+infoStrip()
+			+top-nav()(class='with-black-aside')
+				//-with-white-aside
+				img.lazy(src="#" data-src="img/@2x/logo-w.png" alt="")
+				//img.lazy(src="#" data-src="img/@2x/logo-green.png" alt="")
+		+sMainPage
 	//+footer()
 
 

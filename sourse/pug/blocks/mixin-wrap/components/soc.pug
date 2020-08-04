@@ -1,5 +1,5 @@
 mixin item-sos(icon, a='#')
-	+e.A.item(href= a target="_blank")
+	+e.A.item(href=a target="_blank")
 		if block
 			block
 		else
@@ -10,8 +10,14 @@ mixin soc()
 		if block
 			block
 		else
-			+item-sos('fb')
-			+item-sos('instagram')
-			+item-sos('telegram')
-
-//- /social buttons 
+			+e.A.item(href="#" target="_blank")
+				img.lazy(src="#" data-src='img/svg/soc-vk.svg' alt="")
+			+e.A.item(href="#" target="_blank")
+				img.lazy(src="#" data-src='img/svg/soc-insta.svg' alt="")
+			+e.A.item(href="#" target="_blank")
+				img.lazy(src="#" data-src='img/svg/soc-youtube.svg' alt="")
+			+e.A.item(href="#" target="_blank")
+				img.lazy(src="#" data-src='img/svg/soc-fb.svg' alt="")
+			+e.A.item(href="#" target="_blank")
+				img.lazy(src="#" data-src='img/svg/soc-odnokl.svg' alt="")
+//- /social buttons

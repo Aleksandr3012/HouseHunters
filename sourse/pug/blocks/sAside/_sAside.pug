@@ -1,8 +1,6 @@
-mixin BlackAside()
+mixin Aside()
 	// start sAside
-	+b.ASIDE.sAside.black-aside#sAside&attributes(attributes)
-		//-+e.A.logo(href="/")
-			img.lazy(src="#" data-src="img/@2x/logo-w.png" alt="")
+	+b.ASIDE.sAside#sAside&attributes(attributes)
 		+e.iconed-menu
 			ul
 				+iconedMenuItem('buy', 'Купить')
@@ -11,24 +9,32 @@ mixin BlackAside()
 				+iconedMenuItem('get-rent', 'Снять')
 				+iconedMenuItem('no-agent', 'Без агента')
 		+mnu()
-	// end sAside
+		+e.mob-menu.d-xl-none
+			+e.info-txt.d-lg-none
+				+e.top-txt Адрес офиса:
+				+e.address-txt
+					| Санкт-Петербург, Невский
+					|
+					br.d-sm-none
+					| проспект 90-92А
+				+e.small
+					p ПН-ПТ с 10:00 до 20:00
+					p СБ с 11:00 до 18:00
+					p ВС по договоренности
+			+e.A.mail-link.d-md-none(href="mailto:Info@hh-r.ru")
+				+icon('mail')
+				span Info@hh-r.ru
+			+e.A.tel-link.d-md-none(href="tel:+78123335515")
+				+icon('phone')
+				span +7 812 333-55-15
+			+e.A.free-consult-btn(href="#") Бесплатная консультация
 
-mixin WhiteAside()
-	// start sAside
-	+b.ASIDE.sAside.white-aside#sAside&attributes(attributes)
-		+e.iconed-menu
-			ul
-				+iconedMenuItem('buy-black', 'Купить')
-				+iconedMenuItem('sell-black', 'Продать')
-				+iconedMenuItem('give-rent-black', 'Сдать')
-				+iconedMenuItem('get-rent-black', 'Снять')
-				+iconedMenuItem('no-agent-black', 'Без агента')
-		+mnu()
+
 	// end sAside
 
 mixin iconedMenuItem(iconName, txt)
 	li
 		a(href="#")
 			+e.icon-cont
-				img.img-svg-js(src=`img/@2x/aside-${iconName}.png` alt="")
+				img.img-svg-js(src=`img/svg/aside-${iconName}.svg` alt="")
 			+e.iconed-txt=txt

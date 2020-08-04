@@ -1,6 +1,129 @@
 .footer {
-		
+  background: $body-color2;
+  color: $white;
 
+  padding: rem(50px) 0;
+  @include media-breakpoint-up(lg){
+    padding: rem(70px) 0;
+  }
+
+  &__row{
+    @include media-breakpoint-between(sm,lg){
+      padding-bottom: rem(30);
+    }
+  }
+
+  &__col{
+    @include media-breakpoint-up(xxl){
+      padding-left: 0;
+    }
+
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li{
+        margin-bottom: 20px;
+        &:last-child{
+          margin-bottom: 30px;
+        }
+      }
+      a{
+        display: block;
+        font-size: rem(14);
+        line-height: (18/14);
+
+        @include mt();
+        color: $white;
+        &:hover{
+          color: rgba($white, .7);
+        }
+      }
+    }
+  }
+
+  &__headline{
+    font-weight: bold;
+    @include media-breakpoint-up(lg){
+      font-weight: 500;
+    }
+    font-size: rem(16px);
+    line-height: (20/16);
+    color: $white;
+
+    margin-bottom: rem(30);
+  }
+
+
+  //
+  &__mob-logo{
+    display: block;
+    margin: 0 auto 20px auto;
+
+    font-weight: 800;
+    font-size: 36px;
+    line-height: (40/36);
+    text-align: center;
+
+    color: $white !important;
+  }
+
+  &__lower-row{
+    flex-direction: column-reverse;
+    @include media-breakpoint-up(sm){
+      flex-direction: row;
+    }
+
+    @include media-breakpoint-up(lg){
+      justify-content: space-between;
+    }
+  }
+  &__lower-col{
+    @include media-breakpoint-up(xxl){
+      padding-left: 0;
+    }
+
+    margin-bottom: rem(30);
+    @include media-breakpoint-up(sm){
+      margin-bottom: rem(15);
+    }
+  }
+  //soc => mixin-wrap.scss
+
+  &__mail-link, &__phone-link{
+    @include mt();
+    color: $white;
+    &:hover{
+      color: rgba($white, .7);
+    }
+
+    .icon{
+      font-size: rem(20);
+      margin-right: rem(15);
+    }
+    span{
+      font-size: rem(16px);
+      line-height: (20/16);
+    }
+  }
+  &__phone-link{
+    .icon{
+      margin-right: rem(25);
+    }
+  }
+  &__all-rights-txt{
+    text-align: center;
+    @include media-breakpoint-up(sm){
+      text-align: left;
+    }
+    span{
+      font-weight: 300;
+      font-size: rem(12px);
+      line-height: (18/12);
+    }
+  }
+  &__{}
+  &__{}
 
 // 
 @include media-breakpoint-up(xl) {}
@@ -41,3 +164,4 @@
 
 @include media-breakpoint-down(xs) {}
 }
+

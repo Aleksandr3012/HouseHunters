@@ -232,17 +232,17 @@ function eventHandler() {
 	var _defaultSl;
 
 	JSCCommon.modalCall();
-	JSCCommon.tabscostume('tabs');
-	JSCCommon.mobileMenu();
+	JSCCommon.tabscostume('tabs'); //JSCCommon.mobileMenu();
+
 	JSCCommon.inputMask();
 	JSCCommon.ifie();
-	JSCCommon.sendForm();
-	JSCCommon.heightwindow();
+	JSCCommon.sendForm(); //JSCCommon.heightwindow();
+
 	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
 	var screenName;
-	screenName = '01.png';
+	screenName = '02.png';
 	screenName ? $(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>")) : ''; // /добавляет подложку для pixel perfect
 
 	function whenResize() {
@@ -314,12 +314,80 @@ function eventHandler() {
 
 			$img.replaceWith($svg);
 		}, 'xml');
-	}); // custom select
+	}); //stop sidebar before footer
+
+	function fixedStip() {
+		var fixedStrip = document.querySelector('.sAside');
+		if (!fixedStrip) return;
+		window.addEventListener("scroll", toggleFixedStrip.bind(undefined, fixedStrip), {
+			passive: true
+		});
+	} //fixedStip();
+
+
+	function toggleFixedStrip(fixedStrip) {
+		var footerTop = $('.footer')[0].getBoundingClientRect().top + $(window)['scrollTop']();
+		var windowHeight = calcVh(100); //console.log(window.sc)
+	}
+
+	function calcVh(v) {
+		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+		return v * h / 100;
+	} // custom select
+
 
 	$('.custom-select2').select2({
 		minimumResultsForSearch: Infinity,
 		dropdownCssClass: "drop-down-full-grey"
-	}); //end luckyone JS
+	}); //mob menu
+
+	$('.burger-js').click(function () {
+		$(this).toggleClass('active');
+		$('body').toggleClass('fixed-on-filter-js');
+		$('.sAside').toggleClass('active');
+	});
+	$(window).resize(function () {
+		if (window.matchMedia("(min-width: 1280px)").matches) {
+			$('.burger-js').removeClass('active');
+			$('body').removeClass('fixed-on-filter-js');
+			$('.sAside').removeClass('active');
+		}
+	}); //map
+
+	$('.hide-map-js, .show-map-js').click(function () {
+		$('.hide-map-js, .show-map-js, .map-block-js').toggleClass('active');
+	}); //catalog item slider
+
+	$(".catalog-row__slider").each(function () {
+		var articalsSlider = new Swiper($(this).find(".catalog-item-sl-js"), {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			loop: true,
+			//lazy
+			lazy: {
+				loadPrevNext: true,
+				loadPrevNextAmount: 2
+			},
+			//nav
+			navigation: {
+				nextEl: $(this).find('.catalog-item-next'),
+				prevEl: $(this).find('.catalog-item-prev')
+			},
+			//pugination
+			pagination: {
+				el: $(this).find('.catalog-item-pugin-js'),
+				clickable: true
+			}
+		});
+	});
+	/*
+	* 1. menu (from lider)
+	* 2. fix info strip btn / +++++
+	* 3. get responsive widget
+	* 4. make aside sticky
+	*	5. remake logo in header
+	* */
+	//end luckyone JS
 }
 
 ;

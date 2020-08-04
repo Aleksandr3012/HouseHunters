@@ -59,19 +59,12 @@ body {
 		top: 0;
 	}
 
-	&.fixed {
-		overflow: hidden;
-		position: absolute;
+	&.fixed-on-filter-js{
+		position: fixed;
 		width: 100%;
-		left: 0;
-		top: 0;
-		z-index: 999;
-
-		&::before {
-			z-index: 999;
-			opacity: 0.76;
-		}
+		overflow: hidden;
 	}
+
 }
 
 .mono {
@@ -441,7 +434,7 @@ body{
 	background-color: $white;
 	border: 2px solid $primary;
 	box-shadow: inset 0 0 0 0 $primary;
-	color: $primary;
+	color: $primary !important;
 	&:hover{
 		background-color: $white;
 		border: 2px solid $primary;
@@ -449,8 +442,8 @@ body{
 		color: $primary;
 	}
 	&:focus{
-		background-color: $primary;
-		color: $white;
+		background-color: $primary !important;
+		color: $white !important;
 	}
 
 	&.muted{
@@ -478,5 +471,49 @@ body{
 	}
 	&:focus{
 		background-color: #226702;
+	}
+}
+
+
+.container{
+	@include media-breakpoint-between(xl, xxl){
+		margin-left: var(--asideW);
+	}
+
+}
+
+//breadcrumbs
+.breadcrumb{
+	margin-bottom: rem(20);
+	background: transparent;
+	border-radius: 0;
+	padding: 0;
+
+	.breadcrumb-item+.breadcrumb-item{
+
+		padding-left: 3px;
+		&:before{
+			font-size: 10px;
+			padding-right: 3px;
+		}
+	}
+
+	&-item{
+		&:last-child{
+			a{
+				color: $body-color;
+			}
+		}
+
+		a{
+			font-size: rem(12px);
+			line-height: (15/12);
+
+			@include mt();
+			color: $secondary;
+			&:hover{
+				color: $body-color;
+			}
+		}
 	}
 }

@@ -1,0 +1,147 @@
+// start .topBuy
+.buy-sel-form {
+
+	&.top-buy{
+		.form-wrap{
+			margin-bottom: 0;
+			&__buy-btn{
+				width: rem(160);
+				height: rem(39);
+				cursor: pointer;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+
+				color: $white;
+				font-size: rem(16);
+				margin-right: rem(10);
+
+				border-radius: rem(5) rem(5) 0 0;
+				@include mt();
+
+				background-color: $primary;
+
+				font-weight: 500;
+			}
+
+			&__inputs-bl{
+				@include media-breakpoint-up(xxl){
+					display: flex;
+					align-items: stretch;
+				}
+
+				margin-bottom: rem(20);
+			}
+			&__inputs-strip{
+				padding: 6px 20px;
+				@include media-breakpoint-up(xxl){
+					margin-bottom: 0;
+				}
+			}
+
+			&__submit-btn{
+				//flex-shrink: 0;
+				margin-left: 0;
+				@include media-breakpoint-up(xxl){
+					margin-left: rem(20);
+				}
+			}
+
+			&__select2-cont{
+				//1
+				&.house-select{
+					width: rem(183);
+
+					margin-right: rem(60px);
+					&:after{
+						left: calc(100% + 30px);
+					}
+				}
+				//2
+				&.room-select{
+					width: rem(120);
+
+					margin-right: rem(60px);
+					&:after{
+						left: calc(100% + 30px);
+					}
+				}
+				//3
+				&.price-select{
+					width: rem(74);
+
+					margin-right: rem(47px);
+					&:after{
+						left: calc(100% + 30px);
+					}
+				}
+
+				//
+				.select2-container{
+					height: 40px;
+				}
+				.select2-selection__rendered{
+					line-height: 40px !important;
+				}
+
+			}
+
+			&__submit-btn{
+
+			}
+			//
+			&__input-wrap{
+				min-width: rem(234px);
+			}
+
+
+			//more-filters-btn
+			&__more-filters-btn{
+				display: flex;
+				align-items: center;
+
+				span{
+					font-weight: 500;
+					font-size: rem(14px);
+					line-height: (18/14);
+					margin-right: rem(10);
+				}
+				.icon{
+					font-size: rem(10);
+				}
+
+				margin-bottom: rem(40);
+			}
+
+
+			&__{}
+			&__{}
+			&__{}
+			&__{}
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.topBuy

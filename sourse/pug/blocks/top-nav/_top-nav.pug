@@ -21,20 +21,22 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy&attributes(attributes)
+		+e.menu-btn.burger-js.d-xl-none
+			span
 		+e.A.logo(href="/")
 			block
 		+e.container.container
-			+e.A.location-link(href="#")
+			+e.A.location-link.d-none.d-lg-flex(href="#")
 				+icon('location')
 				span Санкт-Петербург
 				+icon('chevron-down')
-			+e.A.mail-link(href='mailto:agentstvo@gmail.com')
+			+e.A.mail-link.d-none.d-md-flex(href='mailto:agentstvo@gmail.com')
 				+icon('mail')
 				span agentstvo@gmail.com
-			+e.A.phone-link(href='tel:+79053454212')
+			+e.A.phone-link.d-none.d-md-flex(href='tel:+79053454212')
 				+icon('phone')
 				span +7 (905) 345-42-12
-			+e.A.consult-btn(href="#") Бесплатная консультация
+			+e.A.consult-btn.d-none.d-xl-inline-block(href="#") Бесплатная консультация
 			+e.icons-box
 				a(href="#")
 					+icon('heart')
@@ -42,11 +44,18 @@ mixin top-nav()
 					+icon('user')
 				//location
 	// end top-nav
+
+
 mixin infoStrip()
 	+b.info-strip
-		+e.address-gray Адрес офиса:
-		+e.address Санкт-Петербург, Воскресенская 12
-		+e.shedule ПН-ПТ с 9:00 до 20:00
+		+e.A.location-link.d-lg-none(href="#")
+			+icon('location')
+			span Санкт-Петербург
+			+icon('chevron-down')
+		+e.address-block.d-none.d-lg-flex
+			+e.address-gray Адрес офиса:
+			+e.address Санкт-Петербург, Воскресенская 12
+			+e.shedule ПН-ПТ с 9:00 до 20:00
 		+e.A.add-btn(href="#")
 			+icon('plus')
-			span Добавить объект
+			span.d-none.d-sm-block Добавить объект
