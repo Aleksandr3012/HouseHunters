@@ -2,6 +2,11 @@
 .sAside {
 	//positons
 	position: fixed;
+	&.absolute{
+		position: absolute;
+	}
+
+
 	left: 0;
 	top: 70px;
 
@@ -10,12 +15,14 @@
 	z-index: 102;
 	@include media-breakpoint-up(xl){
 		width: var(--asideW);
-		height: 101vh;
+		height: calc(100vh - 70px);
 		z-index: 100;
 	}
 
 	//
-	@include mt();
+	//@include mt();
+	transition: transform .36s ease-in-out;
+
 	transform: translateX(-120vw);
 	&.active{
 		overflow-x: hidden;

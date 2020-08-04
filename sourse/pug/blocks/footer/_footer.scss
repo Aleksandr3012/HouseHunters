@@ -4,7 +4,7 @@
 
   padding: rem(50px) 0;
   @include media-breakpoint-up(lg){
-    padding: rem(70px) 0;
+    padding: 64px 0 0 0;
   }
 
   &__row{
@@ -14,8 +14,10 @@
   }
 
   &__col{
-    @include media-breakpoint-up(xxl){
-      padding-left: 0;
+    &:first-child{
+      @include media-breakpoint-up(xxl){
+        padding-left: 0;
+      }
     }
 
     ul{
@@ -23,9 +25,9 @@
       margin: 0;
       padding: 0;
       li{
-        margin-bottom: 20px;
+        margin-bottom: rem(16px);
         &:last-child{
-          margin-bottom: 30px;
+          margin-bottom: rem(25px);
         }
       }
       a{
@@ -51,7 +53,7 @@
     line-height: (20/16);
     color: $white;
 
-    margin-bottom: rem(30);
+    margin-bottom: rem(21);
   }
 
 
@@ -90,6 +92,7 @@
   }
   //soc => mixin-wrap.scss
 
+  //
   &__mail-link, &__phone-link{
     @include mt();
     color: $white;
@@ -104,6 +107,11 @@
     span{
       font-size: rem(16px);
       line-height: (20/16);
+    }
+  }
+  &__mail-link{
+    @include media-breakpoint-up(xxl){
+      padding: 0px 25px;
     }
   }
   &__phone-link{

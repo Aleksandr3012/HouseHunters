@@ -328,21 +328,33 @@ function eventHandler() {
 		if(!fixedStrip) return
 
 		window.addEventListener("scroll", toggleFixedStrip.bind(undefined, fixedStrip), {passive:  true});
+		window.addEventListener('resize', function () {
+			if (window.matchMedia("(max-width: 1280px)").matches) {
+				$(fixedStrip).removeClass('absolute');
+				fixedStrip.style.top = '';
+			}
+		});
 	}
-	//fixedStip();
+	fixedStip();
 	function toggleFixedStrip(fixedStrip){
 		let footerTop = $('.footer')[0].getBoundingClientRect().top + $(window)['scrollTop']();
 		let windowHeight = calcVh(100);
 
-		//console.log(window.sc)
+		//console.log(footerTop);
+		if (windowHeight + window.scrollY > footerTop){
+			$(fixedStrip).addClass('absolute');
+			fixedStrip.style.top = (footerTop - fixedStrip.offsetHeight) + 'px';
+		}
+		else{
+			$(fixedStrip).removeClass('absolute');
+			fixedStrip.style.top = '';
+		}
 	}
 
 	function calcVh(v) {
 		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 		return (v * h) / 100;
 	}
-
-
 
 	// custom select
 	$('.custom-select2').select2({
@@ -398,10 +410,10 @@ function eventHandler() {
 	});
 
 	/*
-	* 1. menu (from lider)
+	* 1. menu (from lider) / +++++
 	* 2. fix info strip btn / +++++
 	* 3. get responsive widget
-	* 4. make aside sticky
+	* 4. make aside sticky // +++++
 	*	5. remake logo in header
 	* */
 

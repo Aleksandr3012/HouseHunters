@@ -322,12 +322,27 @@ function eventHandler() {
 		window.addEventListener("scroll", toggleFixedStrip.bind(undefined, fixedStrip), {
 			passive: true
 		});
-	} //fixedStip();
+		window.addEventListener('resize', function () {
+			if (window.matchMedia("(max-width: 1280px)").matches) {
+				$(fixedStrip).removeClass('absolute');
+				fixedStrip.style.top = '';
+			}
+		});
+	}
 
+	fixedStip();
 
 	function toggleFixedStrip(fixedStrip) {
 		var footerTop = $('.footer')[0].getBoundingClientRect().top + $(window)['scrollTop']();
-		var windowHeight = calcVh(100); //console.log(window.sc)
+		var windowHeight = calcVh(100); //console.log(footerTop);
+
+		if (windowHeight + window.scrollY > footerTop) {
+			$(fixedStrip).addClass('absolute');
+			fixedStrip.style.top = footerTop - fixedStrip.offsetHeight + 'px';
+		} else {
+			$(fixedStrip).removeClass('absolute');
+			fixedStrip.style.top = '';
+		}
 	}
 
 	function calcVh(v) {
@@ -381,10 +396,10 @@ function eventHandler() {
 		});
 	});
 	/*
-	* 1. menu (from lider)
+	* 1. menu (from lider) / +++++
 	* 2. fix info strip btn / +++++
 	* 3. get responsive widget
-	* 4. make aside sticky
+	* 4. make aside sticky // +++++
 	*	5. remake logo in header
 	* */
 	//end luckyone JS

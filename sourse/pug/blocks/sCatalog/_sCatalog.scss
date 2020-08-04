@@ -81,6 +81,10 @@
 		}
 
 	}
+	//
+	.catalog-row{
+		padding-bottom: 18px;
+	}
 
 	//
 	&__show-more-btn{
@@ -129,7 +133,7 @@
 //row
 .catalog-row{
 	& > *{
-		margin-bottom: 20px;
+		margin-bottom: 22px;
 	}
 
 	&__item{
