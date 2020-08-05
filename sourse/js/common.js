@@ -230,7 +230,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	let screenName;
-	screenName = '02.png';
+	screenName = '06.png';
 	screenName
 		? $(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`)
 		: '';
@@ -409,12 +409,196 @@ function eventHandler() {
 		});
 	});
 
+
+	//
+	let dayInCompanySlider = new Swiper('.day-in-company-js', {
+		effect: 'coverflow',
+		spaceBetween: 0,
+		grabCursor: true,
+		centeredSlides: true,
+		slidesPerView: 'auto',
+
+		//breakpoints
+		breakpoints: {
+			//xxl
+			1525: {
+				coverflowEffect: {
+					rotate: 0,
+					stretch: -364,
+					depth: 1350,
+					modifier: 1,
+					slideShadows: false
+				},
+			},
+			//xl
+			1280 : {
+				coverflowEffect: {
+					rotate: 0,
+					stretch: -344,
+					depth: 1350,
+					modifier: 1,
+					slideShadows: false
+				},
+			},
+			//lg
+			992 : {
+				coverflowEffect: {
+					rotate: 0,
+					stretch: -305,
+					depth: 1350,
+					modifier: 1,
+					slideShadows: false
+				},
+			},
+		},
+
+		loop: true,
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 4,
+		},
+		//nav
+		navigation: {
+			nextEl: $(this).find('.day-in-company-next'),
+			prevEl: $(this).find('.day-in-company-prev'),
+		},
+		//pugination
+		pagination: {
+			el: $(this).find('.day-in-company-pugin'),
+			clickable: true,
+		},
+	});
+
+	//
+	let employeeSlider = new Swiper('.employee-slider-js', {
+		effect: 'coverflow',
+		spaceBetween: 0,
+		grabCursor: true,
+		centeredSlides: true,
+		slidesPerView: 'auto',
+		slideToClickedSlide: true,
+
+		//breakpoints
+		breakpoints: {
+			//lg
+			992 : {
+				coverflowEffect: {
+					rotate: 0,
+					stretch: -110,
+					depth: 460,
+					modifier: 1,
+					slideShadows: false
+				},
+			},
+			//md
+			768 : {
+				coverflowEffect: {
+					rotate: 0,
+					stretch: -30,
+					depth: 160,
+					modifier: 1,
+					slideShadows: false
+				},
+			},
+			//md
+			576 : {
+				coverflowEffect: {
+					rotate: 0,
+					stretch: -30,
+					depth: 160,
+					modifier: 1,
+					slideShadows: false
+				},
+			},
+		},
+
+		loop: true,
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 4,
+		},
+		//nav
+		navigation: {
+			nextEl: $(this).find('.employee-next'),
+			prevEl: $(this).find('.employee-prev'),
+		},
+		//pugination
+		pagination: {
+			el: $(this).find('.employee-pugin'),
+			clickable: true,
+		},
+	});
+
+	//office slider
+	let officeSlider = new Swiper('.office-slider-js', {
+		slidesPerView: 'auto',
+
+		breakpoints : {
+			992: {
+				spaceBetween: 30,
+			},
+			320: {
+				spaceBetween: 20,
+			},
+		},
+
+
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5,
+		},
+		//pugination
+		pagination: {
+			el: $(this).find('.office-slider-pugin'),
+			clickable: true,
+		},
+	});
+
+
+	//partners slider
+	let partners = new Swiper('.partners-slider-js', {
+		slidesPerView: 'auto',
+		loop: true,
+
+		breakpoints : {
+			992: {
+				spaceBetween: 30,
+			},
+			320: {
+				spaceBetween: 25,
+			},
+		},
+
+
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 7,
+		},
+		//nav
+		navigation: {
+			nextEl: $(this).find('.partners-next'),
+			prevEl: $(this).find('.partners-prev'),
+		},
+		//pugination
+		pagination: {
+			el: $(this).find('.partners-slider-pugin'),
+			clickable: true,
+		},
+	});
 	/*
-	* 1. menu (from lider) / +++++
-	* 2. fix info strip btn / +++++
-	* 3. get responsive widget
-	* 4. make aside sticky // +++++
-	*	5. remake logo in header
+	* 1. info strip cont width
+	* 2. make desctop widget
+	* 	2.1 make responsive widget
+	* 3. make widget fot other pages
+	* 4.
+	*	5. remake logo in header // ????
+	* 6. seek bugs
+	* 7. make popups
+	* 8. make main page with other pictures
 	* */
 
 	//end luckyone JS

@@ -14,49 +14,50 @@ mixin sCatalog()
 			+e.A.help-btn(href="#") Нужна помощь специалиста?
 	// end sCatalog
 
-mixin catalogRow()
+mixin catalogRow(itemModificator, iconLinkClasses, iconName='heart')
 	+b.catalog-row.row
-		+catalogItem()
+		+catalogItem(itemModificator, iconLinkClasses, iconName)
 			+catalogItemSlide(1,1)
 			+catalogItemSlide(2,1)
 			+catalogItemSlide(3,1)
-		+catalogItem()
+		+catalogItem(itemModificator, iconLinkClasses, iconName)
 			+catalogItemSlide(1,2)
 			+catalogItemSlide(2,2)
 			+catalogItemSlide(3,2)
-		+catalogItem()
+		+catalogItem(itemModificator, iconLinkClasses, iconName)
 			+catalogItemSlide(1,3)
 			+catalogItemSlide(2,3)
 			+catalogItemSlide(3,3)
 		//-2
-		+catalogItem()
+		+catalogItem(itemModificator, iconLinkClasses, iconName)
 			+catalogItemSlide(1,4)
 			+catalogItemSlide(2,4)
 			+catalogItemSlide(3,4)
-		+catalogItem()
+		+catalogItem(itemModificator, iconLinkClasses, iconName)
 			+catalogItemSlide(1,5)
 			+catalogItemSlide(2,5)
 			+catalogItemSlide(3,5)
-		+catalogItem()
+		+catalogItem(itemModificator, iconLinkClasses, iconName)
 			+catalogItemSlide(1,6)
 			+catalogItemSlide(2,6)
 			+catalogItemSlide(3,6)
 		//-3
-		+catalogItem()
+		+catalogItem(itemModificator, iconLinkClasses, iconName)
 			+catalogItemSlide(1,7)
 			+catalogItemSlide(2,7)
 			+catalogItemSlide(3,7)
-		+catalogItem()
+		+catalogItem(itemModificator, iconLinkClasses, iconName)
 			+catalogItemSlide(1,8)
 			+catalogItemSlide(2,8)
 			+catalogItemSlide(3,8)
-		+catalogItem()
+		+catalogItem(itemModificator, iconLinkClasses, iconName)
 			+catalogItemSlide(1,9)
 			+catalogItemSlide(2,9)
 			+catalogItemSlide(3,9)
-mixin catalogItem()
+
+mixin catalogItem(itemModificator, iconLinkClasses, iconName)
 	.col-md-6.col-lg-4
-		+e.item
+		+e.item(class=itemModificator)
 			+e.slider
 				.catalog-item-prev
 					+icon('chevron-left')
@@ -69,17 +70,19 @@ mixin catalogItem()
 			+e.description
 				+e.price-bl
 					+e.price 3 900 000 ₽
-					+e.A.like(href='#')
-						+icon('heart')
+					+e.A.like(href='#' class=iconLinkClasses)
+						+icon(iconName)
 				+e.chars-list
 					+e.char-item 2-ком. квартира
 					+e.char-item 73 кв. м.
 					+e.char-item 2/15 эт.
-				+e.street ул. Воскресенская 12А
-				+e.city м. Сокольники
-				+e.A.btn(href='#')
-					+icon('phone')
-					span Показать телефон
+				+e.bot-content
+					+e.bot-cont-txt
+						+e.street ул. Воскресенская 12А
+						+e.city м. Сокольники
+					+e.A.btn(href='#')
+						+icon('phone')
+						span.d-none.d-sm-inline Показать телефон
 
 mixin catalogItemSlide(imgNum, fancyGroup)
 	.swiper-slide

@@ -351,7 +351,7 @@
 
 .info-strip{
 	position: fixed;
-	z-index: 100;
+	z-index: 99;
 	top: 70px;
 	height: 70px;
 
@@ -360,7 +360,6 @@
 	@include media-breakpoint-up(lg){
 		width: 900px;
 		left: calc(-1 * (900px - 100vw) / 2);
-		border-radius: 0px 0px $border-radius $border-radius;
 	}
 	@include media-breakpoint-up(xl){
 		width: auto;
@@ -371,7 +370,26 @@
 		left: calc(-1 * (1128px - 100vw) / 2);
 	}
 
-	background-color: $white;
+	//border-radius: 0px 0px $border-radius $border-radius;
+
+	&:before{
+		content: '';
+		background-color: $white;
+		z-index: -1;
+		position: fixed;
+		top: 70px;
+		height: 70px;
+
+		width: 100vw;
+		left: 0;
+		@include media-breakpoint-up(xl){
+			width: calc(100vw - var(--asideW));
+			left: var(--asideW);
+		}
+		box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.05);
+	}
+
+
 	display: flex;
 	padding: rem(17) rem(30);
 	align-items: center;

@@ -133,12 +133,19 @@
 //row
 .catalog-row{
 	& > *{
-		margin-bottom: 22px;
+		margin-bottom: 20px;
+		@include media-breakpoint-up(sm){
+			margin-bottom: 22px;
+		}
 	}
 
 	&__item{
-		background: $white;
+		background-color: $white;
 		border-radius: $border-radius;
+
+		&.chosen-object-item{
+
+		}
 	}
 	//slider
 	&__slider{
@@ -251,6 +258,8 @@
 		line-height: 1;
 	}
 	&__like{
+		@extend .icon-btn-frame;
+
 		width: rem(20px);
 		height: rem(20px);
 
@@ -260,9 +269,12 @@
 
 		.icon{
 			font-size: rem(20);
-			color: $secondary;
 			max-width: 100%;
 			max-height: 100%;
+		}
+
+		&:hover{
+
 		}
 	}
 	//chars-list
@@ -296,7 +308,22 @@
 			}
 		}
 	}
-	//
+	//bot-content
+	&__bot-content{
+		display: flex;
+
+		flex-direction: row;
+		@include media-breakpoint-up(sm){
+			flex-direction: column;
+		}
+	}
+	&__bot-cont-txt{
+		margin-right: 15px;
+		@include media-breakpoint-up(sm){
+			margin-right: 0;
+		}
+	}
+
 	&__street{
 		font-size: rem(14px);
 		line-height: (18/14);
@@ -306,23 +333,36 @@
 		font-weight: 300;
 		font-size: rem(12px);
 		line-height: (15/12);
-		margin-bottom: rem(20);
+
+
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(20);
+		}
 	}
 
 	//btn
 	&__btn{
 		@extend .btn-pr-empty;
 
-		min-width: 100%;
+		margin-left: auto;
+		padding: 12px 18px;
+		@include media-breakpoint-up(sm){
+			min-width: 100%;
+			margin-left: 0;
+			padding: rem(18);
+		}
+
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: rem(18);
 
 		.icon{
 			font-size: rem(20);
-			margin-right: rem(15);
 			color: currentColor;
+
+			@include media-breakpoint-up(sm){
+				margin-right: rem(15);
+			}
 		}
 		span{
 			font-weight: bold;

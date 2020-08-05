@@ -1,0 +1,31 @@
+mixin dayInCompany()
+	// start dayInCompany
+	+b.SECTION.dayInCompany.section#dayInCompany&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 День в компании
+			+e.slider
+				.day-in-company-prev.swiper-prev-frame
+					+icon('chevron-left')
+				.day-in-company-next.swiper-next-frame
+					+icon('chevron-right')
+				.swiper-container.day-in-company-js
+					.swiper-wrapper
+						+dayInCompanySlide()
+						+dayInCompanySlide()
+						+dayInCompanySlide()
+						//-+dayInCompanySlide()
+						//-+dayInCompanySlide()
+						//-+dayInCompanySlide()
+				.day-in-company-pugin.swiper-pugin-frame.d-lg-none
+	// end dayInCompany
+
+mixin dayInCompanySlide()
+	.swiper-slide
+		+e.slide-wrap
+			+e.A.slide-link(href="https://www.youtube.com/watch?v=en6gms6e54Q&list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR" data-fancybox="video")
+				+e.img
+					img.swiper-lazy(src="" data-src=`img/@2x/about-company-page-head.jpg` alt="")
+				+e.play-btn
+					+icon('play')
+

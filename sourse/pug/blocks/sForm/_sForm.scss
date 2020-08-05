@@ -1,7 +1,90 @@
+// start .sForm
+.sForm {
+	background-color: $light;
 
-	// start .sForm
-	.sForm {
-		 
+	--sPT: #{50px};
+	--sPB: #{60px};
+	--sTPB: #{2px};
+	@include media-breakpoint-up(md){
+		--sPT: #{rem(92px)};
+		--sPB: #{rem(90)};
+		--sTPB: #{rem(25)};
+	}
+
+
+	.section-title{
+		max-width: rem(920);
+		margin: 0 auto;
+
+		h2{
+			@include media-breakpoint-down(sm){
+				font-size: 22px;
+			}
+
+			margin-bottom: 25px;
+			@include media-breakpoint-up(md){
+				margin-bottom: rem(20);
+			}
+		}
+		p{
+			text-align: left;
+			line-height: 1.7;
+			@include media-breakpoint-up(md){
+				text-align: center;
+				line-height: 1.2;
+			}
+
+			font-size: rem(20px);
+			color: $body-color2;
+		}
+	}
+
+	//form
+	.form-wrap{
+		@include media-breakpoint-up(md){
+			max-width: 650px;
+			margin: 0 auto;
+		}
+		&__row{
+			@include roww(10px);
+
+			padding-bottom: 10px;
+			@include media-breakpoint-up(md){
+				padding-bottom: rem(40);
+			}
+		}
+		&__input-wrap{
+			margin-bottom: 20px;
+			@include media-breakpoint-up(md){
+				margin-bottom: 0;
+			}
+		}
+		&__input{
+			margin-bottom: 0;
+
+			@include media-breakpoint-down(md){
+				padding: 10px 20px !important;
+				min-height: 40px;
+				border: 1px solid $secondary;
+			}
+		}
+
+
+		&__btn{
+			@extend .btn-pr;
+
+			font-weight: bold;
+			font-size: rem(16);
+			line-height: (20/16);
+
+			min-width: 100%;
+			@include media-breakpoint-up(md){
+				min-width: rem(310);
+			}
+		}
+		&__{}
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

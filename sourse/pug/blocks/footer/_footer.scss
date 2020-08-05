@@ -110,9 +110,6 @@
     }
   }
   &__mail-link{
-    @include media-breakpoint-up(xxl){
-      padding: 0px 25px;
-    }
   }
   &__phone-link{
     .icon{
@@ -120,6 +117,12 @@
     }
   }
   &__all-rights-txt{
+    @include media-breakpoint-up(xxl){
+      position: relative;
+      top: -8px;
+      right: -4px;
+    }
+
     text-align: center;
     @include media-breakpoint-up(sm){
       text-align: left;

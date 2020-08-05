@@ -3,7 +3,17 @@ mixin sForm()
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+				h2 Вам интересно?
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt&nbsp;ut labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation
+			+form-wrap()
+				+e.row.row
+					.col-md-4
+						+input('Имя', 'text', undefined, 'name')
+					.col-md-4
+						+input('Номер телефона', 'tel')
+					.col-md-4
+						+input('Дата', 'text', undefined, 'date')
+				.text-center
+					+e.BUTTON.btn(type="submit") Оставить заявку
+
 	// end sForm

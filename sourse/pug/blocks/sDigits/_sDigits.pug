@@ -1,0 +1,27 @@
+mixin sDigits()
+	// start sDigits
+	+b.SECTION.sDigits.section#sDigits&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 О компании в цифрах
+			+e.row.row
+				.col-lg-6
+					+e.digits-row.row
+						+digitsItem(1537)
+							| Успешно проведенных сделок
+						+digitsItem(1537)
+							| Довольных клиентов
+						+digitsItem(153)
+							| Клиента инвестируют с&nbsp;нами
+						+digitsItem(34)
+							| Объекта в управлении
+				.col-lg-6
+					+pic('digits-img.jpg')(class="sDigits__img")
+	// end sDigits
+
+mixin digitsItem(num)
+	.col-sm-6
+		+e.item
+			+e.num=num
+			+e.txt
+				block

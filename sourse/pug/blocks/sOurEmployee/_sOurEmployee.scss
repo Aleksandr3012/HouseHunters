@@ -1,0 +1,162 @@
+// start .sOurEmployee
+.sOurEmployee {
+	background-color: $light;
+
+	--sPT: #{50px};
+	--sPB: #{60px};
+	--sTPB: #{30px};
+	@include media-breakpoint-up(md){
+		--sPT: #{rem(94px)};
+		--sPB: #{rem(90px)};
+		--sTPB: #{rem(53)};
+	}
+
+	.section-title{
+		h2{
+			@include media-breakpoint-down(sm){
+				font-size: 22px;
+			}
+		}
+	}
+
+	&__slider{
+		position: relative;
+
+		//prev, next
+		.employee-prev{
+
+		}
+		.employee-next{
+		}
+
+		//pugin
+		.employee-pugin{
+			padding-top: rem(30);
+		}
+
+		//
+		.swiper-container{
+			@include media-breakpoint-between(sm, md){
+				overflow: visible !important;
+			}
+		}
+
+		//
+		.swiper-slide{
+			width: 100%;
+			height: auto;
+			@include media-breakpoint-up(sm){
+				width: 42%;
+			}
+			@include media-breakpoint-up(md){
+				width: 31.8%;
+			}
+			pointer-events: none;
+			opacity: 0;
+
+
+			.sOurEmployee__img{
+				//padding-top: 90.2%;
+			}
+
+		}
+
+		.swiper-slide-prev, .swiper-slide-next{
+			pointer-events: unset;
+			cursor: pointer !important;
+			@include mt();
+			opacity: .6;
+			&:hover{
+				opacity: .8;
+			}
+		}
+		.swiper-slide-active{
+			opacity: 1 !important;
+			cursor: auto;
+
+
+			.sOurEmployee__img{
+				//padding-top: 71.3%;
+			}
+		}
+
+		//
+		.swiper-container{
+			@include media-breakpoint-up(lg){
+				padding-bottom: 10px;
+			}
+		}
+	}
+	&__slide-cont{
+		box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+		border-radius: $border-radius;
+		background-color: $white;
+		overflow: hidden;
+
+	}
+	&__img{
+		display: block;
+		position: relative;
+		padding-top: 71.3%;
+		height: 0;
+
+		overflow: hidden;
+		
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			min-height: 100%;
+			height: auto;
+		}
+	}
+	&__slide-txt{
+		padding: 39px 20px;
+		@include media-breakpoint-up(sm){
+			padding: 39px 20px 45px 20px;
+		}
+
+		color: $body-color2;
+	}
+	&__name{
+		font-weight: bold;
+		line-height: 1.5;
+
+		font-size: rem(20px);
+		margin-bottom: 10px;
+	}
+	&__descr{
+		p{
+			line-height: 1.5;
+			font-size: rem(16px);
+		}
+		p:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__{}
+	&__{}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sOurEmployee

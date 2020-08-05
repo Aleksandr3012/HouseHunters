@@ -4,5 +4,9 @@ mixin sChosenObj()
 		.container
 			+b.section-title
 				h2 Избранные объекты
-			.row
+			+e.buy-rent-links
+				a.active(href='#') Купить
+				a(href='#') Снять
+			+catalogRow('chosen-object-item', 'active', 'heart-active')
+			+e.A.help-btn.d-none.d-sm-inline-block(href="#") Нужна помощь специалиста?
 	// end sChosenObj

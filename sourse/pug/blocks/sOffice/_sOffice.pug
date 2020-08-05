@@ -1,0 +1,45 @@
+mixin sOffice()
+	// start sOffice
+	+b.SECTION.sOffice.section#sOffice&attributes(attributes)
+		.container
+			+b.section-title.office-title
+				h2 Наш офис
+			//+e.row.row.d-none.d-lg-none
+			+e.office-slider
+				.swiper-container.office-slider-js
+					.swiper-wrapper
+						+officeSlide(1)
+						+officeSlide(2)
+						+officeSlide(3)
+						+officeSlide(4)
+						+officeSlide(5)
+				.office-slider-pugin.swiper-pugin-frame.d-md-none
+			+b.section-title
+				h2 Наши партнеры
+			+e.partners-slider
+				.partners-prev.swiper-prev-frame
+					+icon('chevron-left')
+				.partners-next.swiper-next-frame
+					+icon('chevron-right')
+				.swiper-container.partners-slider-js
+					.swiper-wrapper
+						+partnersSlide(1)
+						+partnersSlide(2)
+						+partnersSlide(3)
+						+partnersSlide(4)
+						+partnersSlide(5)
+						+partnersSlide(6)
+				.partners-slider-pugin.swiper-pugin-frame.d-base-none
+				//partners-slide-
+	// end sOffice
+
+mixin officeSlide(imgNum)
+	.swiper-slide
+		+e.img-link(href=`img/@2x/office-slide-${imgNum}.jpg` data-fancybox=`officeImg`)
+			img.swiper-lazy(src="" data-src=`img/@2x/office-slide-${imgNum}.jpg` alt="")
+
+mixin partnersSlide(imgNum)
+	.swiper-slide
+		+e.parnrest-slide-wrap
+			+e.partners-img
+				img.swiper-lazy(src="" data-src=`img/@2x/partners-slide-${imgNum}.png` alt="")

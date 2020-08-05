@@ -1,0 +1,127 @@
+// start .sDigits
+.sDigits {
+	--sPT: #{52px};
+	--sPB: #{42px};
+	--sTPB: #{28px};
+	@include media-breakpoint-up(md){
+		--sPT: #{rem(93px)};
+		--sPB: #{rem(100)};
+		--sTPB: #{rem(54)};
+	}
+
+	.section-title{
+		h2{
+			@include media-breakpoint-down(sm){
+				font-size: 22px;
+			}
+		}
+	}
+	&__row{
+		flex-direction: column-reverse;
+		@include media-breakpoint-up(lg){
+			flex-direction: row;
+		}
+	}
+	//digits-row
+	&__digits-row{
+		@include media-breakpoint-up(lg){
+			padding: rem(65) 0 rem(35) 0;
+		}
+	}
+	&__item{
+		display: flex;
+		flex-direction: column;
+
+		padding-bottom: rem(25);
+		padding-left: 21px;
+		@include media-breakpoint-up(sm){
+			align-items: center;
+			padding-bottom: rem(36);
+			padding-left: 0;
+		}
+
+		@include media-breakpoint-up(lg){
+
+		}
+	}
+	&__num{
+		font-weight: 800;
+		line-height: 1;
+		color: $primary;
+
+		font-size: 60px;
+
+		margin-bottom: 27px;
+		@include media-breakpoint-up(sm){
+			text-align: center;
+			margin-bottom: 23px;
+		}
+	}
+	&__txt{
+		line-height: 1.09;
+		color: $body-color2;
+
+		font-size: 16px;
+		@include media-breakpoint-up(sm){
+			font-size: 22px;
+			text-align: center;
+		}
+	}
+	//
+	&__img{
+		position: relative;
+		padding-top: 79.71%;
+		width: 100%;
+		height: 0;
+
+		margin-bottom: 24px;
+		@include media-breakpoint-up(md){
+			margin-bottom: 50px;
+		}
+		@include media-breakpoint-up(lg){
+			margin-bottom: 0;
+			position: static;
+			padding-top: 0;
+			width: 100%;
+			height: 100%;
+		}
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include media-breakpoint-up(lg){
+				position: static;
+			}
+
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: $border-radius;
+		}
+
+
+	}
+	&__{}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sDigits

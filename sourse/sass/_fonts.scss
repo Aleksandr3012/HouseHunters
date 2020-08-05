@@ -8,6 +8,7 @@ $file-format: woff2 woff;
 @include font-face ($default-font, $addr + "Geometria/Geometria", $file-formats: $file-format);
 @include font-face ($default-font, $addr + "Geometria-Medium/Geometria-Medium", 500, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "Geometria-Bold/Geometria-Bold", bold, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "Geometria-ExtraBold/Geometria-ExtraBold", 800, $file-formats: $file-format);
 
 // font-weight helper:
 

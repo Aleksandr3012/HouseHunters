@@ -1,0 +1,28 @@
+mixin sOurEmployee()
+	// start sOurEmployee
+	+b.SECTION.sOurEmployee.section#sOurEmployee&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Наши сотрудники
+			+e.slider
+				.employee-prev.swiper-prev-frame
+					+icon('chevron-left')
+				.employee-next.swiper-next-frame
+					+icon('chevron-right')
+				.swiper-container.employee-slider-js
+					.swiper-wrapper
+						+employeeSlide()
+						+employeeSlide()
+						+employeeSlide()
+				.employee-pugin.swiper-pugin-frame.d-lg-none
+	// end sOurEmployee
+
+mixin employeeSlide()
+	.swiper-slide
+		+e.slide-cont
+			+e.img
+				img.swiper-lazy(src="#" data-src=`img/@2x/emploee-slide-1.jpg` alt="")
+			+e.slide-txt
+				+e.name Иван Иванов
+				+e.descr
+					p Риелтор с 10-летним стажем
