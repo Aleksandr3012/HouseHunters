@@ -230,7 +230,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	let screenName;
-	screenName = '06.png';
+	screenName = '01-alt.png';
 	screenName
 		? $(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`)
 		: '';
@@ -324,6 +324,9 @@ function eventHandler() {
 
 	//stop sidebar before footer
 	function fixedStip(){
+		let footer = document.querySelector('.footer');
+		if (!footer) return;
+
 		let fixedStrip = document.querySelector('.sAside');
 		if(!fixedStrip) return
 
@@ -589,6 +592,157 @@ function eventHandler() {
 			clickable: true,
 		},
 	});
+
+	// rangle sliders for main page
+	function currencyFormat(num) {
+		return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
+	}
+
+	$(".range-wrap").each(function () {
+		let _this = $(this);
+		var $range= _this.find(".slider-js");
+		var $inputFrom = _this.find(".input_from");
+		var $inputTo = _this.find(".input_to");
+		var instance, from, to,
+			min = $range.data('min'),
+			max = $range.data('max');
+		$range.ionRangeSlider({
+			skin: "round",
+			type: "double",
+			grid: false,
+			grid_snap: false,
+			hide_min_max: true,
+			hide_from_to: true,
+			onStart: updateInputs,
+			onChange: updateInputs,
+			onFinish: updateInputs
+		});
+		instance = $range.data("ionRangeSlider");
+
+		function updateInputs(data) {
+			from = data.from;
+			to = data.to;
+
+			$inputFrom.prop("value", currencyFormat(from));
+			$inputTo.prop("value", currencyFormat(to));
+			// InputFormat();
+		}
+
+		$inputFrom.on("change input ", function () {
+			var val = +($(this).prop("value").replace(/\s/g, ''));
+			// validate
+			if (val < min) {
+				val = min;
+			} else if (val > to) {
+				val = to;
+			}
+
+			instance.update({
+				from: val
+			});
+			$(this).prop("value", currencyFormat(val));
+			console.log(val)
+		});
+
+		$inputTo.on("change input ", function () {
+			var val = +($(this).prop("value").replace(/\s/g, ''));
+
+			// validate
+			if (val < from) {
+				val = from;
+			} else if (val > max) {
+				val = max;
+			}
+
+			instance.update({
+				to: val
+			});
+			$(this).prop("value", currencyFormat(val));
+		});
+
+	});
+	// widgets custom js
+	$('.pop-up-header-js').click(function () {
+		let self = this;
+		document.body.removeEventListener('click', widgetsPopupsMissclick);
+
+
+		$(this).toggleClass('active');
+		$(this.parentElement).find('.pop-up-content-js').slideToggle(function () {
+			$(this).toggleClass('active');
+		});
+
+		// close everything but this pop up, dont let to be opened 2 popup at the same time
+		if (window.matchMedia("(max-width: 992px)").matches) {
+			//self
+			let allWidgetsPopups = document.querySelectorAll('.pop-up-wrap-js');
+			for (let wrap of allWidgetsPopups){
+
+				let header = wrap.querySelector('.pop-up-header-js');
+				let content = wrap.querySelector('.pop-up-content-js');
+
+				if (self !== header){
+					$(header).removeClass('active');
+					$(content).slideUp(function () {
+						$(this).removeClass('active');
+					});
+				}
+
+			}
+		}
+		//
+
+		event.stopPropagation();
+		document.body.addEventListener('click', widgetsPopupsMissclick);
+	});
+	window.addEventListener('resize', function () {
+		if (window.matchMedia("(max-width: 768px)").matches) {
+			document.body.removeEventListener('click', widgetsPopupsMissclick);
+			openWidgetsPopup();
+		}
+		else{
+			closeWidgetsPopup();
+		}
+
+	});
+
+
+	function widgetsPopupsMissclick() {
+		if (event.target.closest('.pop-up-wrap-js')) return
+
+		closeWidgetsPopup();
+		document.body.removeEventListener('click', widgetsPopupsMissclick);
+	}
+
+	function closeWidgetsPopup() {
+		//close all popups
+		let allWidgetsPopups = document.querySelectorAll('.pop-up-wrap-js');
+		for (let wrap of allWidgetsPopups){
+			let header = wrap.querySelector('.pop-up-header-js');
+			let content = wrap.querySelector('.pop-up-content-js');
+
+			$(header).removeClass('active');
+			$(content).slideUp(function () {
+				$(this).removeClass('active');
+			});
+		}
+	}
+	function openWidgetsPopup() {
+		//close all popups
+		let allWidgetsPopups = document.querySelectorAll('.pop-up-wrap-js');
+		for (let wrap of allWidgetsPopups){
+			let header = wrap.querySelector('.pop-up-header-js');
+			let content = wrap.querySelector('.pop-up-content-js');
+
+			$(header).addClass('active');
+			$(content).slideDown(function () {
+				$(this).addClass('active');
+			});
+		}
+	}
+
+
+
 	/*
 	* 1. info strip cont width
 	* 2. make desctop widget

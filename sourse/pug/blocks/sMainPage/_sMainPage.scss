@@ -1,5 +1,6 @@
 // start .sMainPage
 .sMainPage {
+	background-color: $light;
 	position: relative;
 	z-index: 1;
 	min-height: 100vh;
@@ -8,9 +9,14 @@
 	background-size: cover;
 
 
-	--sPT: #{296px};
+	--sPT: #{180px};
 	--sPB: #{rem(30)};
 	--sTPB: #{rem(24)};
+	@include media-breakpoint-up(xl){
+		--sPT: #{296px};
+		--sPB: #{rem(30)};
+		--sTPB: #{rem(24)};
+	}
 
 
 	&__{}
@@ -48,11 +54,21 @@
 
 .buy-sel-form{
 	.form-wrap{
-		margin-bottom: rem(97);
+		@include media-breakpoint-up(md){
+			margin-bottom: rem(97);
+		}
 		&__top-btns{
 			display: flex;
+			justify-content: space-between;
+			@include media-breakpoint-up(lg){
+				justify-content: flex-start;
+			}
+
 			label{
-				width: auto;
+				width: calc(25% - (10px * 3 / 4));
+				@include media-breakpoint-up(lg){
+					width: auto;
+				}
 			}
 
 			input[type="radio"]{
@@ -60,9 +76,14 @@
 			}
 			input[type="radio"]:checked + span{
 				background-color: $primary;
+				color: $white;
 			}
 			span{
-				width: rem(160);
+				width: 100%;
+				@include media-breakpoint-up(lg){
+					width: rem(160);
+					margin-right: rem(10);
+				}
 				height: rem(39);
 				cursor: pointer;
 
@@ -71,18 +92,25 @@
 				justify-content: center;
 				text-align: center;
 
-				color: $white;
 				font-size: rem(16);
-				margin-right: rem(10);
 
 				border-radius: rem(5) rem(5) 0 0;
 				@include mt();
 
-				background-color: $body-color2;
-				&:hover{
-					font-weight: bold;
-					background-color: #309003;
+
+				font-weight: 500;
+				color: $primary;
+				@include media-breakpoint-up(sm){
+					font-weight: normal;
+					color: $white;
+					background-color: $body-color2;
+					&:hover{
+						font-weight: bold;
+						background-color: #309003;
+					}
 				}
+
+
 			}
 		}
 		&__{}
@@ -92,17 +120,564 @@
 
 		//
 		&__inputs-strip{
-			display: flex;
-			align-items: center;
+
+			@include media-breakpoint-up(md){
+				display: flex;
+			}
+
+			align-items: stretch;
+			color: $body-color;
 
 			background-color: $white;
 			box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-			border-radius: 0 $border-radius $border-radius $border-radius;
 
-			padding: rem(9) rem(30);
+			border-radius: 0 0 $border-radius $border-radius;
+			@include media-breakpoint-up(lg){
+				border-radius: 0 $border-radius $border-radius $border-radius;
+			}
+
+
+			padding: rem(30) rem(15);
+			@include media-breakpoint-up(md){
+				padding: rem(10) rem(20) rem(10) rem(0);
+			}
+			@include media-breakpoint-up(xl){
+				padding: rem(10) rem(30) rem(10) rem(0);
+			}
 			margin-bottom: rem(20);
 		}
+		//pop-ups
+		&__pop-up-wrap{
+			position: relative;
 
+			margin-bottom: 26px;
+			@include media-breakpoint-up(md){
+				margin-bottom: 0;
+				padding-right: rem(20);
+				padding-left: rem(15);
+			}
+			@include media-breakpoint-up(xl){
+				padding-right: rem(60);
+				padding-left: rem(30);
+			}
+
+			//background-color: red;
+
+			height: auto;
+			@include media-breakpoint-up(md){
+				height: 60px;
+				border-right: 1px solid $secondary;
+			}
+			&.price-type{
+
+				@include media-breakpoint-up(md){
+					width: 20%;
+					margin-right: 15px;
+				}
+				@include media-breakpoint-up(xl){
+					width: 12.8%;
+					margin-right: 15px;
+				}
+			}
+			&.room-type{
+				@include media-breakpoint-up(md){
+					width: 25%;
+				}
+				@include media-breakpoint-up(xl){
+					width: 17.8%;
+				}
+			}
+			&.object-type{
+				@include media-breakpoint-up(md){
+					width: 25%;
+				}
+				@include media-breakpoint-up(xl){
+					width: 34%;
+				}
+			}
+		}
+		&__pop-up-header{
+			cursor: pointer;
+			display: flex;
+			justify-content: space-between;
+			height: 100%;
+			align-items: center;
+
+			margin-bottom: 20px;
+			pointer-events: none;
+			@include media-breakpoint-up(md){
+				margin-bottom: 0;
+				pointer-events: auto;
+			}
+
+			span{
+				font-size: 12px;
+				line-height: 1;
+				@include media-breakpoint-up(sm){
+					font-size: rem(14px);
+					line-height: (18/14);
+				}
+
+				font-weight: 500;
+				@include media-breakpoint-up(md){
+					font-weight: 400;
+				}
+			}
+			.icon{
+				@include media-breakpoint-down(md){
+					display: none;
+				}
+				flex-shrink: 0;
+				font-size: rem(10);
+				margin-left: 10px;
+			}
+		}
+		//pop-up-content
+		&__pop-up-content{
+			position: static;
+			@include media-breakpoint-up(md){
+				position: absolute;
+
+				display: none;
+				&.active{
+					display: block;
+				}
+			}
+
+			z-index: 10;
+			left: 0;
+			top: calc(100% + 20px);
+
+			@include media-breakpoint-up(md){
+				background-color: $white;
+				box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+				border-radius: $border-radius;
+			}
+
+			&.price-type{
+				width: 100%;
+				@include media-breakpoint-up(md){
+					width: 270px;
+				}
+			}
+			&.room-type{
+				width: 100%;
+				@include media-breakpoint-up(md){
+					width: 200px;
+				}
+				@include media-breakpoint-up(lg){
+					width: 100%;
+				}
+			}
+			&.object-type{
+				width: 100%;
+				@include media-breakpoint-up(md){
+					width: 300px;
+				}
+				@include media-breakpoint-up(lg){
+					width: 100%;
+				}
+			}
+		}
+
+		//long checkbox
+		&__long-ch-cont{
+
+			@include media-breakpoint-up(md){
+				padding: rem(30);
+			}
+		}
+		&__long-checkbox{
+			cursor: pointer;
+			width: 100%;
+			margin-bottom: rem(15);
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			display: flex;
+			align-items: center;
+
+			input{
+				display: none;
+			}
+			input:checked + .checkbox{
+				background-color: $primary;
+				box-shadow: 0 0 0 0 $primary;
+				.icon{
+					opacity: 1;
+				}
+			}
+
+			&:hover{
+				.checkbox{
+					box-shadow: inset 0 0 0 2px $primary;
+				}
+			}
+			.checkbox{
+				flex-shrink: 0;
+				width: 14px;
+				height: 14px;
+				margin-right: 8px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				box-shadow: inset 0 0 0 2px $secondary;
+				border-radius: rem(2);
+
+				@include mt();
+
+				background-color: $white;
+				.icon{
+					@include mt();
+					color: $white;
+					font-size: rem(7px);
+					opacity: 0;
+				}
+			}
+
+			.long-chb-txt{
+				font-size: rem(14px);
+				line-height: 1;
+			}
+		}
+		//square-checkbox
+		&__squsre-ch-cont{
+			display: flex;
+			flex-wrap: wrap;
+
+			@include media-breakpoint-up(md){
+				padding: rem(30);
+			}
+			@include media-breakpoint-up(xl){
+				padding: rem(30) 15px;
+			}
+			@include media-breakpoint-up(base){
+				padding: rem(30) 17px;
+			}
+		}
+		&__square-checkbox-cont{
+
+			@include media-breakpoint-down(sm){
+				width: calc((100% / 6) - (7px * 5 / 6));
+
+				margin-right: 7px;
+				margin-bottom: 15px;
+				&:nth-child(6n){
+					margin-right: 0;
+				}
+			}
+			@include media-breakpoint-between(sm, md){
+				width: calc((100% / 9) - (7px * 8 / 9));
+
+				margin-right: 7px;
+				margin-bottom: 15px;
+				&:nth-child(9n){
+					margin-right: 0;
+				}
+			}
+			@include media-breakpoint-up(md){
+				width: calc((100% / 4) - (12px * 3 / 4));
+
+				margin-right: 12px;
+				margin-bottom: 12px;
+				&:nth-child(4n){
+					margin-right: 0;
+				}
+			}
+		}
+		&__square-checkbox{
+			cursor: pointer;
+			position: relative;
+			width: 100%;
+			padding-top: 100%;
+			height: 0;
+
+
+			input{
+				display: none;
+			}
+			input:checked + .checkbox{
+				background-color: $primary;
+				box-shadow: 0 0 0 0 $primary;
+				color: $white;
+
+				font-weight: 500;
+			}
+
+			&:hover{
+				.checkbox{
+					box-shadow: inset 0 0 0 2px $primary;
+				}
+			}
+			.checkbox{
+				border-radius: 50%;
+				@include media-breakpoint-up(md){
+					border-radius: 2px;
+				}
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+
+				@include mt();
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+
+				background-color: $white;
+				box-shadow: inset 0 0 0 2px $secondary;
+				color: $body-color;
+
+				font-size: 14px;
+			}
+		}
+
+		//
+		&__room-long-cb{
+			width: 100%;
+
+			padding-top: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+			@include media-breakpoint-up(md){
+				display: block;
+				padding-top: 0;
+			}
+		}
+		&__room-long-checkbox{
+			cursor: pointer;
+			display: flex;
+
+			width: auto;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			&:last-child{
+				margin-right: 0;
+			}
+			@include media-breakpoint-up(md){
+				width: 100%;
+				align-items: flex-start;
+
+				margin-bottom: rem(15);
+				margin-right: 0;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+
+			&:hover{
+				.checkbox{
+					box-shadow: inset 0 0 0 2px $primary;
+				}
+			}
+			input{
+				display: none;
+			}
+			input:checked + .checkbox{
+				background-color: $primary;
+				box-shadow: 0 0 0 0 $primary;
+				.icon{
+					opacity: 1;
+				}
+			}
+			input:checked + .checkbox + .long-chb-txt{
+				background-color: $secondary;
+				color: $body-color2;
+				font-weight: 500;
+				@include media-breakpoint-up(md){
+					font-weight: 400;
+					background-color: transparent;
+				}
+			}
+			.checkbox{
+				display: none;
+				@include media-breakpoint-up(md){
+					display: flex;
+				}
+
+				flex-shrink: 0;
+				width: 14px;
+				height: 14px;
+				margin-right: 8px;
+
+				//display: flex;
+				align-items: center;
+				justify-content: center;
+				box-shadow: inset 0 0 0 2px $secondary;
+				border-radius: rem(2);
+
+				@include mt();
+
+				background-color: $white;
+				.icon{
+					@include mt();
+					color: $white;
+					font-size: rem(7px);
+					opacity: 0;
+				}
+			}
+
+			.long-chb-txt{
+				@include mt();
+
+				font-size: rem(14px);
+				line-height: 1;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid $secondary;
+				height: 40px;
+				border-radius: 20px;
+				padding: 0 20px;
+
+				@include media-breakpoint-up(md){
+					display: block;
+					border: none;
+					border-radius: 0;
+					height: auto;
+					padding: 0;
+				}
+			}
+		}
+
+		//price
+		&__price-pp-cont{
+			@include media-breakpoint-up(md){
+				padding: rem(30);
+			}
+
+			.range-wrap{
+				margin-bottom: 20px;
+			}
+			.row{
+				@include roww(10px);
+			}
+			.form-group{
+				position: relative;
+
+				input{
+					box-sizing: border-box;
+
+					padding: 10px 30px 10px 20px;
+					border: 1px solid $secondary;
+					border-radius: 4px;
+					@include media-breakpoint-up(md){
+						padding: .25rem 30px .25rem .5rem;
+						border: 2px solid $light;
+						border-radius: $border-radius;
+					}
+				}
+
+			}
+			.money-symb{
+				position: absolute;
+				right: 0;
+				top: 0;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				padding: 0 10px;
+			}
+			//
+			.irs-handle{
+				cursor: pointer;
+				box-shadow: none;
+				border: none;
+				transition: background-color .3s ease-in-out;
+
+				background-color: $primary;
+				&:hover{
+					background-color: #309003;
+				}
+				&:focus{
+					background-color: #226702;
+				}
+			}
+			.irs-bar{
+				background-color: $primary;
+			}
+
+		}
+
+		&__bottom-radio{
+			display: flex;
+
+			padding-bottom: 10px;
+			@include media-breakpoint-up(md){
+				padding-bottom: 0;
+			}
+			label{
+				width: 50%;
+
+				//border radius
+				&:last-child{
+					span{
+						border-radius: 0 20px 20px 0;
+					}
+				}
+				&:first-child{
+					span{
+						border-radius: 20px  0 0 20px;
+					}
+				}
+				@include media-breakpoint-up(md){
+					&:last-child{
+						span{
+							border-radius: 0 $border-radius $border-radius 0;
+						}
+					}
+					&:first-child{
+						span{
+							border-radius: $border-radius  0 0 $border-radius ;
+						}
+					}
+				}
+			}
+
+			input[type="radio"]{
+				display: none;
+			}
+			input[type="radio"]:checked + span{
+				font-weight: 500;
+
+				background-color: $secondary;
+				@include media-breakpoint-up(md){
+					background-color: $primary;
+					color: $white;
+				}
+			}
+			span{
+				cursor: pointer;
+				@include mt();
+				height: 40px;
+				padding: 5px;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+
+				color: $body-color2;
+				background-color: $white;
+				border: 1px solid $secondary;
+				@include media-breakpoint-up(md){
+					background-color: $white;
+					border: 2px solid $primary;
+					&:hover{
+						box-shadow: inset 0 0 0 2px $primary;
+					}
+				}
+			}
+		}
+		&__{}
+
+		//input, address
 		&__input-wrap{
 			flex-grow: 1;
 			min-width: rem(210px);
@@ -118,119 +693,26 @@
 
 				box-shadow: none;
 				outline: none !important;
-				border: 1px solid transparent;
+
+				border: 1px solid $secondary;
+				@include media-breakpoint-up(md){
+					border: 1px solid transparent;
+				}
 				&:hover, &:focus{
 					border: 1px solid $secondary;
-				}
-			}
-		}
-		&__select2-cont{
-			//1
-			&.house-select, &.room-select{
-				width: rem(298);
-
-				margin-right: rem(90px);
-				&:after{
-					left: calc(100% + 60px);
-				}
-			}
-			//2
-			&.room-select{
-				width: rem(125);
-
-				margin-right: rem(90px);
-				&:after{
-					left: calc(100% + 60px);
-				}
-			}
-			//3
-			&.price-select{
-				width: rem(74);
-
-				margin-right: rem(77px);
-				&:after{
-					left: calc(100% + 60px);
-				}
-			}
-
-
-			position: relative;
-			&:after{
-				content: '';
-				position: absolute;
-				top: 0;
-				height: 100%;
-				width: 1px;
-				//display: block;
-				background-color: $secondary;
-			}
-
-			.select2-container{
-				width: 100% !important;
-				height: rem(60);
-				background-color: transparent;
-			}
-			.select2-selection{
-				height: 100%;
-				border-radius: 8px;
-				border: 1px solid transparent; //$select-border-color
-				background-color: $body-bg;
-
-				display: flex;
-				align-items: center;
-				justify-content: flex-start;
-			}
-			.select2-selection__rendered{
-				height: 100%;
-				line-height: 60px !important;
-				padding: 0 0 0 0 !important;
-				font-size: 14px !important;
-
-				@include mt();
-				color: $body-color;
-				&:hover{
-					color: $black;
-				}
-			}
-			.select2-selection__placeholder{
-				font-size: 14px;
-				display: block;
-				color: $body-color !important;
-			}
-			.select2-selection__arrow{
-				flex-shrink: 0;
-				background-color: transparent;
-				//background-color: red;
-				position: relative !important;
-
-				top: unset !important;
-				bottom: unset !important;
-				left: unset !important;
-				right: unset !important;
-
-				height: 100% !important;
-				width: 10px !important;
-				margin-left: rem(15);
-				b{
-					display: none;
-				}
-				@include mt();
-				background-image: url(../img/svg/chevron-down.svg);
-				background-repeat: no-repeat;
-				background-position: center;
-			}
-			.select2-container--open{
-				.select2-selection__arrow{
-					padding-top: 0px;
-					transform: rotateX(180deg);
-					//padding-bottom: 5px;
 				}
 			}
 		}
 		//
 		&__submit-btn{
 			@extend .btn-pr;
-			margin-left: auto;
+
+			width: 100%;
+			justify-content: center;
+			@include media-breakpoint-up(md){
+				margin-left: auto;
+				width: auto;
+			}
 
 			padding: rem(20);
 			display: flex;
@@ -268,4 +750,3 @@
 		}
 	}
 }
-//select
