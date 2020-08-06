@@ -230,7 +230,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	let screenName;
-	screenName = '06.png';
+	// screenName = '06.png';
 	screenName
 		? $(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`)
 		: '';

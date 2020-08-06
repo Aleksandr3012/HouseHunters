@@ -241,8 +241,8 @@ function eventHandler() {
 	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	var screenName;
-	screenName = '06.png';
+	var screenName; // screenName = '06.png';
+
 	screenName ? $(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>")) : ''; // /добавляет подложку для pixel perfect
 
 	function whenResize() {
