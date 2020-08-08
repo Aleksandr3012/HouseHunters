@@ -230,7 +230,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	let screenName;
-	screenName = '01-alt.png';
+	screenName = '03-375.png';
 	screenName
 		? $(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`)
 		: '';
@@ -755,17 +755,88 @@ function eventHandler() {
 	//multiple select
 	$('.multiple-select-js').select2();
 
+	//prod card slider
+	let prodCardThumb = new Swiper('.prod-card-thumb-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 9,
+		},
+	});
+
+	let prodCardSlider = new Swiper('.prod-card-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		loop: true,
+
+		//
+		navigation: {
+			nextEl: '.prod-card-next',
+			prevEl: '.prod-card-prev',
+		},
+		thumbs: {
+			swiper: prodCardThumb,
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2,
+		},
+		//pagination
+		pagination: {
+			el: $(this).find('.prod-card-pugin-js'),
+			clickable: true,
+		},
+	});
+	//popular slider
+	let popularSlider = new Swiper('.popular-objects-slider', {
+		spaceBetween: 30,
+		slidesPerView: 'auto',
+
+		//loop: true,
+		//nav
+		navigation: {
+			nextEl: $(this).find('.popular-slider-next'),
+			prevEl: $(this).find('.popular-slider-prev'),
+		},
+		//pugination
+		pagination: {
+			el: $(this).find('.day-in-company-pugin'),
+			clickable: true,
+		},
+	});
+	//calc credit js
+	$('.credit-show-js, .credit-hide-js').click(function () {
+		$('.credit-block-js, .credit-show-js').slideToggle(function () {
+			$(this).toggleClass('visiable');
+		});
+	});
+
+	//range
+	$(".range-slider-single-js").ionRangeSlider({
+		skin: "round",
+		//type: "double",
+		grid: false,
+		grid_snap: false,
+		hide_min_max: true,
+		//hide_from_to: true,
+		//onStart: updateInputs,
+		//onChange: updateInputs,
+		//onFinish: updateInputs
+	});
+	//instance = $range.data("ionRangeSlider");
+
+
 
 	/*
-	* 1. info strip cont width
-	* 2. make desctop widget
-	* 	2.1 make responsive widget
-	* 3. make widget fot other pages
-	* 4.
-	*	5. remake logo in header // ????
+	* 1. 03 pad bottom, finish calc
+	* popular slides fancygalery split
 	* 6. seek bugs
-	* 7. make popups
-	* 8. make main page with other pictures
+	* 7. 03 modal
+	* 8. main page modal
+	* 9. main page with other pictures
+	* 10. 02 with other filters
 	* */
 
 	//end luckyone JS

@@ -248,7 +248,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 
 	var screenName;
-	screenName = '01-alt.png';
+	screenName = '03-375.png';
 	screenName ? $(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>")) : ''; // /добавляет подложку для pixel perfect
 
 	function whenResize() {
@@ -752,14 +752,75 @@ function eventHandler() {
 		$('.more-filters-cont').slideToggle();
 	}); //multiple select
 
-	$('.multiple-select-js').select2();
+	$('.multiple-select-js').select2(); //prod card slider
+
+	var prodCardThumb = new Swiper('.prod-card-thumb-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 9
+		}
+	});
+	var prodCardSlider = new Swiper('.prod-card-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		loop: true,
+		//
+		navigation: {
+			nextEl: '.prod-card-next',
+			prevEl: '.prod-card-prev'
+		},
+		thumbs: {
+			swiper: prodCardThumb
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2
+		},
+		//pagination
+		pagination: {
+			el: $(this).find('.prod-card-pugin-js'),
+			clickable: true
+		}
+	}); //popular slider
+
+	var popularSlider = new Swiper('.popular-objects-slider', {
+		spaceBetween: 30,
+		slidesPerView: 'auto',
+		//loop: true,
+		//nav
+		navigation: {
+			nextEl: $(this).find('.popular-slider-next'),
+			prevEl: $(this).find('.popular-slider-prev')
+		},
+		//pugination
+		pagination: {
+			el: $(this).find('.day-in-company-pugin'),
+			clickable: true
+		}
+	}); //calc credit js
+
+	$('.credit-show-js, .credit-hide-js').click(function () {
+		$('.credit-block-js, .credit-show-js').slideToggle(function () {
+			$(this).toggleClass('visiable');
+		});
+	}); //range
+
+	$(".range-slider-single-js").ionRangeSlider({
+		skin: "round",
+		//type: "double",
+		grid: false,
+		grid_snap: false,
+		hide_min_max: true //hide_from_to: true,
+		//onStart: updateInputs,
+		//onChange: updateInputs,
+		//onFinish: updateInputs
+
+	}); //instance = $range.data("ionRangeSlider");
+
 	/*
 	* 1. info strip cont width
-	* 2. make desctop widget
-	* 	2.1 make responsive widget
-	* 3. make widget fot other pages
-	* 4.
-	*	5. remake logo in header // ????
 	* 6. seek bugs
 	* 7. make popups
 	* 8. make main page with other pictures

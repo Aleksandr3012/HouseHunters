@@ -74,7 +74,7 @@
 	//black aside
 	&.with-black-aside{
 		.top-nav__logo{
-			background-color: rgba($red, .1);
+			//background-color: rgba($red, .1);
 		}
 
 		background: $white;
@@ -100,10 +100,9 @@
 				top: 0;
 				z-index: 101;
 				box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
-				width: var(--asideW);
+				//width: var(--asideW);
 
-				display: block;
-				padding: rem(22px) 0 0 rem(5px);
+				//display: block;
 
 				height: 71px;
 				border-bottom: 1px solid $secondary;
@@ -111,10 +110,16 @@
 
 				background: rgba($black, 0.4);
 				backdrop-filter: blur(15px);
-				img{
-					max-width: 100%;
-					width: auto;
-					height: auto;
+
+				.img-svg-js{
+					path{
+						fill: $primary !important;
+					}
+					@include media-breakpoint-up(xl){
+						path{
+							fill: $white !important;
+						}
+					}
 				}
 			}
 		}
@@ -131,22 +136,43 @@
 				left: 0;
 				top: 0;
 				z-index: 100;
-				width: var(--asideW);
-				display: block;
-				padding-top: rem(14);
+				//width: var(--asideW);
+				//display: block;
 
 				height: 71px;
 				border-bottom: 1px solid $secondary;
 				background-color: $white;
-				img{
-					max-width: 100%;
-					max-height: 100%;
-					width: auto;
-					height: auto;
+				.img-svg-js{
+					path{
+						fill: $primary !important;
+					}
 				}
+
 			}
 		}
+
 	}
+	.top-nav__logo{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		flex-shrink: 0;
+		width: 155px;
+		@include media-breakpoint-up(xl){
+			padding: 10px 14px;
+			width: var(--asideW);
+		}
+
+		.img-svg-js{
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;
+			height: auto;
+		}
+
+	}
+
 
 
 	&__container{

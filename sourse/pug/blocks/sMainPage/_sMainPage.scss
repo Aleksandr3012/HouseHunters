@@ -230,6 +230,13 @@
 				flex-shrink: 0;
 				font-size: rem(10);
 				margin-left: 10px;
+				@include mt();
+			}
+
+			&.active{
+				.icon{
+					transform: rotateX(180deg);
+				}
 			}
 		}
 		//pop-up-content
