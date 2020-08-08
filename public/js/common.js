@@ -820,10 +820,14 @@ function eventHandler() {
 	}); //instance = $range.data("ionRangeSlider");
 
 	/*
-	* 1. info strip cont width
+	* 1. 03 pad bottom, finish calc
+	* popular slides fancygalery split
 	* 6. seek bugs
-	* 7. make popups
-	* 8. make main page with other pictures
+	* 7. 03 modal
+	* 8. main page modal
+	* 9. main page with other pictures
+	* 10. 02 with other filters
+	* 11 fix width of top line
 	* */
 	//end luckyone JS
 }
