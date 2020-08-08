@@ -17,17 +17,19 @@ mixin arrow()
 //- /arrow for swiper-slider
 
 
-mixin range(c1, c2)
-	.range-wrap.price_slider_amount
+mixin range(c1, c2, Symb=false)
+	.range-wrap.price_slider_amount&attributes(attributes)
 		.row
 			.col-6
 				.form-group
 					+b.INPUT.input_from.form-control.form-control-sm(type="text"  )
-					.money-symb ₽
+					if Symb
+						.money-symb=Symb
 			.col-6
 				.form-group
 					+b.INPUT.input_to.form-control.form-control-sm(type="text"  )
-					.money-symb ₽
+					if Symb
+						.money-symb=Symb
 		input.range-slider.slider-js(type='text'  data-min= c1  data-max= c2)
 
 mixin ie11()

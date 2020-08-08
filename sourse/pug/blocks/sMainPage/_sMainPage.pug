@@ -5,7 +5,7 @@ mixin sMainPage()
 		.container
 			+b.section-title.d-none.d-sm-block
 				h2 Недвижимость в Санкт-Петербурге
-			+b.buy-sel-form
+			+b.widget
 				+form-wrap()
 					+e.top-btns
 						+topBtn('Купить')(checked)
@@ -53,12 +53,20 @@ mixin sMainPage()
 								+icon('chevron-down')
 							+e.pop-up-content.pop-up-content-js.price-type
 								+e.price-pp-cont
-									+range("10000", "999999")
+									+range("10000", "999999", '₽')(class='with-symbol')
 									+e.bottom-radio
 										+topBtn('За все', 'price-checkbox')(checked)
 										+topBtn('За м²', 'price-checkbox')
 						//-
 						+input('Адрес', 'text', undefined, 'price')
+						//-+e.A.more-filters-btn.more-filters-btn-js.d-md-none(href="#")
+							span Больше фильтров
+							+icon('chevron-down')
+					+e.A.more-filters-btn.more-filters-btn-js.main-page-btn(href="#")
+						//-.d-none.d-md-flex
+						span Больше фильтров
+						+icon('chevron-down')
+					+moreFiltersBlock()
 					+e.BUTTON.submit-btn(type='submit')
 						+icon('search')
 						span Показать 2327 объектов
@@ -79,7 +87,7 @@ mixin roomLongChb(txt)
 		.long-chb-txt=txt
 
 mixin objectTypeItem(itemTxt='itemTxt')
-	+e.LABEL.long-checkbox
+	+b.LABEL.long-checkbox
 		input(type='checkbox' name="")
 		.checkbox
 			+icon('check')

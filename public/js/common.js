@@ -676,14 +676,19 @@ function eventHandler() {
 
 		event.stopPropagation();
 		document.body.addEventListener('click', widgetsPopupsMissclick);
-	});
+	}); //fix
+
 	window.addEventListener('resize', function () {
 		if (window.matchMedia("(max-width: 768px)").matches) {
 			document.body.removeEventListener('click', widgetsPopupsMissclick);
 			openWidgetsPopup();
 		} else {
 			closeWidgetsPopup();
-		}
+		} //
+
+
+		$('.more-filters-btn-js').removeClass('active');
+		$('.more-filters-cont').slideUp();
 	});
 
 	function widgetsPopupsMissclick() {
@@ -738,7 +743,16 @@ function eventHandler() {
 		} finally {
 			_iterator3.f();
 		}
-	}
+	} //for more filters btn
+
+
+	$('.more-filters-btn-js').click(function () {
+		event.preventDefault();
+		$(this).toggleClass('active');
+		$('.more-filters-cont').slideToggle();
+	}); //multiple select
+
+	$('.multiple-select-js').select2();
 	/*
 	* 1. info strip cont width
 	* 2. make desctop widget
@@ -751,7 +765,6 @@ function eventHandler() {
 	* 8. make main page with other pictures
 	* */
 	//end luckyone JS
-
 }
 
 ;
