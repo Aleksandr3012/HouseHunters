@@ -22,7 +22,7 @@ include ../blocks/sReviews/_sReviews.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Отзывы'
+	- let  title= 'Контакты'
 	title= title
 block pagecontent
 	.main-wrapper
@@ -36,12 +36,12 @@ block pagecontent
 			style.
 				@media (min-width: 576px) {
 					.pageHead {
-						background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), no-repeat center/cover url(img/@2x/vacansies-page-head.jpg);
+						background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), no-repeat center/cover url(img/@2x/contacts-page-head.jpg);
 					}
 				}
 			.container
 				+b.section-title.text-center
-					h1 Отзывы о нашей <br>работе
+					h1= title
 
-		+sReviews()
+		+sContact()
 		+footer()

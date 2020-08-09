@@ -1,7 +1,117 @@
+// start .sContact
+.sContact {
+	padding-top: var(--sPT);
+	padding-bottom: calc(var(--sPB) * 1.2);
+	background-color: $light;
 
-	// start .sContact
-	.sContact {
-		 
+	&__map {
+		margin-bottom: rem(60);
+		height: rem(120);
+		@include media-breakpoint-up(sm) {
+			height: rem(280);
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(110);
+		}
+
+		iframe {
+			width: 100%;
+			height: 100%;
+		}
+
+	}
+
+	&__lcol {
+		padding: rem(55) rem(20) rem(43) rem(20);
+		@include media-breakpoint-up(sm) {
+			padding: rem(37) rem(75) rem(43) rem(50);
+		}
+		box-shadow: 0 1px $border-radius rgba(0, 0, 0, 0.1);
+		border-radius: $border-radius;
+		background-color: #fff;
+	}
+
+	&__col {
+		border-radius: 0px 0px 10px 10px;
+		padding: rem(60) rem(20);
+		@include media-breakpoint-up(sm) {
+			padding: rem(55) rem(30);
+		}
+		@include media-breakpoint-up(lg) {
+			border-radius: 0px $border-radius $border-radius 0px;
+		}
+		background: #2F2D2D;
+	}
+
+	&__title {
+		font-size: 20px;
+		font-weight: 500;
+		margin-bottom: rem(38);
+		line-height: 1.25;
+	}
+
+	&__time {
+		font-weight: 300;
+		margin-bottom: rem(12);
+	}
+
+	&__tel {
+		margin-top: rem(35);
+	}
+
+	&__tel, &__mail{
+		font-size: 20px;
+		font-weight: 500;
+		margin-bottom: rem(15);
+		color: $body-color2;
+		display: block;
+
+		.icon {
+			font-size: rem(20);
+			color: $dark;
+			margin-right: rem(20);
+		}
+	}
+
+	.row {
+		--bs-gutter-x: 0px;
+	}
+
+	.soc {
+		padding-top: rem(20);
+	}
+
+	.form-wrap {
+
+		&__title {
+			@extend .h2;
+			font-weight: 800;
+			color: #ffffff;
+			margin-bottom: rem(16);
+		}
+
+		&__subtitle {
+			color: #ffffff;
+			margin-bottom: rem(37);
+		}
+
+		&__form {
+			max-width: rem(310);
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		&__input {
+			padding: rem(15) rem(20);
+			height: 48px;
+			margin-top: 0;
+		}
+
+		&__input-wrap {
+			padding-bottom: 18px;
+		}
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
