@@ -109,7 +109,7 @@
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
 
-	.buy-sel-form .form-wrap__pop-up-wrap.object-type {
+	.widget .form-wrap__pop-up-wrap.object-type {
 		padding: rem(15) rem(20);
 		border: 1px solid #E8E8E8;
 		@include media-breakpoint-up(md) {
@@ -121,21 +121,21 @@
 			color: $body-color2;
 		}
 	}
-	.buy-sel-form .form-wrap__inputs-strip {
+	.widget .form-wrap__inputs-strip {
 		padding: 0;
 		box-shadow: none;
 	}
-	.buy-sel-form .form-wrap__pop-up-header {
+	.widget .form-wrap__pop-up-header {
 		pointer-events: all;
 		margin-bottom: 0;
 	}
-	.buy-sel-form .form-wrap__pop-up-content.object-type {
+	.widget .form-wrap__pop-up-content.object-type {
 		@include media-breakpoint-down(md) {
 			display: none;
 			margin-top: 20px;
 		}
 	}
-	.buy-sel-form .form-wrap__pop-up-header .icon {
+	.widget .form-wrap__pop-up-header .icon {
 		@include media-breakpoint-down(md) {
 			display: block;
 		}

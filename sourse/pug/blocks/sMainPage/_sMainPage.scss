@@ -229,7 +229,7 @@
 				}
 				flex-shrink: 0;
 				font-size: rem(10);
-				margin-left: 10px;
+				margin-left: 8px;
 				@include mt();
 			}
 
@@ -585,10 +585,12 @@
 		&__input-wrap{
 			flex-grow: 1;
 			min-width: rem(210px);
+			padding: 0;
 			display: flex;
 			align-items: center;
 
 			input{
+				margin: 0;
 				min-height: 0;
 				width: 100%;
 				font-size: rem(14px);

@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAside/_sAside.pug
+include ../blocks/sMainPage/_sMainPage.pug
+include ../blocks/topBuy/_topBuy.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Главная'
+	title= title
+block pagecontent
+	.main-wrapper()
+		+Aside()(class='black-aside')
+		//-.white-aside
+		+header()
+			+infoStrip()
+			+top-nav()(class='with-black-aside')
+				//-with-white-aside
+		+sMainPage
+			style.
+				@media (min-width: 576px) {
+					.sMainPage {
+						background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), no-repeat center/cover url(img/@2x/main-page-bg-3.jpg);
+					}
+				}
+	//+footer()
+
+
+	
