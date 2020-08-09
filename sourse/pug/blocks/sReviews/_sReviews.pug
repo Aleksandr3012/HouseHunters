@@ -1,0 +1,44 @@
+mixin sReviews()
+	// start sReviews
+	+b.sReviews#sReviews&attributes(attributes)
+		.container
+			+e.slider
+				.review-slider-prev.d-none.d-lg-block
+					+icon('chevron-left')
+				.review-slider-next.d-none.d-lg-block
+					+icon('chevron-right')
+				.swiper-container.review-slider-js
+					.swiper-wrapper
+						+reviewSlide()
+						+reviewSlide()
+						+reviewSlide()
+				.review-slider-pugin.swiper-pugin-frame
+			+e.btn.link-modal(href="#") Оставить отзыв
+
+mixin reviewSlide()
+	.swiper-slide
+		+e.slideWrap
+			.row.justify-content-between
+				.col-4
+					picture
+						source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/reviews-photo.webp` type="image/webp")
+						img.swiper-lazy(src="#" data-src=`img/@2x/reviews-photo.jpg`, alt="")
+				.col-auto
+					+b.rating(data-total-value="4")
+						+e.item(data-item-value="5")
+							+icon('star')
+						+e.item(data-item-value="4")
+							+icon('star')
+						+e.item(data-item-value="3")
+							+icon('star')
+						+e.item(data-item-value="2")
+							+icon('star')
+						+e.item(data-item-value="1")
+							+icon('star')
+					+e.vk(href="#" target="_blank")
+						img.swiper-lazy(src="#" data-src='img/svg/soc-vk.svg' alt="")
+			+e.name Иван Иванов
+			+e.position Риелтор с 10-летним стажем
+			p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+
+	// end sReviews

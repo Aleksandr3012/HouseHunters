@@ -1,0 +1,70 @@
+// start .sListVacancies
+.sListVacancies {
+	background-color: $light;
+	padding-top: calc(var(--sPT) * 1.35);
+
+	.section-title {
+		padding-bottom: calc(var(--sTPB) / 1.3);
+	}
+
+	&__item {
+		box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+		border-radius: $border-radius;
+		padding: rem(25) rem(20) rem(27) rem(30);
+		background-color: #fff;
+		margin-bottom: rem(30);
+	}
+
+	&__title, &__price {
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	&__price {
+		color: $primary;
+	}
+	&__title {
+		margin-right: rem(10);
+	}
+
+	&__row {
+		margin-bottom: rem(19);
+	}
+
+	&__roww {
+		margin-bottom: rem(23);
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__btn {
+		@extend .btn-pr;
+		font-weight: bold;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		max-width: rem(310);
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sListVacancies

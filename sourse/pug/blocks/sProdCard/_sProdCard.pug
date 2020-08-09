@@ -1,0 +1,195 @@
+mixin sProdCard()
+	// start sProdCard
+	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
+		block
+		.container
+			+e.row.row
+				.col-lg-8
+					+e.slider
+						.prod-card-prev
+							+icon('chevron-left')
+						.prod-card-next
+							+icon('chevron-right')
+						.swiper-container.prod-card-slider-js
+							.swiper-wrapper
+								+prodCardSlide(1)
+								+prodCardSlide(2)
+								+prodCardSlide(3)
+								+prodCardSlide(1)
+								+prodCardSlide(2)
+								+prodCardSlide(3)
+								+prodCardSlide(1)
+								+prodCardSlide(2)
+								+prodCardSlide(3)
+						.prod-card-pugin.prod-card-pugin-js
+					+b.catalog-item-description.d-sm-none
+						+e.price-bl
+							+e.price 3 900 000 ₽
+							+e.A.like.icon-btn-frame(href='#')
+								+icon('heart')
+						+e.chars-list
+							+e.char-item 2-ком. квартира
+							+e.char-item 73 кв. м.
+							+e.char-item 2/15 эт.
+						+e.bot-content
+							+e.bot-cont-txt
+								+e.street ул. Воскресенская 12А
+								+e.city м. Сокольники
+							+e.A.btn(href='#')
+								+icon('phone')
+								span.d-none.d-sm-inline Показать телефон
+					+e.slider-thumb.d-none.d-sm-block
+						.swiper-container.prod-card-thumb-js
+							.swiper-wrapper
+								+prodCardThumb(1)
+								+prodCardThumb(2)
+								+prodCardThumb(3)
+								+prodCardThumb(1)
+								+prodCardThumb(2)
+								+prodCardThumb(3)
+								+prodCardThumb(1)
+								+prodCardThumb(2)
+								+prodCardThumb(3)
+					+e.price-like-strip.d-none.d-sm-flex
+						+e.price 3 900 000 ₽
+						+e.A.like-btn.icon-btn-frame(href='#')
+							+icon('heart')
+					+e.chars-list
+						+e.headline Характеристики
+						+charListItem('Этаж: ', '7')
+						+charListItem('Количество комнат: ', '2')
+						+charListItem('Всего этажей: ', '15')
+						+charListItem('Общая площадь: ', '73 кв. м.')
+						+charListItem('Тип дома: ', 'Монолитный')
+						+charListItem('Жилая площадь: ', '56 кв. м.')
+						+charListItem('Год постройки ', '2019')
+						+charListItem('Площадь кухни: ', '12 кв. м.')
+					+e.map
+						+e.headline ул. Воскресенская 12А
+						+e.map-cont
+							+e.map-inner-cont
+								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10158.698586354934!2d30.460393000000003!3d50.465783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdd1bf50ff55%3A0x5449b859d7752573!2z0YPQuy4g0KHQtdC80YzQuCDQpdC-0YXQu9C-0LLRi9GFLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1596469991978!5m2!1sru!2sua" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					+e.chars-list
+						+e.headline Дополнительные характеристики
+						+charListItem('Этаж: ', '7')
+						+charListItem('Количество комнат: ', '2')
+						+charListItem('Всего этажей: ', '15')
+						+charListItem('Общая площадь: ', '73 кв. м.')
+						+charListItem('Тип дома: ', 'Монолитный')
+						+charListItem('Жилая площадь: ', '56 кв. м.')
+						+charListItem('Год постройки ', '2019')
+						+charListItem('Площадь кухни: ', '12 кв. м.')
+					+e.popular-objects
+						+e.headline Популярные объекты
+						+e.popular-slider
+							.popular-slider-prev.swiper-prev-frame
+								+icon('chevron-left')
+							.popular-slider-next.swiper-next-frame
+								+icon('chevron-right')
+							.swiper-container.popular-objects-slider
+								.swiper-wrapper
+									+popularSlide('')
+									+popularSlide('')
+									+popularSlide(3)
+									+popularSlide(4)
+									+popularSlide(5)
+									+popularSlide(6)
+				.col-lg-4
+					+e.help-bl
+						+e.help-headline Нужна помощь специалиста?
+						+e.help-img
+							img.lazy(src="#" data-src="img/@2x/tetiana-img.jpg" alt="")
+						+e.help-name Татьяна
+						+e.help-txt
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor
+						+e.A.order-help-btn(href="#") Заказать звонок
+						+e.A.help-show-btn(href='#')
+							+icon('phone')
+							span Показать телефон
+					+e.precents
+						+percentsItem(1, 'Сбербанк   18%')
+						+percentsItem(2, 'Дом.рф   15%')
+						+percentsItem(3, 'Росбанк   18%')
+						+percentsItem(4, 'Россельхозбанк   20%')
+					+e.credit-calc-btn.credit-show-js Рассчитать ипотеку
+					+e.credit.credit-block-js.visiable
+						+e.credit-hide-btn.credit-hide-js Свернуть
+						+e.credit-headline Онлайн-калькулятор ипотеки
+						+e.credit-items
+							+creditItem('Стоимость объекта', 200000, 1000000, 1000, 256000)
+							+creditItem('Собственные средства', 0, 1000000, 1000, 50000)
+							+creditItem('Срок кредитования', 12, 240, 1, 240, ' мес.')
+							+creditItem('Процентная ставка', 1, 50, 1, 15, ' %')
+						+e.A.credit-get-btn(href='#') Получить ипотеку
+	// end sProdCard
+
+mixin creditItem(titleTxt, min='1', max='100', step='1', from=1, postFix=' ₽')
+	+e.credit-item
+		+e.credit-title=titleTxt
+		.range-wrap
+			input.range-slider-single-js(value='' data-min=min data-from=from  data-max=max data-postfix=postFix data-step=step type='text' name='')
+
+
+
+mixin percentsItem(imgNum, txt='txt', date='от 28.05.2020')
+	+e.precents-item
+		+e.precents-bank
+			+e.precents-img
+				img.lazy(src="#" data-src=`img/@2x/bank-img-${imgNum}.png` alt="")
+			+e.precents-txt=txt
+		+e.percents-date=date
+
+mixin popularSlide(slideNum='')
+	.swiper-slide
+		+b.catalog-row
+			+e.item(class=itemModificator)
+				+e.slider
+					.catalog-item-prev
+						+icon('chevron-left')
+					.catalog-item-next
+						+icon('chevron-right')
+					.catalog-item-pugin-js
+					.swiper-container.catalog-item-sl-js
+						.swiper-wrapper
+							+popularSubSlide(1)
+							+popularSubSlide(2)
+							+popularSubSlide(3)
+				+b.catalog-item-description
+					+e.price-bl
+						+e.price=`3 900 000 ₽${slideNum}`
+						+e.A.like(href='#' class=iconLinkClasses)
+							+icon(iconName)
+					+e.chars-list
+						+e.char-item 2-ком. квартира
+						+e.char-item 73 кв. м.
+						+e.char-item 2/15 эт.
+					+e.bot-content
+						+e.bot-cont-txt
+							+e.street ул. Воскресенская 12А
+							+e.city м. Сокольники
+						+e.A.btn(href='#')
+							+icon('phone')
+							span.d-none.d-sm-inline Показать телефон
+
+mixin popularSubSlide(imgNum)
+	.swiper-slide
+		+e.A.fancy-link(href=`img/@2x/prod-card-${imgNum}.jpg` data-fancybox=`popularSlideImg`)
+			img(src=`img/@2x/prod-card-${imgNum}.jpg` alt="")
+			//-.swiper-lazy(src="#" data-
+
+mixin charListItem(item="Этаж: ", val='7')
+	+e.chars-item
+		span=item
+		span=val
+
+mixin prodCardSlide(imgNum='1')
+	.swiper-slide
+		+e.slide-contnet
+			+e.A.fancy-link(href=`img/@2x/sProdCard-${imgNum}.jpg` data-fancybox=`prodCardImg`)
+				img.swiper-lazy(src="#" data-src=`img/@2x/sProdCard-${imgNum}.jpg` alt="")
+
+
+mixin prodCardThumb(imgNum='1')
+	.swiper-slide
+		+e.img-cont
+			img.swiper-lazy(src="#" data-src=`img/@2x/sProdCard-${imgNum}.jpg` alt="")

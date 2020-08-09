@@ -1,17 +1,127 @@
 mixin topBuy()
 	// start topBuy
-	+b.buy-sel-form.top-buy#topBuy&attributes(attributes)
+	+b.widget.top-buy#topBuy&attributes(attributes)
 		.container
 			+form-wrap()
-				+e.buy-btn Купить
+				+e.tb-top-strip
+					+e.tb-buy-btn Купить
 				+e.inputs-bl
 					+e.inputs-strip
+						//-1
+						+e.pop-up-wrap.pop-up-wrap-js.object-type
+							+e.pop-up-header.pop-up-header-js
+								span Тип объекта
+								+icon('chevron-down')
+							+e.pop-up-content.object-type.pop-up-content-js
+								+e.long-ch-cont
+									+objectTypeItem('Квартиры')
+									+objectTypeItem('Комнаты')
+									+objectTypeItem('Дома, дачи, коттеджи')
+									+objectTypeItem('Коммерческая недвижимость')
+									+objectTypeItem('Земельные участки')
+									+objectTypeItem('Гаражи и машиноместа')
+									+objectTypeItem('Новостройки')
+						//-2
+						+e.pop-up-wrap.pop-up-wrap-js.room-type
+							+e.pop-up-header.pop-up-header-js
+								span Комнатность
+								+icon('chevron-down')
+							+e.pop-up-content.room-type.pop-up-content-js
+								+e.squsre-ch-cont
+									+roomTypeItem('1')
+									+roomTypeItem('1E')
+									+roomTypeItem('2')
+									+roomTypeItem('2E')
+									+roomTypeItem('3')
+									+roomTypeItem('3E')
+									+roomTypeItem('4')
+									+roomTypeItem('4E')
+									+roomTypeItem('5+')
+									+e.room-long-cb
+										+roomLongChb('Студия')
+										+roomLongChb('Свобод. планировка')
+						//-3
+						+e.pop-up-wrap.pop-up-wrap-js.price-type
+							+e.pop-up-header.pop-up-header-js
+								span Цена
+								+icon('chevron-down')
+							+e.pop-up-content.pop-up-content-js.price-type
+								+e.price-pp-cont
+									+range("10000", "999999", '₽')(class='with-symbol')
+									+e.bottom-radio
+										+topBtn('За все', 'price-checkbox')(checked)
+										+topBtn('За м²', 'price-checkbox')
+						//-
 						+input('Адрес', 'text', undefined, 'price')
-					+e.BUTTON.submit-btn(type='submit')
+						+e.A.more-filters-btn.more-filters-btn-js.d-md-none(href="#")
+							span Больше фильтров
+							+icon('chevron-down')
+					+e.BUTTON.submit-btn.d-none.d-md-flex(type='submit')
 						+icon('search')
 						span Показать 2327 объектов
-				+e.A.more-filters-btn(href="#")
+				+e.A.more-filters-btn.more-filters-btn-js.d-none.d-md-flex(href="#")
 					span Больше фильтров
 					+icon('chevron-down')
+				+moreFiltersBlock()
+				+e.BUTTON.submit-btn.d-md-none(type='submit')
+					+icon('search')
+					span Показать 2327 объектов
 			block
 	// end topBuy
+
+mixin moreFiltersBlock()
+	+b.more-filters-cont
+		+e.row.row
+			//-1
+			+moreFiltersItem('Площадь кухни, м²')
+				+range(6, 78)
+			+moreFiltersItem('Жилая площадь, м²')
+				+range(30, 278)
+			+moreFiltersItem('Этаж')
+				+range(1, 40)
+			+moreFiltersItem('Этажность')
+				+range(1, 40)
+			//-2
+			+moreFiltersItem('Материал стен')
+				+multipleSelect(['Кирпич', 'Брус', 'Бревно', 'Металл','Сэндвич-панели','Кирпич2','Кирпич3'])
+			+moreFiltersItem('Тип комнат')
+				+multipleSelect(['Смежные','Изолированные'])
+			+moreFiltersItem('Состояние')
+				+multipleSelect(['Хорошее','Отличное','Нормальное','Плохое'])
+			+moreFiltersItem('Ремонт')
+				+multipleSelect(['Евро', 'Дизайнерский', 'Частичный ремонт', 'Хороший', 'С отделкой', 'HE Хороший'])
+			//-3
+			+moreFiltersItem('Пассажирский лифт')
+				+multipleSelect(['Есть', 'Нет'])
+			+moreFiltersItem('Грузовой лифт')
+				+multipleSelect(['Есть', 'Нет'])
+			+moreFiltersItem('Высота потолков')
+				+range(1, 8)
+			+moreFiltersItem('Вид из окна')
+				+multipleSelect(['Во двор', 'На улицу', 'Во двор и улицу'])
+			//-4
+			+moreFiltersItem('Санузел')
+				+multipleSelect(['Совместный', 'Раздельный', 'Более одного'])
+			+moreFiltersItem('Грузовой лифт')
+				+multipleSelect(['Есть', 'Нет'])
+			+moreFiltersItem('Расстояние от метро')
+				+range(1, 8)
+				+objectTypeItem('Пешком')
+				+objectTypeItem('На общественном транспорте')
+				+objectTypeItem('На машине')
+		+e.bottom-btns.text-right
+			+e.BUTTON.clean-btn(type='') Очистить
+			+e.BUTTON.accept-btn(type='') Применить фильтр
+
+
+mixin moreFiltersItem(txt)
+	.col-sm-6.col-lg-4.col-xl-3
+		+e.item
+			+e.header=txt
+			block
+
+mixin multipleSelect(optionsArr=['1','2','3'] ,selectName='selectName')
+	+b.select2-multiple
+		select.multiple-select-js(name=selectName multiple='multiple')
+			- for (let item of optionsArr)
+				option(value=item)=item

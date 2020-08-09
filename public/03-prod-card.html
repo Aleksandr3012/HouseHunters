@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>03-prod-card</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png"><meta name="format-detection" content="telephone=no">
+		<link rel="image_src" href="http://genrif.ru/assets/i/soc-logo.png">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="content">
+		<meta property="og:title" content="content">
+		<meta property="og:description" content="content">
+		<meta property="og:url" content="content">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:image" content="path/to/image.jpg">
+		<meta property="og:image:width" content="968">
+		<meta property="og:image:height" content="504">
+		<!-- Custom Browsers Color-->
+		<meta name="theme-color" content="#3361d8">
+		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
+		<link rel="stylesheet" href="libs/select2/css/select2.min.css"/>
+		<!--range slider-->
+		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
+		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
+		<link rel="stylesheet" href="css/main.min.css"/>
+	</head>
+	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+		<div class="main-wrapper">
+			<!-- start sAside-->
+			<aside class="sAside white-aside" id="sAside">
+				<div class="sAside__iconed-menu">
+					<ul>
+						<li><a href="#">
+								<div class="sAside__icon-cont"><img class="img-svg-js" src="img/svg/aside-buy.svg" alt=""/>
+								</div>
+								<div class="sAside__iconed-txt">Купить
+								</div></a></li>
+						<li><a href="#">
+								<div class="sAside__icon-cont"><img class="img-svg-js" src="img/svg/aside-sell.svg" alt=""/>
+								</div>
+								<div class="sAside__iconed-txt">Продать
+								</div></a></li>
+						<li><a href="#">
+								<div class="sAside__icon-cont"><img class="img-svg-js" src="img/svg/aside-give-rent.svg" alt=""/>
+								</div>
+								<div class="sAside__iconed-txt">Сдать
+								</div></a></li>
+						<li><a href="#">
+								<div class="sAside__icon-cont"><img class="img-svg-js" src="img/svg/aside-get-rent.svg" alt=""/>
+								</div>
+								<div class="sAside__iconed-txt">Снять
+								</div></a></li>
+						<li><a href="#">
+								<div class="sAside__icon-cont"><img class="img-svg-js" src="img/svg/aside-no-agent.svg" alt=""/>
+								</div>
+								<div class="sAside__iconed-txt">Без агента
+								</div></a></li>
+					</ul>
+				</div>
+				<ul class="sAside__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<li class="sAside__item" itemprop="item"><a class="sAside__link" href="/" itemprop="url">О компании</a>
+					</li>
+					<li class="sAside__item" itemprop="item"><a class="sAside__link" href="#" itemprop="url">Вакансии</a>
+					</li>
+					<li class="sAside__item" itemprop="item"><a class="sAside__link" href="#" itemprop="url">Ремонт</a>
+					</li>
+					<li class="sAside__item" itemprop="item"><a class="sAside__link" href="#" itemprop="url">Дизайн</a>
+					</li>
+					<li class="sAside__item" itemprop="item"><a class="sAside__link" href="#" itemprop="url">Отзывы</a>
+					</li>
+					<li class="sAside__item" itemprop="item"><a class="sAside__link" href="#" itemprop="url">Сотрудничество</a>
+					</li>
+					<li class="sAside__item" itemprop="item"><a class="sAside__link" href="#" itemprop="url">Сдать в управление</a>
+					</li>
+					<li class="sAside__item" itemprop="item"><a class="sAside__link" href="#" itemprop="url">Контакты</a>
+					</li>
+				</ul>
+				<div class="sAside__mob-menu d-xl-none">
+					<div class="sAside__info-txt d-lg-none">
+						<div class="sAside__top-txt">Адрес офиса:
+						</div>
+						<div class="sAside__address-txt">
+							Санкт-Петербург, Невский
+							<br class="d-sm-none"/>проспект 90-92А
+						</div>
+						<div class="sAside__small">
+							<p>ПН-ПТ с 10:00 до 20:00</p>
+							<p>СБ с 11:00 до 18:00</p>
+							<p>ВС по договоренности</p>
+						</div>
+					</div><a class="sAside__mail-link d-md-none" href="mailto:Info@hh-r.ru">
+					<svg class="icon icon-mail ">
+						<use xlink:href="img/svg/sprite.svg#mail"></use>
+					</svg><span>Info@hh-r.ru</span></a><a class="sAside__tel-link d-md-none" href="tel:+78123335515">
+					<svg class="icon icon-phone ">
+						<use xlink:href="img/svg/sprite.svg#phone"></use>
+					</svg><span>+7 812 333-55-15</span></a><a class="sAside__free-consult-btn" href="#">Бесплатная консультация</a>
+				</div>
+			</aside>
+			<!-- end sAside-->
+			<!-- start header-->
+			<header class="header" id="header">
+				<div class="info-strip"><a class="info-strip__location-link d-lg-none" href="#">
+					<svg class="icon icon-location ">
+						<use xlink:href="img/svg/sprite.svg#location"></use>
+					</svg><span>Санкт-Петербург</span>
+					<svg class="icon icon-chevron-down ">
+						<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+					</svg></a>
+					<div class="info-strip__address-block d-none d-lg-flex">
+						<div class="info-strip__address-gray">Адрес офиса:
+						</div>
+						<div class="info-strip__address">Санкт-Петербург, Воскресенская 12
+						</div>
+						<div class="info-strip__shedule">ПН-ПТ с 9:00 до 20:00
+						</div>
+					</div><a class="info-strip__add-btn" href="#">
+					<svg class="icon icon-plus ">
+						<use xlink:href="img/svg/sprite.svg#plus"></use>
+					</svg><span class="d-none d-sm-block">Добавить объект</span></a>
+				</div>
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy with-white-aside">
+					<div class="top-nav__menu-btn burger-js d-xl-none"><span></span>
+					</div><a class="top-nav__logo" href="/">
+					<!--block--><img class="img-svg-js" src="img/svg/logo-svg.svg"/></a>
+					<div class="top-nav__container container"><a class="top-nav__location-link d-none d-lg-flex" href="#">
+						<svg class="icon icon-location ">
+							<use xlink:href="img/svg/sprite.svg#location"></use>
+						</svg><span>Санкт-Петербург</span>
+						<svg class="icon icon-chevron-down ">
+							<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+						</svg></a><a class="top-nav__mail-link d-none d-md-flex" href="mailto:agentstvo@gmail.com">
+						<svg class="icon icon-mail ">
+							<use xlink:href="img/svg/sprite.svg#mail"></use>
+						</svg><span>agentstvo@gmail.com</span></a><a class="top-nav__phone-link d-none d-md-flex" href="tel:+79053454212">
+						<svg class="icon icon-phone ">
+							<use xlink:href="img/svg/sprite.svg#phone"></use>
+						</svg><span>+7 (905) 345-42-12</span></a><a class="top-nav__consult-btn d-none d-xl-inline-block" href="#">Бесплатная консультация</a>
+						<div class="top-nav__icons-box"><a href="#">
+								<svg class="icon icon-heart ">
+									<use xlink:href="img/svg/sprite.svg#heart"></use>
+								</svg></a><a href="#">
+								<svg class="icon icon-user ">
+									<use xlink:href="img/svg/sprite.svg#user"></use>
+								</svg></a>
+							<!--location-->
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
+			<!-- start sProdCard-->
+			<section class="sProdCard section" id="sProdCard">
+				<!-- start topBuy-->
+				<div class="widget top-buy" id="topBuy">
+					<div class="container">
+						<div class="form-wrap">
+							<form>
+								<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+								<div class="form-wrap__tb-top-strip">
+									<div class="form-wrap__tb-buy-btn">Купить
+									</div>
+								</div>
+								<div class="form-wrap__inputs-bl">
+									<div class="form-wrap__inputs-strip">
+										<div class="form-wrap__pop-up-wrap pop-up-wrap-js object-type">
+											<div class="form-wrap__pop-up-header pop-up-header-js"><span>Тип объекта</span>
+												<svg class="icon icon-chevron-down ">
+													<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+												</svg>
+											</div>
+											<div class="form-wrap__pop-up-content object-type pop-up-content-js">
+												<div class="form-wrap__long-ch-cont">
+													<label class="long-checkbox">
+														<input type="checkbox" name=""/>
+														<div class="checkbox">
+															<svg class="icon icon-check ">
+																<use xlink:href="img/svg/sprite.svg#check"></use>
+															</svg>
+														</div>
+														<div class="long-chb-txt">Квартиры</div>
+													</label>
+													<label class="long-checkbox">
+														<input type="checkbox" name=""/>
+														<div class="checkbox">
+															<svg class="icon icon-check ">
+																<use xlink:href="img/svg/sprite.svg#check"></use>
+															</svg>
+														</div>
+														<div class="long-chb-txt">Комнаты</div>
+													</label>
+													<label class="long-checkbox">
+														<input type="checkbox" name=""/>
+														<div class="checkbox">
+															<svg class="icon icon-check ">
+																<use xlink:href="img/svg/sprite.svg#check"></use>
+															</svg>
+														</div>
+														<div class="long-chb-txt">Дома, дачи, коттеджи</div>
+													</label>
+													<label class="long-checkbox">
+														<input type="checkbox" name=""/>
+														<div class="checkbox">
+															<svg class="icon icon-check ">
+																<use xlink:href="img/svg/sprite.svg#check"></use>
+															</svg>
+														</div>
+														<div class="long-chb-txt">Коммерческая недвижимость</div>
+													</label>
+													<label class="long-checkbox">
+														<input type="checkbox" name=""/>
+														<div class="checkbox">
+															<svg class="icon icon-check ">
+																<use xlink:href="img/svg/sprite.svg#check"></use>
+															</svg>
+														</div>
+														<div class="long-chb-txt">Земельные участки</div>
+													</label>
+													<label class="long-checkbox">
+														<input type="checkbox" name=""/>
+														<div class="checkbox">
+															<svg class="icon icon-check ">
+																<use xlink:href="img/svg/sprite.svg#check"></use>
+															</svg>
+														</div>
+														<div class="long-chb-txt">Гаражи и машиноместа</div>
+													</label>
+													<label class="long-checkbox">
+														<input type="checkbox" name=""/>
+														<div class="checkbox">
+															<svg class="icon icon-check ">
+																<use xlink:href="img/svg/sprite.svg#check"></use>
+															</svg>
+														</div>
+														<div class="long-chb-txt">Новостройки</div>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="form-wrap__pop-up-wrap pop-up-wrap-js room-type">
+											<div class="form-wrap__pop-up-header pop-up-header-js"><span>Комнатность</span>
+												<svg class="icon icon-chevron-down ">
+													<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+												</svg>
+											</div>
+											<div class="form-wrap__pop-up-content room-type pop-up-content-js">
+												<div class="form-wrap__squsre-ch-cont">
+													<div class="form-wrap__square-checkbox-cont">
+														<label class="form-wrap__square-checkbox">
+															<input type="checkbox" name=""/>
+															<div class="checkbox">1</div>
+														</label>
+													</div>
+													<div class="form-wrap__square-checkbox-cont">
+														<label class="form-wrap__square-checkbox">
+															<input type="checkbox" name=""/>
+															<div class="checkbox">1E</div>
+														</label>
+													</div>
+													<div class="form-wrap__square-checkbox-cont">
+														<label class="form-wrap__square-checkbox">
+															<input type="checkbox" name=""/>
+															<div class="checkbox">2</div>
+														</label>
+													</div>
+													<div class="form-wrap__square-checkbox-cont">
+														<label class="form-wrap__square-checkbox">
+															<input type="checkbox" name=""/>
+															<div class="checkbox">2E</div>
+														</label>
+													</div>
+													<div class="form-wrap__square-checkbox-cont">
+														<label class="form-wrap__square-checkbox">
+															<input type="checkbox" name=""/>
+															<div class="checkbox">3</div>
+														</label>
+													</div>
+													<div class="form-wrap__square-checkbox-cont">
+														<label class="form-wrap__square-checkbox">
+															<input type="checkbox" name=""/>
+															<div class="checkbox">3E</div>
+														</label>
+													</div>
+													<div class="form-wrap__square-checkbox-cont">
+														<label class="form-wrap__square-checkbox">
+															<input type="checkbox" name=""/>
+															<div class="checkbox">4</div>
+														</label>
+													</div>
+													<div class="form-wrap__square-checkbox-cont">
+														<label class="form-wrap__square-checkbox">
+															<input type="checkbox" name=""/>
+															<div class="checkbox">4E</div>
+														</label>
+													</div>
+													<div class="form-wrap__square-checkbox-cont">
+														<label class="form-wrap__square-checkbox">
+															<input type="checkbox" name=""/>
+															<div class="checkbox">5+</div>
+														</label>
+													</div>
+													<div class="form-wrap__room-long-cb">
+														<label class="form-wrap__room-long-checkbox">
+															<input type="checkbox" name=""/>
+															<div class="checkbox">
+																<svg class="icon icon-check ">
+																	<use xlink:href="img/svg/sprite.svg#check"></use>
+																</svg>
+															</div>
+															<div class="long-chb-txt">Студия</div>
+														</label>
+														<label class="form-wrap__room-long-checkbox">
+															<input type="checkbox" name=""/>
+															<div class="checkbox">
+																<svg class="icon icon-check ">
+																	<use xlink:href="img/svg/sprite.svg#check"></use>
+																</svg>
+															</div>
+															<div class="long-chb-txt">Свобод. планировка</div>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-wrap__pop-up-wrap pop-up-wrap-js price-type">
+											<div class="form-wrap__pop-up-header pop-up-header-js"><span>Цена</span>
+												<svg class="icon icon-chevron-down ">
+													<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+												</svg>
+											</div>
+											<div class="form-wrap__pop-up-content pop-up-content-js price-type">
+												<div class="form-wrap__price-pp-cont">
+													<div class="range-wrap price_slider_amount with-symbol">
+														<div class="row">
+															<div class="col-6">
+																<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
+																	<div class="money-symb">₽</div>
+																</div>
+															</div>
+															<div class="col-6">
+																<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
+																	<div class="money-symb">₽</div>
+																</div>
+															</div>
+														</div>
+														<input class="range-slider slider-js" type="text" data-min="10000" data-max="999999"/>
+													</div>
+													<div class="form-wrap__bottom-radio">
+														<label>
+															<input type="radio" name="price-checkbox" value="За все" checked="checked"/><span>За все</span>
+														</label>
+														<label>
+															<input type="radio" name="price-checkbox" value="За м²"/><span>За м²</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Адрес" name="price"/>
+										</div>
+										<!-- +e.input-wrap--><a class="form-wrap__more-filters-btn more-filters-btn-js d-md-none" href="#"><span>Больше фильтров</span>
+										<svg class="icon icon-chevron-down ">
+											<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+										</svg></a>
+									</div>
+									<button class="form-wrap__submit-btn d-none d-md-flex" type="submit">
+										<svg class="icon icon-search ">
+											<use xlink:href="img/svg/sprite.svg#search"></use>
+										</svg><span>Показать 2327 объектов</span>
+									</button>
+								</div><a class="form-wrap__more-filters-btn more-filters-btn-js d-none d-md-flex" href="#"><span>Больше фильтров</span>
+								<svg class="icon icon-chevron-down ">
+									<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+								</svg></a>
+								<div class="more-filters-cont">
+									<div class="more-filters-cont__row row">
+										<div class="col-sm-6 col-lg-4 col-xl-3">
+											<div class="more-filters-cont__item">
+												<div class="more-filters-cont__header">Площадь кухни, м²
+												</div>
+												<div class="range-wrap price_slider_amount">
+													<div class="row">
+														<div class="col-6">
+															<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
+															</div>
+														</div>
+														<div class="col-6">
+															<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
+															</div>
+														</div>
+													</div>
+													<input class="range-slider slider-js" type="text" data-min="6" data-max="78"/>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-4 col-xl-3">
+											<div class="more-filters-cont__item">
+												<div class="more-filters-cont__header">Жилая площадь, м²
+												</div>
+												<div class="range-wrap price_slider_amount">
+													<div class="row">
+														<div class="col-6">
+															<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
+															</div>
+														</div>
+														<div class="col-6">
+															<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
+															</div>
+														</div>
+													</div>
+													<input class="range-slider slider-js" type="text" data-min="30" data-max="278"/>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-4 col-xl-3">
+											<div class="more-filters-cont__item">
+												<div class="more-filters-cont__header">Этаж
+												</div>
+												<div class="range-wrap price_slider_amount">
+													<div class="row">
+														<div class="col-6">
+															<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
+															</div>
+														</div>
+														<div class="col-6">
+															<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
+															</div>
+														</div>
+													</div>
+													<input class="range-slider slider-js" type="text" data-min="1" data-max="40"/>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-4 col-xl-3">
+											<div class="more-filters-cont__item">
+												<div class="more-filters-cont__header">Этажность
+												</div>
+												<div class="range-wrap price_slider_amount">
+													<div class="row">
+														<div class="col-6">
+															<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
+															</div>
+														</div>
+														<div class="col-6">
+															<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
+															</div>
+														</div>
+													</div>
+													<input class="range-slider slider-js" type="text" data-min="1" data-max="40"/>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-4 col-xl-3">
+											<div class="more-filters-cont__item">
+												<div class="more-filters-cont__header">Материал стен
+												</div>
+												<div class="select2-multiple">
+													<select class="multiple-select-js" name="selectName" multiple="multiple">
+														<option value="Кирпич">Кирпич</option>
+														<option value="Брус">Брус</option>
+														<option value="Бревно">Бревно</option>
+														<option value="Металл">Металл</option>
+														<option value="Сэндвич-панели">Сэндвич-панели</option>
+														<option value="Кирпич2">Кирпич2</option>
+														<option value="Кирпич3">Кирпич3</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-4 col-xl-3">
+											<div class="more-filters-cont__item">
+												<div class="more-filters-cont__header">Тип комнат
+												</div>
+												<div class="select2-multiple">
+													<select class="multiple-select-js" name="selectName" multiple="multiple">
+														<option value="Смежные">Смежные</option>
+														<option value="Изолированные">Изолированные</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-4 col-xl-3">
+											<div class="more-filters-cont__item">
+												<div class="more-filters-cont__header">Состояние
+												</div>
+												<div class="select2-multiple">
+													<select class="multiple-select-js" name="selectName" multiple="multiple">
+														<option value="Хорошее">Хорошее</option>
+														<option value="Отличное">Отличное</option>
+														<option value="Нормальное">Нормальное</option>
+														<option value="Плохое">Плохое</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-4 col-xl-3">
+											<div class="more-filters-cont__item">
+												<div class="more-filters-cont__header">Ремонт
+												</div>
+												<div class="select2-multiple">
+													<select class="multiple-select-js" name="selectName" multiple="multiple">
+														<option value="Евро">Евро</option>
+														<option value="Дизайнерский">Дизайнерский</option>
+														<option value="Частичный ремонт">Частичный ремонт</option>
+														<option value="Хороший">Хороший</option>
+														<option value="С отделкой">С отделкой</option>
+														<option value="HE Хороший">HE Хороший</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-4 col-xl-3">
+											<div class="more-filters-cont__item">
+												<div class="more-filters-cont__header">Пассажирский лифт
+												</div>
+												<div class="select2-multiple">
+													<select class="multiple-select-js" name="selectName" multiple="multiple">
+														<option value="Есть">Есть</option>
+														<option value="Нет">Нет</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-4 col-xl-3">
+											<div class="more-filters-cont__item">
+												<div class="more-filters-cont__header">Грузовой лифт
+												</div>
+												<div class="select2-multiple">
+													<select class="multiple-select-js" name="selectName" multiple="multiple">
+														<option value="Есть">Есть</option>
+														<option value="Нет">Нет</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-4 col-xl-3">
+											<div class="more-filters-cont__item">
+												<div class="more-filters-cont__header">Высота потолков
+												</div>
+												<div class="range-wrap price_slider_amount">
+													<div class="row">
+														<div class="col-6">
+															<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
+															</div>
+														</div>
+														<div class="col-6">
+															<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
+															</div>
+														</div>
+													</div>
+													<input class="range-slider slider-js" type="text" data-min="1" data-max="8"/>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-4 col-xl-3">
+											<div class="more-filters-cont__item">
+												<div class="more-filters-cont__header">Вид из окна
+												</div>
+												<div class="select2-multiple">
+													<select class="multiple-select-js" name="selectName" multiple="multiple">
+														<option value="Во двор">Во двор</option>
+														<option value="На улицу">На улицу</option>
+														<option value="Во двор и улицу">Во двор и улицу</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-4 col-xl-3">
+											<div class="more-filters-cont__item">
+												<div class="more-filters-cont__header">Санузел
+												</div>
+												<div class="select2-multiple">
+													<select class="multiple-select-js" name="selectName" multiple="multiple">
+														<option value="Совместный">Совместный</option>
+														<option value="Раздельный">Раздельный</option>
+														<option value="Более одного">Более одного</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-4 col-xl-3">
+											<div class="more-filters-cont__item">
+												<div class="more-filters-cont__header">Грузовой лифт
+												</div>
+												<div class="select2-multiple">
+													<select class="multiple-select-js" name="selectName" multiple="multiple">
+														<option value="Есть">Есть</option>
+														<option value="Нет">Нет</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-6 col-lg-4 col-xl-3">
+											<div class="more-filters-cont__item">
+												<div class="more-filters-cont__header">Расстояние от метро
+												</div>
+												<div class="range-wrap price_slider_amount">
+													<div class="row">
+														<div class="col-6">
+															<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
+															</div>
+														</div>
+														<div class="col-6">
+															<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
+															</div>
+														</div>
+													</div>
+													<input class="range-slider slider-js" type="text" data-min="1" data-max="8"/>
+												</div>
+												<label class="long-checkbox">
+													<input type="checkbox" name=""/>
+													<div class="checkbox">
+														<svg class="icon icon-check ">
+															<use xlink:href="img/svg/sprite.svg#check"></use>
+														</svg>
+													</div>
+													<div class="long-chb-txt">Пешком</div>
+												</label>
+												<label class="long-checkbox">
+													<input type="checkbox" name=""/>
+													<div class="checkbox">
+														<svg class="icon icon-check ">
+															<use xlink:href="img/svg/sprite.svg#check"></use>
+														</svg>
+													</div>
+													<div class="long-chb-txt">На общественном транспорте</div>
+												</label>
+												<label class="long-checkbox">
+													<input type="checkbox" name=""/>
+													<div class="checkbox">
+														<svg class="icon icon-check ">
+															<use xlink:href="img/svg/sprite.svg#check"></use>
+														</svg>
+													</div>
+													<div class="long-chb-txt">На машине</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="more-filters-cont__bottom-btns text-right">
+										<button class="more-filters-cont__clean-btn" type="">Очистить
+										</button>
+										<button class="more-filters-cont__accept-btn" type="">Применить фильтр
+										</button>
+									</div>
+								</div>
+								<button class="form-wrap__submit-btn d-md-none" type="submit">
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg><span>Показать 2327 объектов</span>
+								</button>
+							</form>
+						</div>
+						<nav aria-label="breadcrumb">
+							<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+										<meta itemprop="position" content="1"/></a></li>
+								<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Купить</span>
+										<meta itemprop="position" content="2"/></a></li>
+								<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Вторичный рынок</span>
+										<meta itemprop="position" content="3"/></a></li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				<!-- end topBuy-->
+				<div class="container">
+					<div class="sProdCard__row row">
+						<div class="col-lg-8">
+							<div class="sProdCard__slider">
+								<div class="prod-card-prev">
+									<svg class="icon icon-chevron-left ">
+										<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+									</svg>
+								</div>
+								<div class="prod-card-next">
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+								<div class="swiper-container prod-card-slider-js">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="sProdCard__slide-contnet"><a class="sProdCard__fancy-link" href="img/@2x/sProdCard-1.jpg" data-fancybox="prodCardImg"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-1.jpg" alt=""/></a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sProdCard__slide-contnet"><a class="sProdCard__fancy-link" href="img/@2x/sProdCard-2.jpg" data-fancybox="prodCardImg"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-2.jpg" alt=""/></a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sProdCard__slide-contnet"><a class="sProdCard__fancy-link" href="img/@2x/sProdCard-3.jpg" data-fancybox="prodCardImg"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-3.jpg" alt=""/></a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sProdCard__slide-contnet"><a class="sProdCard__fancy-link" href="img/@2x/sProdCard-1.jpg" data-fancybox="prodCardImg"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-1.jpg" alt=""/></a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sProdCard__slide-contnet"><a class="sProdCard__fancy-link" href="img/@2x/sProdCard-2.jpg" data-fancybox="prodCardImg"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-2.jpg" alt=""/></a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sProdCard__slide-contnet"><a class="sProdCard__fancy-link" href="img/@2x/sProdCard-3.jpg" data-fancybox="prodCardImg"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-3.jpg" alt=""/></a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sProdCard__slide-contnet"><a class="sProdCard__fancy-link" href="img/@2x/sProdCard-1.jpg" data-fancybox="prodCardImg"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-1.jpg" alt=""/></a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sProdCard__slide-contnet"><a class="sProdCard__fancy-link" href="img/@2x/sProdCard-2.jpg" data-fancybox="prodCardImg"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-2.jpg" alt=""/></a>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sProdCard__slide-contnet"><a class="sProdCard__fancy-link" href="img/@2x/sProdCard-3.jpg" data-fancybox="prodCardImg"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-3.jpg" alt=""/></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="prod-card-pugin prod-card-pugin-js"></div>
+							</div>
+							<div class="catalog-item-description d-sm-none">
+								<div class="catalog-item-description__price-bl">
+									<div class="catalog-item-description__price">3 900 000 ₽
+									</div><a class="catalog-item-description__like icon-btn-frame" href="#">
+									<svg class="icon icon-heart ">
+										<use xlink:href="img/svg/sprite.svg#heart"></use>
+									</svg></a>
+								</div>
+								<div class="catalog-item-description__chars-list">
+									<div class="catalog-item-description__char-item">2-ком. квартира
+									</div>
+									<div class="catalog-item-description__char-item">73 кв. м.
+									</div>
+									<div class="catalog-item-description__char-item">2/15 эт.
+									</div>
+								</div>
+								<div class="catalog-item-description__bot-content">
+									<div class="catalog-item-description__bot-cont-txt">
+										<div class="catalog-item-description__street">ул. Воскресенская 12А
+										</div>
+										<div class="catalog-item-description__city">м. Сокольники
+										</div>
+									</div><a class="catalog-item-description__btn" href="#">
+									<svg class="icon icon-phone ">
+										<use xlink:href="img/svg/sprite.svg#phone"></use>
+									</svg><span class="d-none d-sm-inline">Показать телефон</span></a>
+								</div>
+							</div>
+							<div class="sProdCard__slider-thumb d-none d-sm-block">
+								<div class="swiper-container prod-card-thumb-js">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="sProdCard__img-cont"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-1.jpg" alt=""/>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sProdCard__img-cont"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-2.jpg" alt=""/>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sProdCard__img-cont"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-3.jpg" alt=""/>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sProdCard__img-cont"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-1.jpg" alt=""/>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sProdCard__img-cont"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-2.jpg" alt=""/>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sProdCard__img-cont"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-3.jpg" alt=""/>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sProdCard__img-cont"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-1.jpg" alt=""/>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sProdCard__img-cont"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-2.jpg" alt=""/>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sProdCard__img-cont"><img class="swiper-lazy" src="#" data-src="img/@2x/sProdCard-3.jpg" alt=""/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sProdCard__price-like-strip d-none d-sm-flex">
+								<div class="sProdCard__price">3 900 000 ₽
+								</div><a class="sProdCard__like-btn icon-btn-frame" href="#">
+								<svg class="icon icon-heart ">
+									<use xlink:href="img/svg/sprite.svg#heart"></use>
+								</svg></a>
+							</div>
+							<div class="sProdCard__chars-list">
+								<div class="sProdCard__headline">Характеристики
+								</div>
+								<div class="sProdCard__chars-item"><span>Этаж: </span><span>7</span>
+								</div>
+								<div class="sProdCard__chars-item"><span>Количество комнат: </span><span>2</span>
+								</div>
+								<div class="sProdCard__chars-item"><span>Всего этажей: </span><span>15</span>
+								</div>
+								<div class="sProdCard__chars-item"><span>Общая площадь: </span><span>73 кв. м.</span>
+								</div>
+								<div class="sProdCard__chars-item"><span>Тип дома: </span><span>Монолитный</span>
+								</div>
+								<div class="sProdCard__chars-item"><span>Жилая площадь: </span><span>56 кв. м.</span>
+								</div>
+								<div class="sProdCard__chars-item"><span>Год постройки </span><span>2019</span>
+								</div>
+								<div class="sProdCard__chars-item"><span>Площадь кухни: </span><span>12 кв. м.</span>
+								</div>
+							</div>
+							<div class="sProdCard__map">
+								<div class="sProdCard__headline">ул. Воскресенская 12А
+								</div>
+								<div class="sProdCard__map-cont">
+									<div class="sProdCard__map-inner-cont"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10158.698586354934!2d30.460393000000003!3d50.465783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdd1bf50ff55%3A0x5449b859d7752573!2z0YPQuy4g0KHQtdC80YzQuCDQpdC-0YXQu9C-0LLRi9GFLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1596469991978!5m2!1sru!2sua" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+									</div>
+								</div>
+							</div>
+							<div class="sProdCard__chars-list">
+								<div class="sProdCard__headline">Дополнительные характеристики
+								</div>
+								<div class="sProdCard__chars-item"><span>Этаж: </span><span>7</span>
+								</div>
+								<div class="sProdCard__chars-item"><span>Количество комнат: </span><span>2</span>
+								</div>
+								<div class="sProdCard__chars-item"><span>Всего этажей: </span><span>15</span>
+								</div>
+								<div class="sProdCard__chars-item"><span>Общая площадь: </span><span>73 кв. м.</span>
+								</div>
+								<div class="sProdCard__chars-item"><span>Тип дома: </span><span>Монолитный</span>
+								</div>
+								<div class="sProdCard__chars-item"><span>Жилая площадь: </span><span>56 кв. м.</span>
+								</div>
+								<div class="sProdCard__chars-item"><span>Год постройки </span><span>2019</span>
+								</div>
+								<div class="sProdCard__chars-item"><span>Площадь кухни: </span><span>12 кв. м.</span>
+								</div>
+							</div>
+							<div class="sProdCard__popular-objects">
+								<div class="sProdCard__headline">Популярные объекты
+								</div>
+								<div class="sProdCard__popular-slider">
+									<div class="popular-slider-prev swiper-prev-frame">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>
+									</div>
+									<div class="popular-slider-next swiper-next-frame">
+										<svg class="icon icon-chevron-right ">
+											<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+										</svg>
+									</div>
+									<div class="swiper-container popular-objects-slider">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="catalog-row">
+													<div class="catalog-row__item">
+														<div class="catalog-row__slider">
+															<div class="catalog-item-prev">
+																<svg class="icon icon-chevron-left ">
+																	<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+																</svg>
+															</div>
+															<div class="catalog-item-next">
+																<svg class="icon icon-chevron-right ">
+																	<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+																</svg>
+															</div>
+															<div class="catalog-item-pugin-js"></div>
+															<div class="swiper-container catalog-item-sl-js">
+																<div class="swiper-wrapper">
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-1.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-1.jpg" alt=""/></a>
+																	</div>
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-2.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-2.jpg" alt=""/></a>
+																	</div>
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-3.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-3.jpg" alt=""/></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="catalog-item-description">
+															<div class="catalog-item-description__price-bl">
+																<div class="catalog-item-description__price">3 900 000 ₽
+																</div><a class="catalog-item-description__like" href="#">
+																<svg class="icon icon-undefined ">
+																	<use xlink:href="img/svg/sprite.svg#undefined"></use>
+																</svg></a>
+															</div>
+															<div class="catalog-item-description__chars-list">
+																<div class="catalog-item-description__char-item">2-ком. квартира
+																</div>
+																<div class="catalog-item-description__char-item">73 кв. м.
+																</div>
+																<div class="catalog-item-description__char-item">2/15 эт.
+																</div>
+															</div>
+															<div class="catalog-item-description__bot-content">
+																<div class="catalog-item-description__bot-cont-txt">
+																	<div class="catalog-item-description__street">ул. Воскресенская 12А
+																	</div>
+																	<div class="catalog-item-description__city">м. Сокольники
+																	</div>
+																</div><a class="catalog-item-description__btn" href="#">
+																<svg class="icon icon-phone ">
+																	<use xlink:href="img/svg/sprite.svg#phone"></use>
+																</svg><span class="d-none d-sm-inline">Показать телефон</span></a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="catalog-row">
+													<div class="catalog-row__item">
+														<div class="catalog-row__slider">
+															<div class="catalog-item-prev">
+																<svg class="icon icon-chevron-left ">
+																	<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+																</svg>
+															</div>
+															<div class="catalog-item-next">
+																<svg class="icon icon-chevron-right ">
+																	<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+																</svg>
+															</div>
+															<div class="catalog-item-pugin-js"></div>
+															<div class="swiper-container catalog-item-sl-js">
+																<div class="swiper-wrapper">
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-1.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-1.jpg" alt=""/></a>
+																	</div>
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-2.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-2.jpg" alt=""/></a>
+																	</div>
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-3.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-3.jpg" alt=""/></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="catalog-item-description">
+															<div class="catalog-item-description__price-bl">
+																<div class="catalog-item-description__price">3 900 000 ₽
+																</div><a class="catalog-item-description__like" href="#">
+																<svg class="icon icon-undefined ">
+																	<use xlink:href="img/svg/sprite.svg#undefined"></use>
+																</svg></a>
+															</div>
+															<div class="catalog-item-description__chars-list">
+																<div class="catalog-item-description__char-item">2-ком. квартира
+																</div>
+																<div class="catalog-item-description__char-item">73 кв. м.
+																</div>
+																<div class="catalog-item-description__char-item">2/15 эт.
+																</div>
+															</div>
+															<div class="catalog-item-description__bot-content">
+																<div class="catalog-item-description__bot-cont-txt">
+																	<div class="catalog-item-description__street">ул. Воскресенская 12А
+																	</div>
+																	<div class="catalog-item-description__city">м. Сокольники
+																	</div>
+																</div><a class="catalog-item-description__btn" href="#">
+																<svg class="icon icon-phone ">
+																	<use xlink:href="img/svg/sprite.svg#phone"></use>
+																</svg><span class="d-none d-sm-inline">Показать телефон</span></a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="catalog-row">
+													<div class="catalog-row__item">
+														<div class="catalog-row__slider">
+															<div class="catalog-item-prev">
+																<svg class="icon icon-chevron-left ">
+																	<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+																</svg>
+															</div>
+															<div class="catalog-item-next">
+																<svg class="icon icon-chevron-right ">
+																	<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+																</svg>
+															</div>
+															<div class="catalog-item-pugin-js"></div>
+															<div class="swiper-container catalog-item-sl-js">
+																<div class="swiper-wrapper">
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-1.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-1.jpg" alt=""/></a>
+																	</div>
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-2.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-2.jpg" alt=""/></a>
+																	</div>
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-3.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-3.jpg" alt=""/></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="catalog-item-description">
+															<div class="catalog-item-description__price-bl">
+																<div class="catalog-item-description__price">3 900 000 ₽3
+																</div><a class="catalog-item-description__like" href="#">
+																<svg class="icon icon-undefined ">
+																	<use xlink:href="img/svg/sprite.svg#undefined"></use>
+																</svg></a>
+															</div>
+															<div class="catalog-item-description__chars-list">
+																<div class="catalog-item-description__char-item">2-ком. квартира
+																</div>
+																<div class="catalog-item-description__char-item">73 кв. м.
+																</div>
+																<div class="catalog-item-description__char-item">2/15 эт.
+																</div>
+															</div>
+															<div class="catalog-item-description__bot-content">
+																<div class="catalog-item-description__bot-cont-txt">
+																	<div class="catalog-item-description__street">ул. Воскресенская 12А
+																	</div>
+																	<div class="catalog-item-description__city">м. Сокольники
+																	</div>
+																</div><a class="catalog-item-description__btn" href="#">
+																<svg class="icon icon-phone ">
+																	<use xlink:href="img/svg/sprite.svg#phone"></use>
+																</svg><span class="d-none d-sm-inline">Показать телефон</span></a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="catalog-row">
+													<div class="catalog-row__item">
+														<div class="catalog-row__slider">
+															<div class="catalog-item-prev">
+																<svg class="icon icon-chevron-left ">
+																	<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+																</svg>
+															</div>
+															<div class="catalog-item-next">
+																<svg class="icon icon-chevron-right ">
+																	<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+																</svg>
+															</div>
+															<div class="catalog-item-pugin-js"></div>
+															<div class="swiper-container catalog-item-sl-js">
+																<div class="swiper-wrapper">
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-1.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-1.jpg" alt=""/></a>
+																	</div>
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-2.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-2.jpg" alt=""/></a>
+																	</div>
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-3.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-3.jpg" alt=""/></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="catalog-item-description">
+															<div class="catalog-item-description__price-bl">
+																<div class="catalog-item-description__price">3 900 000 ₽4
+																</div><a class="catalog-item-description__like" href="#">
+																<svg class="icon icon-undefined ">
+																	<use xlink:href="img/svg/sprite.svg#undefined"></use>
+																</svg></a>
+															</div>
+															<div class="catalog-item-description__chars-list">
+																<div class="catalog-item-description__char-item">2-ком. квартира
+																</div>
+																<div class="catalog-item-description__char-item">73 кв. м.
+																</div>
+																<div class="catalog-item-description__char-item">2/15 эт.
+																</div>
+															</div>
+															<div class="catalog-item-description__bot-content">
+																<div class="catalog-item-description__bot-cont-txt">
+																	<div class="catalog-item-description__street">ул. Воскресенская 12А
+																	</div>
+																	<div class="catalog-item-description__city">м. Сокольники
+																	</div>
+																</div><a class="catalog-item-description__btn" href="#">
+																<svg class="icon icon-phone ">
+																	<use xlink:href="img/svg/sprite.svg#phone"></use>
+																</svg><span class="d-none d-sm-inline">Показать телефон</span></a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="catalog-row">
+													<div class="catalog-row__item">
+														<div class="catalog-row__slider">
+															<div class="catalog-item-prev">
+																<svg class="icon icon-chevron-left ">
+																	<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+																</svg>
+															</div>
+															<div class="catalog-item-next">
+																<svg class="icon icon-chevron-right ">
+																	<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+																</svg>
+															</div>
+															<div class="catalog-item-pugin-js"></div>
+															<div class="swiper-container catalog-item-sl-js">
+																<div class="swiper-wrapper">
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-1.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-1.jpg" alt=""/></a>
+																	</div>
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-2.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-2.jpg" alt=""/></a>
+																	</div>
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-3.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-3.jpg" alt=""/></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="catalog-item-description">
+															<div class="catalog-item-description__price-bl">
+																<div class="catalog-item-description__price">3 900 000 ₽5
+																</div><a class="catalog-item-description__like" href="#">
+																<svg class="icon icon-undefined ">
+																	<use xlink:href="img/svg/sprite.svg#undefined"></use>
+																</svg></a>
+															</div>
+															<div class="catalog-item-description__chars-list">
+																<div class="catalog-item-description__char-item">2-ком. квартира
+																</div>
+																<div class="catalog-item-description__char-item">73 кв. м.
+																</div>
+																<div class="catalog-item-description__char-item">2/15 эт.
+																</div>
+															</div>
+															<div class="catalog-item-description__bot-content">
+																<div class="catalog-item-description__bot-cont-txt">
+																	<div class="catalog-item-description__street">ул. Воскресенская 12А
+																	</div>
+																	<div class="catalog-item-description__city">м. Сокольники
+																	</div>
+																</div><a class="catalog-item-description__btn" href="#">
+																<svg class="icon icon-phone ">
+																	<use xlink:href="img/svg/sprite.svg#phone"></use>
+																</svg><span class="d-none d-sm-inline">Показать телефон</span></a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="catalog-row">
+													<div class="catalog-row__item">
+														<div class="catalog-row__slider">
+															<div class="catalog-item-prev">
+																<svg class="icon icon-chevron-left ">
+																	<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+																</svg>
+															</div>
+															<div class="catalog-item-next">
+																<svg class="icon icon-chevron-right ">
+																	<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+																</svg>
+															</div>
+															<div class="catalog-item-pugin-js"></div>
+															<div class="swiper-container catalog-item-sl-js">
+																<div class="swiper-wrapper">
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-1.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-1.jpg" alt=""/></a>
+																	</div>
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-2.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-2.jpg" alt=""/></a>
+																	</div>
+																	<div class="swiper-slide"><a class="catalog-row__fancy-link" href="img/@2x/prod-card-3.jpg" data-fancybox="popularSlideImg"><img src="img/@2x/prod-card-3.jpg" alt=""/></a>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="catalog-item-description">
+															<div class="catalog-item-description__price-bl">
+																<div class="catalog-item-description__price">3 900 000 ₽6
+																</div><a class="catalog-item-description__like" href="#">
+																<svg class="icon icon-undefined ">
+																	<use xlink:href="img/svg/sprite.svg#undefined"></use>
+																</svg></a>
+															</div>
+															<div class="catalog-item-description__chars-list">
+																<div class="catalog-item-description__char-item">2-ком. квартира
+																</div>
+																<div class="catalog-item-description__char-item">73 кв. м.
+																</div>
+																<div class="catalog-item-description__char-item">2/15 эт.
+																</div>
+															</div>
+															<div class="catalog-item-description__bot-content">
+																<div class="catalog-item-description__bot-cont-txt">
+																	<div class="catalog-item-description__street">ул. Воскресенская 12А
+																	</div>
+																	<div class="catalog-item-description__city">м. Сокольники
+																	</div>
+																</div><a class="catalog-item-description__btn" href="#">
+																<svg class="icon icon-phone ">
+																	<use xlink:href="img/svg/sprite.svg#phone"></use>
+																</svg><span class="d-none d-sm-inline">Показать телефон</span></a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="sProdCard__help-bl">
+								<div class="sProdCard__help-headline">Нужна помощь специалиста?
+								</div>
+								<div class="sProdCard__help-img"><img class="lazy" src="#" data-src="img/@2x/tetiana-img.jpg" alt=""/>
+								</div>
+								<div class="sProdCard__help-name">Татьяна
+								</div>
+								<div class="sProdCard__help-txt">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor</p>
+								</div><a class="sProdCard__order-help-btn" href="#">Заказать звонок</a><a class="sProdCard__help-show-btn" href="#">
+								<svg class="icon icon-phone ">
+									<use xlink:href="img/svg/sprite.svg#phone"></use>
+								</svg><span>Показать телефон</span></a>
+							</div>
+							<div class="sProdCard__precents">
+								<div class="sProdCard__precents-item">
+									<div class="sProdCard__precents-bank">
+										<div class="sProdCard__precents-img"><img class="lazy" src="#" data-src="img/@2x/bank-img-1.png" alt=""/>
+										</div>
+										<div class="sProdCard__precents-txt">Сбербанк   18%
+										</div>
+									</div>
+									<div class="sProdCard__percents-date">от 28.05.2020
+									</div>
+								</div>
+								<div class="sProdCard__precents-item">
+									<div class="sProdCard__precents-bank">
+										<div class="sProdCard__precents-img"><img class="lazy" src="#" data-src="img/@2x/bank-img-2.png" alt=""/>
+										</div>
+										<div class="sProdCard__precents-txt">Дом.рф   15%
+										</div>
+									</div>
+									<div class="sProdCard__percents-date">от 28.05.2020
+									</div>
+								</div>
+								<div class="sProdCard__precents-item">
+									<div class="sProdCard__precents-bank">
+										<div class="sProdCard__precents-img"><img class="lazy" src="#" data-src="img/@2x/bank-img-3.png" alt=""/>
+										</div>
+										<div class="sProdCard__precents-txt">Росбанк   18%
+										</div>
+									</div>
+									<div class="sProdCard__percents-date">от 28.05.2020
+									</div>
+								</div>
+								<div class="sProdCard__precents-item">
+									<div class="sProdCard__precents-bank">
+										<div class="sProdCard__precents-img"><img class="lazy" src="#" data-src="img/@2x/bank-img-4.png" alt=""/>
+										</div>
+										<div class="sProdCard__precents-txt">Россельхозбанк   20%
+										</div>
+									</div>
+									<div class="sProdCard__percents-date">от 28.05.2020
+									</div>
+								</div>
+							</div>
+							<div class="sProdCard__credit-calc-btn credit-show-js">Рассчитать ипотеку
+							</div>
+							<div class="sProdCard__credit credit-block-js visiable">
+								<div class="sProdCard__credit-hide-btn credit-hide-js">Свернуть
+								</div>
+								<div class="sProdCard__credit-headline">Онлайн-калькулятор ипотеки
+								</div>
+								<div class="sProdCard__credit-items">
+									<div class="sProdCard__credit-item">
+										<div class="sProdCard__credit-title">Стоимость объекта
+										</div>
+										<div class="range-wrap">
+											<input class="range-slider-single-js" value="" data-min="200000" data-from="256000" data-max="1000000" data-postfix=" ₽" data-step="1000" type="text" name=""/>
+										</div>
+									</div>
+									<div class="sProdCard__credit-item">
+										<div class="sProdCard__credit-title">Собственные средства
+										</div>
+										<div class="range-wrap">
+											<input class="range-slider-single-js" value="" data-min="0" data-from="50000" data-max="1000000" data-postfix=" ₽" data-step="1000" type="text" name=""/>
+										</div>
+									</div>
+									<div class="sProdCard__credit-item">
+										<div class="sProdCard__credit-title">Срок кредитования
+										</div>
+										<div class="range-wrap">
+											<input class="range-slider-single-js" value="" data-min="12" data-from="240" data-max="240" data-postfix=" мес." data-step="1" type="text" name=""/>
+										</div>
+									</div>
+									<div class="sProdCard__credit-item">
+										<div class="sProdCard__credit-title">Процентная ставка
+										</div>
+										<div class="range-wrap">
+											<input class="range-slider-single-js" value="" data-min="1" data-from="15" data-max="50" data-postfix=" %" data-step="1" type="text" name=""/>
+										</div>
+									</div>
+								</div><a class="sProdCard__credit-get-btn" href="#">Получить ипотеку</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sProdCard-->
+			<footer class="footer block-with-lazy">
+				<div class="footer__container container"><a class="footer__mob-logo d-sm-none" href="#">HouseHunters</a>
+					<div class="footer__row row d-none d-sm-flex">
+						<div class="footer__col col-sm-6 col-lg-3">
+							<div class="footer__headline">Меню
+							</div>
+							<ul>
+								<li><a href="#">Купить</a></li>
+								<li><a href="#">Продать</a></li>
+								<li><a href="#">Сдать</a></li>
+								<li><a href="#">Снять</a></li>
+								<li><a href="#">Без агента</a></li>
+							</ul>
+						</div>
+						<div class="footer__col col-sm-6 col-lg-3">
+							<div class="footer__headline">Наша компания
+							</div>
+							<ul>
+								<li><a href="#">О компании</a></li>
+								<li><a href="#">Вакансии</a></li>
+								<li><a href="#">Отзывы</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+						<div class="footer__col col-sm-6 col-lg-3">
+							<div class="footer__headline">Услуги
+							</div>
+							<ul>
+								<li><a href="#">Ремонт</a></li>
+								<li><a href="#">Дизайн</a></li>
+							</ul>
+						</div>
+						<div class="footer__col col-sm-6 col-lg-3">
+							<div class="footer__headline">Сотрудничество
+							</div>
+							<ul>
+								<li><a href="#">Сотрудничество</a></li>
+								<li><a href="#">Сдать в управление</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__lower-row row">
+						<div class="footer__lower-col col-sm-6 col-lg-auto">
+							<div class="soc"><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-vk.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-insta.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-youtube.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-fb.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-odnokl.svg" alt=""/></a>
+							</div>
+						</div>
+						<div class="footer__lower-col col-sm-6 col-lg-auto d-none d-sm-block"><a class="footer__mail-link" href="mailto:Info@hh-r.ru">
+							<svg class="icon icon-mail ">
+								<use xlink:href="img/svg/sprite.svg#mail"></use>
+							</svg><span>Info@hh-r.ru</span></a>
+						</div>
+						<div class="footer__lower-col col-sm-6 col-lg-auto d-none d-sm-block"><a class="footer__phone-link" href="tel:">
+							<svg class="icon icon-phone ">
+								<use xlink:href="img/svg/sprite.svg#phone"></use>
+							</svg><span>+7 812 333-55-15</span></a>
+						</div>
+						<div class="footer__lower-col col-sm-6 col-lg-auto">
+							<div class="footer__all-rights-txt"><span class="d-none d-xxl-inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br/>tempor incididunt ut  magna aliqua.  /
+									</span><span>@2020. Все права защищены</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div class="modal-win" id="modal-call" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<div class="text-center">
+						<div class="form-wrap__title-h">Консультация
+						</div>
+						<p class="after-headline">Оставьте заявку и&nbsp;мы&nbsp;вам перезвоним</p>
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Имя</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit">Оставить заявку
+					</button>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<script src="js/lazy.js"></script>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<!-- modal libs-->
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/js/swiper.min.js"></script>
+		<!-- /slider libs-->
+		<!--range slider-->
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>

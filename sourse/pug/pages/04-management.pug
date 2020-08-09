@@ -16,6 +16,7 @@ include ../blocks/sCompanyTargets/_sCompanyTargets.pug
 include ../blocks/sDigits/_sDigits.pug
 include ../blocks/sOurEmployee/_sOurEmployee.pug
 include ../blocks/sOffice/_sOffice.pug
+include ../blocks/sWorkingComditions/_sWorkingComditions.pug
 
 block variables
 	- let  mainPage= null
@@ -28,25 +29,39 @@ block pagecontent
 		+header()
 			+infoStrip()
 			+top-nav()(class='with-white-aside')
-				img.lazy(src="#" data-src="img/@2x/logo-green.png" alt="")
+				//- img.lazy(src="#" data-src="img/@2x/logo-green.png" alt="")
 		//-+sChosenObj()
-		+pageHead()
+		+pageHead(class="pageHead--04")
 			style.
 				@media (min-width: 576px) {
 					.pageHead {
-						background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), no-repeat center/cover url(img/@2x/about-company-page-head.jpg);
+						background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), no-repeat center/cover url(img/@2x/managment-page-head.jpg);
 					}
 				}
-			.container.text-center
-				+b.section-title
-					h2
-						| Нам доверяют свою недвижимость Управляем объектами более 34&nbsp;собственников Доверьтесь и&nbsp;Вы
-				//- +e.A.default-btn(href="#") Узнать больше
-		+dayInCompany()
-		+sForm()
-		+sCompanyMission()
-		+sCompanyTargets()
-		+sDigits()
-		+sOurEmployee()
-		+sOffice()
+			.container
+				+b.section-title.text-center
+					h1 Нам доверяют свою недвижимость Управляем&nbsp;объектами более 34&nbsp;собственников Доверьтесь и&nbsp;Вы
+				+e.roww.row.align-items-center
+					.col-lg-4
+						+e.warranty
+							+icon('check')
+							span Гибкая система вознаграджения
+					.col-lg-4
+						+e.warranty
+							+icon('check')
+							span Индивидуальный&nbsp;подход к каждому клиенту
+					.col-lg-4
+						+e.warranty
+							+icon('check')
+							span Прозрачное сотрудничество
+				.text-center
+					+e.A.default-btn(href="#") Сдать в управление
+		//- +dayInCompany()
+		+sWorkingComditions()
+		+sForm-04()
+		//- +sCompanyMission()
+		//- +sCompanyTargets()
+		//- +sDigits()
+		//- +sOurEmployee()
+		//- +sOffice()
 		+footer()
