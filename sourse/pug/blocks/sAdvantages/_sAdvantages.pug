@@ -3,12 +3,13 @@ mixin sAdvantages()
 	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
 		.container
 
-				
+			+b.section-title.d-lg-none
+				h2 Преимущества работы в&nbsp;HouseHunters
 			.row.align-items-center
 				.col-lg-6
 					+pic('advantages')
 				.col-lg-6
-					+b.section-title
+					+b.section-title.d-none.d-lg-block
 						h2 Преимущества работы в&nbsp;HouseHunters
 					.row
 						mixin item(i,t)

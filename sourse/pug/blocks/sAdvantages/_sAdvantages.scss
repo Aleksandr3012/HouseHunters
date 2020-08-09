@@ -1,6 +1,9 @@
 // start .sAdvantages
 .sAdvantages {
-	padding-top: calc(var(--sPT) * 1.25);
+	padding-top: calc(var(--sPT) / 1.25);
+	@include media-breakpoint-up(lg) {
+		padding-top: calc(var(--sPT) * 1.25);
+	}
 
 	.section-title {
 		padding-top: rem(25);
@@ -28,6 +31,7 @@
 		@include media-breakpoint-down(lg) {
 			border-radius: 10px;
 			overflow: hidden;
+			margin-bottom: rem(30);
 		}
 
 		img {
