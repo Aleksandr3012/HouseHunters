@@ -248,7 +248,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 
 	var screenName;
-	screenName = '13.jpg';
+	screenName = '08.jpg';
 	screenName ? $(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>")) : ''; // /добавляет подложку для pixel perfect
 
 	function whenResize() {
@@ -784,7 +784,9 @@ function eventHandler() {
 		$('.more-filters-cont').slideToggle();
 	}); //multiple select
 
-	$('.multiple-select-js').select2(); //prod card slider
+	$('.multiple-select-js').select2({
+		dropdownCssClass: "checkbox-list"
+	}); //prod card slider
 
 	var prodCardThumb = new Swiper('.prod-card-thumb-js', {
 		slidesPerView: 'auto',
@@ -828,7 +830,7 @@ function eventHandler() {
 		},
 		//pugination
 		pagination: {
-			el: $(this).find('.day-in-company-pugin'),
+			el: $(this).find('.popular-slider-pugin'),
 			clickable: true
 		}
 	}); //calc credit js
@@ -852,14 +854,8 @@ function eventHandler() {
 	}); //instance = $range.data("ionRangeSlider");
 
 	/*
-	* 1. 03 pad bottom, finish calc
-	* popular slides fancygalery split
-	* 6. seek bugs
 	* 7. 03 modal
 	* 8. main page modal
-	* 9. main page with other pictures
-	* 10. 02 with other filters
-	* 11 fix width of top line
 	* */
 	//end luckyone JS
 }

@@ -21,6 +21,12 @@ block pagecontent
 			+top-nav()(class='with-black-aside')
 				//-with-white-aside
 		+sMainPage
+			style.
+				@media (min-width: 576px) {
+					.sMainPage {
+						background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), no-repeat center/cover url(img/@2x/main-page-bg.jpg);
+					}
+				}
 	//+footer()
 
 

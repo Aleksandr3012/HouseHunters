@@ -4,6 +4,20 @@
 	&.top-buy{
 		.form-wrap{
 			margin-bottom: 0;
+
+			&__tb-top-strip{
+				display: flex;
+				flex-direction: column;
+			}
+			&__top-chb-block{
+				width: 100%;
+				.tob-chb-list{
+					padding-left: 0;
+					padding-bottom: 20px !important;
+				}
+			}
+
+
 			&__tb-buy-btn{
 				width: rem(160);
 				height: rem(39);
@@ -354,7 +368,8 @@
 	}
 }
 
-.select2-dropdown{
+//.select2-dropdown
+.checkbox-list{
 	z-index: 25!important;
 	//transform: translateY(20px);
 	border: 2px solid $light !important;
