@@ -12,7 +12,7 @@ mixin sWithoutAgent()
 								+e.title!= t
 								+e.text!= p
 								+e.price!= c
-							+e.A.btn.link-modal(href="#modal-call") Оставить заявку
+							+e.A.btn.link-modal(href="#modal-call" data-title= t data-order= t) Оставить заявку
 
 				+item(1, `Консультация`, `Консультация по&nbsp;проведению сделки`, `5&nbsp;000&nbsp;₽`)
 				+item(2, `Купля-продажа`, `Составление договора купли-продажи 1-й сложности (2&nbsp;участника)`, `2&nbsp;000&nbsp;₽`)

@@ -47,9 +47,9 @@ const JSCCommon = {
 							// console.log(modal.querySelector(elem).tagName)
 						}
 					}
-					setValue(data.title, '.ttu');
-					setValue(data.text, '.after-headline');
-					setValue(data.btn, '.btn');
+					setValue(data.title, '.form-wrap__title-h');
+					// setValue(data.text, '.after-headline');
+					// setValue(data.btn, '.btn');
 					setValue(data.order, '.order');
 				})
 			})

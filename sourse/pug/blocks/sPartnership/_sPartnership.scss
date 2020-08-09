@@ -1,41 +1,72 @@
 	// start .sPartnership
 	.sPartnership {
-
+		@include media-breakpoint-up(sm) {
+		padding-top: 97px;
+		}
+		padding-top: 0;
 		background-color: $gray-100;
 
-		// &__col{
-		// 	display: flex;
-		// }
+		&__col{
+			@include media-breakpoint-up(md) {
+				margin-bottom: 20px;
+			}
+			margin-bottom: 25px;
+		}
+
+		&__title{
+			@include media-breakpoint-up(sm) {
+				padding-bottom: 20px;
+			}
+			padding-bottom: 40px;
+		}
 
 		&__item {
 			display: flex;
 			background: #FFFFFF;
 			box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
 			border-radius: 5px;
-			margin-bottom: 20px;
-		}
-
-		&__bg-img-wrap{
-			display: flex;
+			min-height: 95px;
+			height: 100%;
 			align-items: center;
-			justify-content: center;
-			width: 40px;
-			height: 40px;
-			// flex-grow: 0;
-			border-radius: 50%;
-			background-color: $green;
-			margin: 15px 20px
+			@include media-breakpoint-up(md) {
+				min-height: 70px;
+			}
 		}
 
 		&__img-wrap{
-			width: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include media-breakpoint-up(sm) {
+				width: 40px;
+				height: 40px;
+			}
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background-color: $green;
+			margin: 15px 20px;
+			flex-shrink: 0;
+			// img{
+			// 	max-width: 100%;
+			// 	max-height: 100%;
+			// 	width: auto;
+			// 	height: auto;
+			// }
+			
 		}
 
 		&__text{
 			font-weight: 500;
 			font-size: 20px;
-			line-height: (40 / 20);
-			padding: 15px;
+			@include media-breakpoint-up(sm) {
+				line-height: (40 / 20);
+				padding-top: 15px;
+				padding-bottom: 15px;
+			}
+			line-height: (33 / 20);
+			padding-top: 25px;
+			padding-bottom: 25px;
 		}
 		
 		&__btn{
@@ -44,6 +75,12 @@
 			line-height: (20 / 16);
 			padding-right: 113px;
 			padding-left: 113px;
+			@include media-breakpoint-up(sm) {
+				margin-top: 20px;
+				margin-bottom: 60px;
+			}
+			margin-top: 5px;
+			margin-bottom: 50px;
 			width: 316px;
 			// text-align: center;
 			// @include media-breakpoint-up(md) {

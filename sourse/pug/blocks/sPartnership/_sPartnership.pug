@@ -2,15 +2,14 @@ mixin sPartnership()
 	// start sPartnership
 	+b.SECTION.sPartnership.section#sPartnership&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+e.title.section-title.text-center
 				h2 Агентам
 			.row
 				mixin item(i,p)
-					.col-md-6
+					+e.col.col-md-6
 						+e.item
-							+e.bg-img-wrap
-								+e.img-wrap
-									img.lazy(src="#" data-src=`img/svg/sPartnership-${i}.svg`, alt="")
+							+e.img-wrap
+								img.lazy(src="#" data-src=`img/svg/sPartnership-${i}.svg`, alt="")
 							+e.text!= p
 					block
 					
@@ -19,8 +18,8 @@ mixin sPartnership()
 				+item(3, `Доступ к&nbsp;базам недвижимости`)
 				+item(4, `Партнерские программы`)
 				.text-center
-					+e.A.btn(href="#") Связаться
-				+b.section-title.text-center
+					+e.A.btn.link-modal(href="#modal-partnership") Связаться
+				+e.title.section-title.text-center
 					h2 Компаниям
 				+item(5, `Региональным&nbsp;&mdash; консультация клиента`)
 				+item(6, `Партнерские программы`)

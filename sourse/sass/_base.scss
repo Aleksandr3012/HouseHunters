@@ -202,12 +202,36 @@ ul {
 
 
 .tabs {
+	&__caption{
+		display: flex;
+		margin-bottom: 25px;
+	}
+
 	&__btn {
+		border: 2px solid #2A7D03;
+		color: #2A7D03;
+		padding: 10px 14px;
+		cursor: pointer;
+		flex-grow: 1;
+		width: 50%;
+		text-align: center;
+		font-weight: bold;
+		&:first-child{
+			border-radius: 5px 0px 0px 5px;
+		}
+		&:last-child{
+			border-radius: 0px 5px 5px 0px;
+		}
 		&:hover {
 			cursor: pointer;
+			background-color: #2A7D03;
+			color: #fff;
 		}
 
-		&.active {}
+		&.active {
+			background-color: #2A7D03;
+			color: #fff;
+		}
 
 	}
 
