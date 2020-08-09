@@ -40,8 +40,9 @@
 		left: 50%;
 		transform: translateX(-50%) translateY(-50%);
 		font-weight: bold;
-
 		background-color: transparent;
+
+		white-space: nowrap;
 	}
 	&__cross-btn{
 		display: none;
@@ -240,11 +241,15 @@
 		}
 	}
 
-	//description
-	&__description{
-		padding: rem(20);
-	}
-	//
+
+	&__{}
+	&__{}
+}
+
+//description
+.catalog-item-description{
+	padding: rem(20);
+
 	&__price-bl{
 		display: flex;
 		justify-content: space-between;
@@ -370,8 +375,4 @@
 			line-height: (20/16);
 		}
 	}
-
-
-	&__{}
-	&__{}
 }
