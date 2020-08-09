@@ -1,0 +1,79 @@
+// start .sReviews
+.sReviews {
+	padding-top: var(--sPT);
+	padding-bottom: var(--sPB);
+	background-color: $light;
+
+	&__btn {
+		@extend .btn-pr;
+		font-weight: bold;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		max-width: rem(310);
+	}
+
+	&__vk {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&__slideWrap {
+		border-radius: $border-radius;
+		background-color: #ffffff;
+		box-shadow: 0 1px $border-radius rgba(0, 0, 0, 0.1);
+		padding: rem(30) rem(20) rem(46);
+	}
+
+	.swiper-container {
+		margin-bottom: rem(30);
+	}
+	.review-slider-pugin {
+		margin-bottom: rem(40);
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sReviews
+
+.rating {
+	display: flex;
+	flex-direction: row-reverse;
+	margin-bottom: rem(20);
+
+	&__item {
+		@include mt;
+		.icon {
+			color: $secondary;
+		}
+	}
+
+	[data-total-value="1"] &__item:nth-child(n + 5),
+	[data-total-value="2"] &__item:nth-child(n + 4),
+	[data-total-value="3"] &__item:nth-child(n + 3),
+	[data-total-value="4"] &__item:nth-child(n + 2),
+	[data-total-value="5"] &__item:nth-child(n + 1){
+		.icon {
+			color: #ffc107;
+		}
+	}
+}
+

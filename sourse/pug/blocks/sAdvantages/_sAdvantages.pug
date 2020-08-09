@@ -1,0 +1,27 @@
+mixin sAdvantages()
+	// start sAdvantages
+	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
+		.container
+
+				
+			.row.align-items-center
+				.col-lg-6
+					+pic('advantages')
+				.col-lg-6
+					+b.section-title
+						h2 Преимущества работы в&nbsp;HouseHunters
+					.row
+						mixin item(i,t)
+							.col-sm-6
+								+e.item
+									+icon(`marketing-${i}`)
+									+e.text= t
+						+item('1','Полная рекламная поддержка')
+						+item('2','Удобный офис')
+						+item('3','Высокий % от сделки')
+						+item('4','Карьерный рост')
+						+item('5','Обучение')
+						+item('6','Информационные базы')
+					
+
+	// end sAdvantages

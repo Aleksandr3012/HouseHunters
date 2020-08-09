@@ -1,0 +1,19 @@
+mixin sListVacancies()
+	// start sListVacancies
+	+b.SECTION.sListVacancies.section#sListVacancies&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Список вакансий
+				
+			+e.row.row
+				mixin item(t)
+					.col-lg-6
+						+e.item
+							+e.roww
+								+e.title= t
+								+e.price от 40 000 ₽
+							+e.sity Москва, Россия
+				+item('Агент')
+				+item('Менеджер')
+			+e.A.btn.link-modal(href="#") Прислать резюме
+	// end sListVacancies

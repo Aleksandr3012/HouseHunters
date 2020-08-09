@@ -17,3 +17,35 @@ mixin sForm()
 					+e.BUTTON.btn(type="submit") Оставить заявку
 
 	// end sForm
+
+mixin sForm-04()
+	// start sForm
+	+b.SECTION.sForm.section#sForm&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Сдать объект в управление
+				//- p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt&nbsp;ut labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation
+			+b.buy-sel-form
+				+form-wrap()
+					+e.row.row
+						.col-md-4
+							+input('Имя', 'text', undefined, 'name')
+						.col-md-4
+							+input('Номер телефона', 'tel')
+						.col-md-4
+							+e.inputs-strip
+								+e.pop-up-wrap.pop-up-wrap-js.object-type
+									+e.pop-up-header.pop-up-header-js
+										span Тип объекта
+										+icon('chevron-down')
+									+e.pop-up-content.object-type.pop-up-content-js
+										+e.long-ch-cont
+											+objectTypeItem('Квартиры')
+											+objectTypeItem('Комнаты')
+											+objectTypeItem('Дома, дачи, коттеджи')
+											+objectTypeItem('Коммерческая недвижимость')
+											+objectTypeItem('Земельные участки')
+											+objectTypeItem('Гаражи и машиноместа')
+											+objectTypeItem('Новостройки')
+					.text-center
+						+e.BUTTON.btn(type="submit") Сдать в управление

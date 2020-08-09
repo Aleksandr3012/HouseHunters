@@ -3,4 +3,6 @@
 1. <https://aleksandr3012.github.io/HouseHunters/public/02-catalog.html>
 1. <https://aleksandr3012.github.io/HouseHunters/public/04-management.html> Сдача в управление 
 1. <https://aleksandr3012.github.io/HouseHunters/public/06-about-company.html>
+1. <https://aleksandr3012.github.io/HouseHunters/public/07-vacancies.html> Вакансии
+1. <https://aleksandr3012.github.io/HouseHunters/public/08-reviews.html> Вакансии
 1. <https://aleksandr3012.github.io/HouseHunters/public/10-personal-cabinet.html>

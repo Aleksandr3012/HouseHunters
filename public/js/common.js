@@ -248,7 +248,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 
 	var screenName;
-	screenName = '01-alt.png';
+	screenName = '07.jpg';
 	screenName ? $(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>")) : ''; // /добавляет подложку для pixel perfect
 
 	function whenResize() {
@@ -565,6 +565,38 @@ function eventHandler() {
 		//pugination
 		pagination: {
 			el: $(this).find('.partners-slider-pugin'),
+			clickable: true
+		}
+	});
+	var reviewSlider = new Swiper('.review-slider-js', {
+		spaceBetween: 30,
+		slidesPerView: 1,
+		grabCursor: true,
+		centeredSlides: true,
+		//breakpoints
+		breakpoints: {
+			//lg
+			992: {
+				slidesPerView: 3
+			},
+			576: {
+				slidesPerView: 2
+			}
+		},
+		loop: true,
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 4
+		},
+		//nav
+		navigation: {
+			nextEl: $(this).find('.review-slider-next'),
+			prevEl: $(this).find('.review-slider-prev')
+		},
+		//pugination
+		pagination: {
+			el: $(this).find('.review-slider-pugin'),
 			clickable: true
 		}
 	}); // rangle sliders for main page
