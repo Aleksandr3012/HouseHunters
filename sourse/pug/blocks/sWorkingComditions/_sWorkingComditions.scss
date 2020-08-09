@@ -1,0 +1,51 @@
+// start .sWorkingComditions
+.sWorkingComditions {
+	&__item {
+		border-radius: $border-radius;
+		background-color: $light;
+		display: flex;
+		align-items: center;
+		padding: rem(15) rem(10) rem(16);
+		margin-bottom: rem(20);
+	}
+
+	&__numb {
+		color: #fff;
+		background-color: $primary;
+		width: 39px;
+		height: 39px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		font-size: 20px;
+		margin-right: rem(20);
+		border-radius: 50%;
+	}
+
+	&__text {
+		font-size: 20px;
+		font-weight: 500;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sWorkingComditions

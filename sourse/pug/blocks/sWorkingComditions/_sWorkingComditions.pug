@@ -1,0 +1,19 @@
+mixin sWorkingComditions()
+	// start sWorkingComditions
+	+b.SECTION.sWorkingComditions.section#sWorkingComditions&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Условия работы
+			.row
+				mixin item(n,t)
+					.col-md-6.col-lg-4
+						+e.item
+							+e.numb= n
+							+e.text= t
+				+item('1','Полная эксклюзивность')
+				+item('3','Фиксированный %')
+				+item('5','Полный пакет документов')
+				+item('2','Доступ к объекту')
+				+item('4','Право выбора арендатора')
+				+item('6','Гибкая ценовая политика')
+	// end sWorkingComditions

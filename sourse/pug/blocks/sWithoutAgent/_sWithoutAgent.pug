@@ -1,0 +1,31 @@
+mixin sWithoutAgent()
+	// start sWithoutAgent
+	+b.sWithoutAgent.section#sWithoutAgent&attributes(attributes)
+		.container
+			+e.row.row
+				mixin item(i,t,p,c)
+					+e.col.col-lg-3.col-md-4
+						+e.item
+							+e.img-wrap
+								img.lazy(src="#" data-src=`img/svg/sWAgent-${i}.svg`, alt="")
+							+e.text-block
+								+e.title!= t
+								+e.text!= p
+								+e.price!= c
+							+e.A.btn.link-modal(href="#modal-call") Оставить заявку
+
+				+item(1, `Консультация`, `Консультация по&nbsp;проведению сделки`, `5&nbsp;000&nbsp;₽`)
+				+item(2, `Купля-продажа`, `Составление договора купли-продажи 1-й сложности (2&nbsp;участника)`, `2&nbsp;000&nbsp;₽`)
+				+item(3, `Купля-продажа`, `Составление договора купли-продажи 2-й сложности (2+&nbsp;участников)`, `5&nbsp;000&nbsp;₽`)
+				+item(4, `Цессия`, `Составление договора цессии`, `2&nbsp;000&nbsp;₽`)
+				+item(5, `Договор аренды`, `Составление договора аренды`, `1&nbsp;500&nbsp;₽`)
+				+item(6, `Ипотечный кредит`, `Согласование ипотечного кредита`, `10&nbsp;000&nbsp;₽`)
+				+item(7, `Проверка участника`, `Проверка участника сделки`, `2&nbsp;000&nbsp;₽`)
+				+item(8, `Выписка`, `Выписка из&nbsp;ЕГРН`, `100&nbsp;₽`)
+
+
+
+
+
+
+	// end sWithoutAgent

@@ -1,0 +1,76 @@
+	// start .sPartnership
+	.sPartnership {
+
+		background-color: $gray-100;
+
+		// &__col{
+		// 	display: flex;
+		// }
+
+		&__item {
+			display: flex;
+			background: #FFFFFF;
+			box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+			margin-bottom: 20px;
+		}
+
+		&__bg-img-wrap{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 40px;
+			height: 40px;
+			// flex-grow: 0;
+			border-radius: 50%;
+			background-color: $green;
+			margin: 15px 20px
+		}
+
+		&__img-wrap{
+			width: 20px;
+		}
+
+		&__text{
+			font-weight: 500;
+			font-size: 20px;
+			line-height: (40 / 20);
+			padding: 15px;
+		}
+		
+		&__btn{
+			@extend .btn-pr;
+			font-weight: bold;
+			line-height: (20 / 16);
+			padding-right: 113px;
+			padding-left: 113px;
+			width: 316px;
+			// text-align: center;
+			// @include media-breakpoint-up(md) {
+			// 	flex-grow: 0;
+			// }
+		}
+		
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+
+} // end.sPartnership

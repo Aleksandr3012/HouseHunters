@@ -160,12 +160,7 @@
 					<div class="container">
 						<div class="form-wrap">
 							<form>
-								<input type="hidden" name="example-input-field"/>
 								<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-								<input class="utm_source" type="hidden" name="utm_source"/>
-								<input class="utm_term" type="hidden" name="utm_term"/>
-								<input class="utm_medium" type="hidden" name="utm_medium"/>
-								<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 								<div class="form-wrap__tb-top-strip">
 									<div class="form-wrap__tb-buy-btn">Купить
 									</div>
@@ -1254,26 +1249,24 @@
 		<div class="modal-win" id="modal-call" style="display: none">
 			<div class="form-wrap">
 				<form>
-					<input type="hidden" name="example-input-field"/>
 					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 					<div class="text-center">
-						<div class="form-wrap__title h3 ttu">Обратный звонок
+						<div class="form-wrap__title-h">Консультация
 						</div>
-						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+						<p class="after-headline">Оставьте заявку и&nbsp;мы&nbsp;вам перезвоним</p>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
-					</div>
-					<!-- +e.input-wrap-->
-					<button class="form-wrap__btn btn" type="submit"> 
-					</button>
-					<div class="form-wrap__polite">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Имя</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
 						</label>
 					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit">Оставить заявку
+					</button>
 				</form>
 			</div>
 		</div>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Вакансии</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png"><meta name="format-detection" content="telephone=no">
+		<link rel="image_src" href="http://genrif.ru/assets/i/soc-logo.png">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="content">
+		<meta property="og:title" content="content">
+		<meta property="og:description" content="content">
+		<meta property="og:url" content="content">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:image" content="path/to/image.jpg">
+		<meta property="og:image:width" content="968">
+		<meta property="og:image:height" content="504">
+		<!-- Custom Browsers Color-->
+		<meta name="theme-color" content="#3361d8">
+		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
+		<link rel="stylesheet" href="libs/select2/css/select2.min.css"/>
+		<!--range slider-->
+		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
+		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
+		<link rel="stylesheet" href="css/main.min.css"/>
+	</head>
+	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+		<div class="main-wrapper">
+			<!-- start sAside-->
+			<aside class="sAside white-aside" id="sAside">
+				<div class="sAside__iconed-menu">
+					<ul>
+						<li><a href="#">
+								<div class="sAside__icon-cont"><img class="img-svg-js" src="img/svg/aside-buy.svg" alt=""/>
+								</div>
+								<div class="sAside__iconed-txt">Купить
+								</div></a></li>
+						<li><a href="#">
+								<div class="sAside__icon-cont"><img class="img-svg-js" src="img/svg/aside-sell.svg" alt=""/>
+								</div>
+								<div class="sAside__iconed-txt">Продать
+								</div></a></li>
+						<li><a href="#">
+								<div class="sAside__icon-cont"><img class="img-svg-js" src="img/svg/aside-give-rent.svg" alt=""/>
+								</div>
+								<div class="sAside__iconed-txt">Сдать
+								</div></a></li>
+						<li><a href="#">
+								<div class="sAside__icon-cont"><img class="img-svg-js" src="img/svg/aside-get-rent.svg" alt=""/>
+								</div>
+								<div class="sAside__iconed-txt">Снять
+								</div></a></li>
+						<li><a href="#">
+								<div class="sAside__icon-cont"><img class="img-svg-js" src="img/svg/aside-no-agent.svg" alt=""/>
+								</div>
+								<div class="sAside__iconed-txt">Без агента
+								</div></a></li>
+					</ul>
+				</div>
+				<ul class="sAside__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+					<li class="sAside__item" itemprop="item"><a class="sAside__link" href="/" itemprop="url">О компании</a>
+					</li>
+					<li class="sAside__item" itemprop="item"><a class="sAside__link" href="#" itemprop="url">Вакансии</a>
+					</li>
+					<li class="sAside__item" itemprop="item"><a class="sAside__link" href="#" itemprop="url">Ремонт</a>
+					</li>
+					<li class="sAside__item" itemprop="item"><a class="sAside__link" href="#" itemprop="url">Дизайн</a>
+					</li>
+					<li class="sAside__item" itemprop="item"><a class="sAside__link" href="#" itemprop="url">Отзывы</a>
+					</li>
+					<li class="sAside__item" itemprop="item"><a class="sAside__link" href="#" itemprop="url">Сотрудничество</a>
+					</li>
+					<li class="sAside__item" itemprop="item"><a class="sAside__link" href="#" itemprop="url">Сдать в управление</a>
+					</li>
+					<li class="sAside__item" itemprop="item"><a class="sAside__link" href="#" itemprop="url">Контакты</a>
+					</li>
+				</ul>
+				<div class="sAside__mob-menu d-xl-none">
+					<div class="sAside__info-txt d-lg-none">
+						<div class="sAside__top-txt">Адрес офиса:
+						</div>
+						<div class="sAside__address-txt">
+							Санкт-Петербург, Невский
+							<br class="d-sm-none"/>проспект 90-92А
+						</div>
+						<div class="sAside__small">
+							<p>ПН-ПТ с 10:00 до 20:00</p>
+							<p>СБ с 11:00 до 18:00</p>
+							<p>ВС по договоренности</p>
+						</div>
+					</div><a class="sAside__mail-link d-md-none" href="mailto:Info@hh-r.ru">
+					<svg class="icon icon-mail ">
+						<use xlink:href="img/svg/sprite.svg#mail"></use>
+					</svg><span>Info@hh-r.ru</span></a><a class="sAside__tel-link d-md-none" href="tel:+78123335515">
+					<svg class="icon icon-phone ">
+						<use xlink:href="img/svg/sprite.svg#phone"></use>
+					</svg><span>+7 812 333-55-15</span></a><a class="sAside__free-consult-btn" href="#">Бесплатная консультация</a>
+				</div>
+			</aside>
+			<!-- end sAside-->
+			<!-- start header-->
+			<header class="header" id="header">
+				<div class="info-strip"><a class="info-strip__location-link d-lg-none" href="#">
+					<svg class="icon icon-location ">
+						<use xlink:href="img/svg/sprite.svg#location"></use>
+					</svg><span>Санкт-Петербург</span>
+					<svg class="icon icon-chevron-down ">
+						<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+					</svg></a>
+					<div class="info-strip__address-block d-none d-lg-flex">
+						<div class="info-strip__address-gray">Адрес офиса:
+						</div>
+						<div class="info-strip__address">Санкт-Петербург, Воскресенская 12
+						</div>
+						<div class="info-strip__shedule">ПН-ПТ с 9:00 до 20:00
+						</div>
+					</div><a class="info-strip__add-btn" href="#">
+					<svg class="icon icon-plus ">
+						<use xlink:href="img/svg/sprite.svg#plus"></use>
+					</svg><span class="d-none d-sm-block">Добавить объект</span></a>
+				</div>
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy with-white-aside">
+					<div class="top-nav__menu-btn burger-js d-xl-none"><span></span>
+					</div><a class="top-nav__logo" href="/">
+					<!--block--><img class="img-svg-js" src="img/svg/logo-svg.svg"/></a>
+					<div class="top-nav__container container"><a class="top-nav__location-link d-none d-lg-flex" href="#">
+						<svg class="icon icon-location ">
+							<use xlink:href="img/svg/sprite.svg#location"></use>
+						</svg><span>Санкт-Петербург</span>
+						<svg class="icon icon-chevron-down ">
+							<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+						</svg></a><a class="top-nav__mail-link d-none d-md-flex" href="mailto:agentstvo@gmail.com">
+						<svg class="icon icon-mail ">
+							<use xlink:href="img/svg/sprite.svg#mail"></use>
+						</svg><span>agentstvo@gmail.com</span></a><a class="top-nav__phone-link d-none d-md-flex" href="tel:+79053454212">
+						<svg class="icon icon-phone ">
+							<use xlink:href="img/svg/sprite.svg#phone"></use>
+						</svg><span>+7 (905) 345-42-12</span></a><a class="top-nav__consult-btn d-none d-xl-inline-block" href="#">Бесплатная консультация</a>
+						<div class="top-nav__icons-box"><a href="#">
+								<svg class="icon icon-heart ">
+									<use xlink:href="img/svg/sprite.svg#heart"></use>
+								</svg></a><a href="#">
+								<svg class="icon icon-user ">
+									<use xlink:href="img/svg/sprite.svg#user"></use>
+								</svg></a>
+							<!--location-->
+						</div>
+					</div>
+				</div>
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
+			<!-- start pageHead-->
+			<section class="pageHead section pageHead pageHead--07" id="pageHead">
+				<style>
+					@media (min-width: 576px) {
+						.pageHead {
+							background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), no-repeat center/cover url(img/@2x/vacansies-page-head.jpg);
+						}
+					}
+				</style>
+				<div class="container">
+					<div class="section-title text-center">
+						<h1>Вакансии в компании <br>HouseHunters</h1>
+					</div>
+				</div>
+			</section>
+			<!-- end pageHead-->
+			<!-- start sAdvantages-->
+			<section class="sAdvantages section" id="sAdvantages">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-6">
+							<!-- picture-->
+							<picture class="lazy"> 
+								<source srcset="#" data-srcset="img/@2x/webp/advantages.webp" type="image/webp" media="(min-width:576px)"/>
+								<source srcset="#" data-srcset="img/@1x/webp/advantages.webp" type="image/webp"/>
+								<source srcset="#" data-srcset="img/@2x/advantages.jpg" type="image/jpg" media="(min-width:576px)"/>
+								<source srcset="#" data-srcset="img/@1x/advantages.jpg" type="image/jpg"/><img src="#" data-src="img/@2x/advantages.jpg" alt=""/>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="col-lg-6">
+							<div class="section-title">
+								<h2>Преимущества работы в&nbsp;HouseHunters</h2>
+							</div>
+							<div class="row">
+												<div class="col-sm-6">
+													<div class="sAdvantages__item">
+														<svg class="icon icon-marketing-1 ">
+															<use xlink:href="img/svg/sprite.svg#marketing-1"></use>
+														</svg>
+														<div class="sAdvantages__text">Полная рекламная поддержка
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="sAdvantages__item">
+														<svg class="icon icon-marketing-2 ">
+															<use xlink:href="img/svg/sprite.svg#marketing-2"></use>
+														</svg>
+														<div class="sAdvantages__text">Удобный офис
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="sAdvantages__item">
+														<svg class="icon icon-marketing-3 ">
+															<use xlink:href="img/svg/sprite.svg#marketing-3"></use>
+														</svg>
+														<div class="sAdvantages__text">Высокий % от сделки
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="sAdvantages__item">
+														<svg class="icon icon-marketing-4 ">
+															<use xlink:href="img/svg/sprite.svg#marketing-4"></use>
+														</svg>
+														<div class="sAdvantages__text">Карьерный рост
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="sAdvantages__item">
+														<svg class="icon icon-marketing-5 ">
+															<use xlink:href="img/svg/sprite.svg#marketing-5"></use>
+														</svg>
+														<div class="sAdvantages__text">Обучение
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="sAdvantages__item">
+														<svg class="icon icon-marketing-6 ">
+															<use xlink:href="img/svg/sprite.svg#marketing-6"></use>
+														</svg>
+														<div class="sAdvantages__text">Информационные базы
+														</div>
+													</div>
+												</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sAdvantages-->
+			<!-- start sListVacancies-->
+			<section class="sListVacancies section" id="sListVacancies">
+				<div class="container">
+					<div class="section-title">
+						<h2>Список вакансий</h2>
+					</div>
+					<div class="sListVacancies__row row">
+						<div class="col-lg-6">
+							<div class="sListVacancies__item">
+								<div class="sListVacancies__roww">
+									<div class="sListVacancies__title">Агент
+									</div>
+									<div class="sListVacancies__price">от 40 000 ₽
+									</div>
+								</div>
+								<div class="sListVacancies__sity">Москва, Россия
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="sListVacancies__item">
+								<div class="sListVacancies__roww">
+									<div class="sListVacancies__title">Менеджер
+									</div>
+									<div class="sListVacancies__price">от 40 000 ₽
+									</div>
+								</div>
+								<div class="sListVacancies__sity">Москва, Россия
+								</div>
+							</div>
+						</div>
+					</div><a class="sListVacancies__btn link-modal" href="#">Прислать резюме</a>
+				</div>
+			</section>
+			<!-- end sListVacancies-->
+			<footer class="footer block-with-lazy">
+				<div class="footer__container container"><a class="footer__mob-logo d-sm-none" href="#">HouseHunters</a>
+					<div class="footer__row row d-none d-sm-flex">
+						<div class="footer__col col-sm-6 col-lg-3">
+							<div class="footer__headline">Меню
+							</div>
+							<ul>
+								<li><a href="#">Купить</a></li>
+								<li><a href="#">Продать</a></li>
+								<li><a href="#">Сдать</a></li>
+								<li><a href="#">Снять</a></li>
+								<li><a href="#">Без агента</a></li>
+							</ul>
+						</div>
+						<div class="footer__col col-sm-6 col-lg-3">
+							<div class="footer__headline">Наша компания
+							</div>
+							<ul>
+								<li><a href="#">О компании</a></li>
+								<li><a href="#">Вакансии</a></li>
+								<li><a href="#">Отзывы</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+						<div class="footer__col col-sm-6 col-lg-3">
+							<div class="footer__headline">Услуги
+							</div>
+							<ul>
+								<li><a href="#">Ремонт</a></li>
+								<li><a href="#">Дизайн</a></li>
+							</ul>
+						</div>
+						<div class="footer__col col-sm-6 col-lg-3">
+							<div class="footer__headline">Сотрудничество
+							</div>
+							<ul>
+								<li><a href="#">Сотрудничество</a></li>
+								<li><a href="#">Сдать в управление</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__lower-row row">
+						<div class="footer__lower-col col-sm-6 col-lg-auto">
+							<div class="soc"><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-vk.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-insta.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-youtube.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-fb.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-odnokl.svg" alt=""/></a>
+							</div>
+						</div>
+						<div class="footer__lower-col col-sm-6 col-lg-auto d-none d-sm-block"><a class="footer__mail-link" href="mailto:Info@hh-r.ru">
+							<svg class="icon icon-mail ">
+								<use xlink:href="img/svg/sprite.svg#mail"></use>
+							</svg><span>Info@hh-r.ru</span></a>
+						</div>
+						<div class="footer__lower-col col-sm-6 col-lg-auto d-none d-sm-block"><a class="footer__phone-link" href="tel:">
+							<svg class="icon icon-phone ">
+								<use xlink:href="img/svg/sprite.svg#phone"></use>
+							</svg><span>+7 812 333-55-15</span></a>
+						</div>
+						<div class="footer__lower-col col-sm-6 col-lg-auto">
+							<div class="footer__all-rights-txt"><span class="d-none d-xxl-inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br/>tempor incididunt ut  magna aliqua.  /
+									</span><span>@2020. Все права защищены</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!--  start modals-->
+		<div class="modal-win" id="modal-call" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<div class="text-center">
+						<div class="form-wrap__title-h">Консультация
+						</div>
+						<p class="after-headline">Оставьте заявку и&nbsp;мы&nbsp;вам перезвоним</p>
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Имя</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit">Оставить заявку
+					</button>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<script src="js/lazy.js"></script>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<!-- modal libs-->
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<script src="libs/select2/js/select2.full.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/js/swiper.min.js"></script>
+		<!-- /slider libs-->
+		<!--range slider-->
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
