@@ -90,12 +90,24 @@
 
 	}
 
+	&--05{
+		h1{
+			@extend h2;
+		}
+	}
+
 	&--07 {
 		h1 {
 			@extend h2;
 		}
 
 		padding-bottom: calc(var(--sPB) / 1.5);
+	}
+
+	&--13{
+		h1{
+			@extend h2;
+		}
 	}
 
 

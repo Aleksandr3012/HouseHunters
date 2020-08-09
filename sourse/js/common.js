@@ -47,9 +47,9 @@ const JSCCommon = {
 							// console.log(modal.querySelector(elem).tagName)
 						}
 					}
-					setValue(data.title, '.ttu');
-					setValue(data.text, '.after-headline');
-					setValue(data.btn, '.btn');
+					setValue(data.title, '.form-wrap__title-h');
+					// setValue(data.text, '.after-headline');
+					// setValue(data.btn, '.btn');
 					setValue(data.order, '.order');
 				})
 			})
@@ -230,7 +230,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	let screenName;
-	screenName = '07.jpg';
+	screenName = '08.jpg';
 	screenName
 		? $(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`)
 		: '';

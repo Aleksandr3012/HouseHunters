@@ -5,6 +5,9 @@
 
 	.section-title {
 		padding-bottom: calc(var(--sTPB) / 1.3);
+		@include media-breakpoint-down(lg) {
+			text-align: center;
+		}
 	}
 
 	&__item {

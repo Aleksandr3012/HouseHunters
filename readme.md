@@ -13,8 +13,10 @@
 
 1. <https://aleksandr3012.github.io/HouseHunters/public/03-prod-card.html> Карточка объекта
 1. <https://aleksandr3012.github.io/HouseHunters/public/04-management.html> Сдача в управление 
-1. <https://aleksandr3012.github.io/HouseHunters/public/05-without-agent.html>
+
+1. <https://aleksandr3012.github.io/HouseHunters/public/05-without-agent.html> Без агента
 1. <https://aleksandr3012.github.io/HouseHunters/public/06-about-company.html> О компании
 1. <https://aleksandr3012.github.io/HouseHunters/public/07-vacancies.html> Вакансии
 1. <https://aleksandr3012.github.io/HouseHunters/public/08-reviews.html> Отзывы
 1. <https://aleksandr3012.github.io/HouseHunters/public/10-personal-cabinet.html> Личный кабинет / Избранное
+1. <https://aleksandr3012.github.io/HouseHunters/public/13-partnership.html> Сотрудничество
