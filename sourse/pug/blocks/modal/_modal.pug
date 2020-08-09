@@ -1,4 +1,3 @@
-
 mixin modal() 
 	//  start modals
 
@@ -11,6 +10,28 @@ mixin modal()
 			+input("", "tel", "Телефон")
 			+e.BUTTON.btn.btn(type="submit") Оставить заявку
 			//- +polite()
-	// #modal-call
+
+	// /#modal-call
+
+	+b.modal-win(id="modal-partnership" class=" " style="display: none" )
+		+form-wrap
+			.text-center
+				+e.title-h Сотрудничество с&nbsp;HouseHunters
+				p.after-headline Оставьте заявку и&nbsp;мы&nbsp;вам перезвоним
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Агент
+					.tabs__btn Компания
+				.tabs__wrap
+					.tabs__content.active
+						+input("", "text", "Имя")
+						+input("", "tel", "Телефон")
+					.tabs__content
+						+input("", "text", "Название компании")
+						+input("", "text", "Сфера деятельности")
+						+input("", "tel", "Телефон")
+			+e.BUTTON.btn.btn(type="submit") Оставить заявку
+
+	// /#modal-partnership
 	
 	// end modals

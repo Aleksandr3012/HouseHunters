@@ -58,9 +58,9 @@ var JSCCommon = {
 						}
 					}
 
-					setValue(data.title, '.ttu');
-					setValue(data.text, '.after-headline');
-					setValue(data.btn, '.btn');
+					setValue(data.title, '.form-wrap__title-h'); // setValue(data.text, '.after-headline');
+					// setValue(data.btn, '.btn');
+
 					setValue(data.order, '.order');
 				});
 			});
@@ -248,7 +248,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 
 	var screenName;
-	screenName = '07.jpg';
+	screenName = '13.jpg';
 	screenName ? $(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>")) : ''; // /добавляет подложку для pixel perfect
 
 	function whenResize() {
