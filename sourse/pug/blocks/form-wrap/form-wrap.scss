@@ -1,20 +1,59 @@
 .form-wrap{
  	&__input-wrap{
-			// @extend .form-group;
-			
-		}
+		// @extend .form-group;
+		padding-bottom: 25px;
+		
+	}
 		&__input{
 			// @extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
+		 margin-top: 15px;
+		 height: 52px;
+		 padding: 5px;
  	}
  	&__btn{
- 		cursor: pointer;
+		cursor: pointer;
+		@extend	.btn-pr;
+		width: 100%;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: (20 / 16);
  	}
  	label{
- 		width: 100%;
- 		display: block;
- 	}
+		width: 100%;
+		display: block;
+		
+	}
+
+	 &__title{
+		color: $body-color2;
+		font-weight: 500;
+		line-height: (20 / 16);
+	 }
+	 
+	
+	&__title-h{
+		font-weight: bold;
+		color: $body-color2;
+		margin-bottom: 27px;
+		font-size: 22px;
+		line-height: (28 / 22);
+		@include media-breakpoint-up(sm) {
+			font-size: 36px;
+			line-height: (45 / 36);
+		}
+	}
+
+	.after-headline{
+		@include media-breakpoint-up(sm) {
+			font-size: 20px;
+		}
+		line-height: (22 / 20);
+		font-size: 16px;
+		color: $body-color2;
+		padding-bottom: 20px;
+	}
 }
 
 
