@@ -838,6 +838,7 @@ function eventHandler() {
 	* 9. main page with other pictures
 	* 10. 02 with other filters
 	* 11 fix width of top line
+	* 12 2 ch at top of 03
 	* */
 
 	//end luckyone JS
