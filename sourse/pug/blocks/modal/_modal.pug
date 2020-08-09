@@ -14,3 +14,16 @@ mixin modal()
 	// #modal-call
 	
 	// end modals
+
+mixin modal()
+	//  start modals
+
+	+b.modal-win(id="modal-call" class=" " style="display: none" )
+		+form-wrap
+			.text-center
+				+e.title-h Консультация
+				p.after-headline Оставьте заявку и&nbsp;мы&nbsp;вам перезвоним
+			+input("", "text", "Имя")
+			+input("", "tel", "Телефон")
+			+e.BUTTON.btn.btn(type="submit") Оставить заявку
+			//- +polite()
