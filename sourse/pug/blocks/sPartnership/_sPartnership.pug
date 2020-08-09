@@ -1,0 +1,32 @@
+mixin sPartnership()
+	// start sPartnership
+	+b.SECTION.sPartnership.section#sPartnership&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Агентам
+			.row
+				mixin item(i,p)
+					.col-md-6
+						+e.item
+							+e.bg-img-wrap
+								+e.img-wrap
+									img.lazy(src="#" data-src=`img/svg/sPartnership-${i}.svg`, alt="")
+							+e.text!= p
+					block
+					
+				+item(1, `Минимум себе, максимум Вам`)
+				+item(2, `Офис для переговоров`)
+				+item(3, `Доступ к&nbsp;базам недвижимости`)
+				+item(4, `Партнерские программы`)
+				.text-center
+					+e.A.btn(href="#") Связаться
+				+b.section-title.text-center
+					h2 Компаниям
+				+item(5, `Региональным&nbsp;&mdash; консультация клиента`)
+				+item(6, `Партнерские программы`)
+				+item(7, `Совместные мероприятия`)
+				+item(8, `Индивидуальное сотрудничество`)
+				.text-center
+					+e.A.btn(href="#") Связаться
+	
+	// end sPartnership

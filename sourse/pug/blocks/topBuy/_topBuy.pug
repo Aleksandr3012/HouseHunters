@@ -125,3 +125,277 @@ mixin multipleSelect(optionsArr=['1','2','3'] ,selectName='selectName')
 		select.multiple-select-js(name=selectName multiple='multiple')
 			- for (let item of optionsArr)
 				option(value=item)=item
+
+
+mixin topBuyGarage()
+	// start topBuy
+	+b.widget.top-buy#topBuy&attributes(attributes)
+		.container
+			+form-wrap()
+				+e.tb-top-strip
+					+e.top-chb-block
+						+e.long-ch-cont.tob-chb-list
+							+objectTypeItem('Прямая продажа')
+							+objectTypeItem('Альтернатива')
+					+e.tb-buy-btn Купить
+				+e.inputs-bl
+					+e.inputs-strip
+						//-1
+						+e.pop-up-wrap.pop-up-wrap-js.object-type
+							+e.pop-up-header.pop-up-header-js
+								span Тип объекта
+								+icon('chevron-down')
+							+e.pop-up-content.object-type.pop-up-content-js
+								+e.long-ch-cont
+									+objectTypeItem('Квартиры')
+									+objectTypeItem('Комнаты')
+									+objectTypeItem('Дома, дачи, коттеджи')
+									+objectTypeItem('Коммерческая недвижимость')
+									+objectTypeItem('Земельные участки')
+									+objectTypeItem('Гаражи и машиноместа')
+									+objectTypeItem('Новостройки')
+						//-2
+						+e.pop-up-wrap.pop-up-wrap-js.room-type
+							+e.pop-up-header.pop-up-header-js
+								span Тип гаража
+								+icon('chevron-down')
+							+e.pop-up-content.room-type.pop-up-content-js
+								+e.squsre-ch-cont
+									+e.room-long-cb
+										+roomLongChb('Гараж')
+										+roomLongChb('Машиноместо')
+										+roomLongChb('Бокс')
+						//-3
+						+e.pop-up-wrap.pop-up-wrap-js.price-type
+							+e.pop-up-header.pop-up-header-js
+								span Цена
+								+icon('chevron-down')
+							+e.pop-up-content.pop-up-content-js.price-type
+								+e.price-pp-cont
+									+range("10000", "999999", '₽')(class='with-symbol')
+									+e.bottom-radio
+										+topBtn('За все', 'price-checkbox')(checked)
+										+topBtn('За м²', 'price-checkbox')
+						//-
+						+input('Адрес', 'text', undefined, 'price')
+						+e.A.more-filters-btn.more-filters-btn-js.d-md-none(href="#")
+							span Больше фильтров
+							+icon('chevron-down')
+					+e.BUTTON.submit-btn.d-none.d-md-flex(type='submit')
+						+icon('search')
+						span Показать 2327 объектов
+				+e.A.more-filters-btn.more-filters-btn-js.d-none.d-md-flex(href="#")
+					span Больше фильтров
+					+icon('chevron-down')
+				+moreFiltersBlock()
+				+e.BUTTON.submit-btn.d-md-none(type='submit')
+					+icon('search')
+					span Показать 2327 объектов
+			block
+	// end topBuy
+
+mixin topBuyEarth()
+	// start topBuy
+	+b.widget.top-buy#topBuy&attributes(attributes)
+		.container
+			+form-wrap()
+				+e.tb-top-strip
+					+e.top-chb-block
+						+e.long-ch-cont.tob-chb-list
+							+objectTypeItem('Прямая продажа')
+							+objectTypeItem('Альтернатива')
+					+e.tb-buy-btn Купить
+				+e.inputs-bl
+					+e.inputs-strip
+						//-1
+						+e.pop-up-wrap.pop-up-wrap-js.object-type
+							+e.pop-up-header.pop-up-header-js
+								span Тип объекта
+								+icon('chevron-down')
+							+e.pop-up-content.object-type.pop-up-content-js
+								+e.long-ch-cont
+									+objectTypeItem('Квартиры')
+									+objectTypeItem('Комнаты')
+									+objectTypeItem('Дома, дачи, коттеджи')
+									+objectTypeItem('Коммерческая недвижимость')
+									+objectTypeItem('Земельные участки')
+									+objectTypeItem('Гаражи и машиноместа')
+									+objectTypeItem('Новостройки')
+						//-2
+						+e.pop-up-wrap.pop-up-wrap-js.room-type
+							+e.pop-up-header.pop-up-header-js
+								span Категория земли
+								+icon('chevron-down')
+							+e.pop-up-content.room-type.pop-up-content-js
+								+e.squsre-ch-cont
+									+e.room-long-cb
+										+roomLongChb('ИЖС')
+										+roomLongChb('Садоводство')
+										+roomLongChb('Земля промышленного назначения')
+										+roomLongChb('Фермерское хозяйство')
+										+roomLongChb('Инвестпроект')
+										+roomLongChb('Дачное некоммерческое партнерство')
+						//-3
+						+e.pop-up-wrap.pop-up-wrap-js.price-type
+							+e.pop-up-header.pop-up-header-js
+								span Цена
+								+icon('chevron-down')
+							+e.pop-up-content.pop-up-content-js.price-type
+								+e.price-pp-cont
+									+range("10000", "999999", '₽')(class='with-symbol')
+									+e.bottom-radio
+										+topBtn('За все', 'price-checkbox')(checked)
+										+topBtn('За м²', 'price-checkbox')
+						//-
+						+input('Адрес', 'text', undefined, 'price')
+						+e.A.more-filters-btn.more-filters-btn-js.d-md-none(href="#")
+							span Больше фильтров
+							+icon('chevron-down')
+					+e.BUTTON.submit-btn.d-none.d-md-flex(type='submit')
+						+icon('search')
+						span Показать 2327 объектов
+				+e.A.more-filters-btn.more-filters-btn-js.d-none.d-md-flex(href="#")
+					span Больше фильтров
+					+icon('chevron-down')
+				+moreFiltersBlock()
+				+e.BUTTON.submit-btn.d-md-none(type='submit')
+					+icon('search')
+					span Показать 2327 объектов
+			block
+	// end topBuy
+
+mixin topBuyCommerce()
+	// start topBuy
+	+b.widget.top-buy#topBuy&attributes(attributes)
+		.container
+			+form-wrap()
+				+e.tb-top-strip
+					+e.top-chb-block
+						+e.long-ch-cont.tob-chb-list
+							+objectTypeItem('Прямая продажа')
+							+objectTypeItem('Альтернатива')
+					+e.tb-buy-btn Купить
+				+e.inputs-bl
+					+e.inputs-strip
+						//-1
+						+e.pop-up-wrap.pop-up-wrap-js.object-type
+							+e.pop-up-header.pop-up-header-js
+								span Тип объекта
+								+icon('chevron-down')
+							+e.pop-up-content.object-type.pop-up-content-js
+								+e.long-ch-cont
+									+objectTypeItem('Квартиры')
+									+objectTypeItem('Комнаты')
+									+objectTypeItem('Дома, дачи, коттеджи')
+									+objectTypeItem('Коммерческая недвижимость')
+									+objectTypeItem('Земельные участки')
+									+objectTypeItem('Гаражи и машиноместа')
+									+objectTypeItem('Новостройки')
+						//-2
+						+e.pop-up-wrap.pop-up-wrap-js.room-type
+							+e.pop-up-header.pop-up-header-js
+								span Класс здания
+								+icon('chevron-down')
+							+e.pop-up-content.room-type.pop-up-content-js
+								+e.squsre-ch-cont
+									+roomTypeItem('A')
+									+roomTypeItem('B')
+									+roomTypeItem('C')
+									+roomTypeItem('Д')
+						//-3
+						+e.pop-up-wrap.pop-up-wrap-js.price-type
+							+e.pop-up-header.pop-up-header-js
+								span Цена
+								+icon('chevron-down')
+							+e.pop-up-content.pop-up-content-js.price-type
+								+e.price-pp-cont
+									+range("10000", "999999", '₽')(class='with-symbol')
+									+e.bottom-radio
+										+topBtn('За все', 'price-checkbox')(checked)
+										+topBtn('За м²', 'price-checkbox')
+						//-
+						+input('Адрес', 'text', undefined, 'price')
+						+e.A.more-filters-btn.more-filters-btn-js.d-md-none(href="#")
+							span Больше фильтров
+							+icon('chevron-down')
+					+e.BUTTON.submit-btn.d-none.d-md-flex(type='submit')
+						+icon('search')
+						span Показать 2327 объектов
+				+e.A.more-filters-btn.more-filters-btn-js.d-none.d-md-flex(href="#")
+					span Больше фильтров
+					+icon('chevron-down')
+				+moreFiltersBlock()
+				+e.BUTTON.submit-btn.d-md-none(type='submit')
+					+icon('search')
+					span Показать 2327 объектов
+			block
+	// end topBuy
+
+mixin topBuyHouses()
+	// start topBuy
+	+b.widget.top-buy#topBuy&attributes(attributes)
+		.container
+			+form-wrap()
+				+e.tb-top-strip
+					+e.top-chb-block
+						+e.long-ch-cont.tob-chb-list
+							+objectTypeItem('Прямая продажа')
+							+objectTypeItem('Альтернатива')
+					+e.tb-buy-btn Купить
+				+e.inputs-bl
+					+e.inputs-strip
+						//-1
+						+e.pop-up-wrap.pop-up-wrap-js.object-type
+							+e.pop-up-header.pop-up-header-js
+								span Тип объекта
+								+icon('chevron-down')
+							+e.pop-up-content.object-type.pop-up-content-js
+								+e.long-ch-cont
+									+objectTypeItem('Квартиры')
+									+objectTypeItem('Комнаты')
+									+objectTypeItem('Дома, дачи, коттеджи')
+									+objectTypeItem('Коммерческая недвижимость')
+									+objectTypeItem('Земельные участки')
+									+objectTypeItem('Гаражи и машиноместа')
+									+objectTypeItem('Новостройки')
+						//-2
+						+e.pop-up-wrap.pop-up-wrap-js.room-type
+							+e.pop-up-header.pop-up-header-js
+								span Тип строения
+								+icon('chevron-down')
+							+e.pop-up-content.room-type.pop-up-content-js
+								+e.squsre-ch-cont
+									+e.room-long-cb
+										+roomLongChb('Дом')
+										+roomLongChb('Дача')
+										+roomLongChb('Коттедж')
+										+roomLongChb('Таунхаус')
+										+roomLongChb('Часть дома')
+						//-3
+						+e.pop-up-wrap.pop-up-wrap-js.price-type
+							+e.pop-up-header.pop-up-header-js
+								span Цена
+								+icon('chevron-down')
+							+e.pop-up-content.pop-up-content-js.price-type
+								+e.price-pp-cont
+									+range("10000", "999999", '₽')(class='with-symbol')
+									+e.bottom-radio
+										+topBtn('За все', 'price-checkbox')(checked)
+										+topBtn('За м²', 'price-checkbox')
+						//-
+						+input('Адрес', 'text', undefined, 'price')
+						+e.A.more-filters-btn.more-filters-btn-js.d-md-none(href="#")
+							span Больше фильтров
+							+icon('chevron-down')
+					+e.BUTTON.submit-btn.d-none.d-md-flex(type='submit')
+						+icon('search')
+						span Показать 2327 объектов
+				+e.A.more-filters-btn.more-filters-btn-js.d-none.d-md-flex(href="#")
+					span Больше фильтров
+					+icon('chevron-down')
+				+moreFiltersBlock()
+				+e.BUTTON.submit-btn.d-md-none(type='submit')
+					+icon('search')
+					span Показать 2327 объектов
+			block
+	// end topBuy

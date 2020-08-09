@@ -1,0 +1,55 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAside/_sAside.pug
+include ../blocks/sMainPage/_sMainPage.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/topBuy/_topBuy.pug
+include ../blocks/sChosenObj/_sChosenObj.pug
+include ../blocks/pageHead/_pageHead.pug
+include ../blocks/dayInCompany/_dayInCompany.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCompanyMission/_sCompanyMission.pug
+include ../blocks/sCompanyTargets/_sCompanyTargets.pug
+include ../blocks/sDigits/_sDigits.pug
+include ../blocks/sOurEmployee/_sOurEmployee.pug
+include ../blocks/sOffice/_sOffice.pug
+include ../blocks/sWithoutAgent/_sWithoutAgent.pug
+include ../blocks/sPartnership/_sPartnership.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Сотрудничество'
+	title= title
+block pagecontent
+	.main-wrapper
+		+Aside()(class='white-aside')
+		+header()
+			+infoStrip()
+			+top-nav()(class='with-white-aside')
+				//- img.lazy(src="#" data-src="img/@2x/logo-green.png" alt="")
+		//-+sChosenObj()
+		+pageHead()
+			style.
+				@media (min-width: 576px) {
+					.pageHead {
+						background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), no-repeat center/cover url(img/@2x/13-page-head.jpg);
+					}
+				}
+			.container.text-center
+				+b.section-title
+					h1
+						| Сотрудничество с&nbsp;HouseHunters
+		//- +dayInCompany()
+		//- +sForm()
+		//- +sCompanyMission()
+		//- +sCompanyTargets()
+		//- +sDigits()
+		//- +sOurEmployee()
+		//- +sOffice()
+		//- +sWithoutAgent()
+		+sPartnership
+		+footer()

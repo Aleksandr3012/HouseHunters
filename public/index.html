@@ -154,7 +154,14 @@
 			</header>
 			<!-- end header-->
 			<!-- start sMainPage-->
-			<section class="sMainPage section bg-wrap" id="sMainPage"><style>@media (min-width:576px) { .sMainPage{background: linear-gradient(rgba(0,0,0, .3), rgba(0,0,0, .3)), no-repeat center/cover url(img/@2x/main-page-bg.jpg);} }</style>
+			<section class="sMainPage section bg-wrap" id="sMainPage">
+				<style>
+					@media (min-width: 576px) {
+						.sMainPage {
+							background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), no-repeat center/cover url(img/@2x/main-page-bg.jpg);
+						}
+					}
+				</style>
 				<div class="container">
 					<div class="section-title d-none d-sm-block">
 						<h2>Недвижимость в Санкт-Петербурге</h2>
@@ -162,12 +169,7 @@
 					<div class="widget">
 						<div class="form-wrap">
 							<form>
-								<input type="hidden" name="example-input-field"/>
 								<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-								<input class="utm_source" type="hidden" name="utm_source"/>
-								<input class="utm_term" type="hidden" name="utm_term"/>
-								<input class="utm_medium" type="hidden" name="utm_medium"/>
-								<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 								<div class="form-wrap__top-btns">
 									<label>
 										<input type="radio" name="top-btn" value="Купить" checked="checked"/><span>Купить</span>
@@ -675,26 +677,24 @@
 		<div class="modal-win" id="modal-call" style="display: none">
 			<div class="form-wrap">
 				<form>
-					<input type="hidden" name="example-input-field"/>
 					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
 					<div class="text-center">
-						<div class="form-wrap__title h3 ttu">Обратный звонок
+						<div class="form-wrap__title-h">Консультация
 						</div>
-						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+						<p class="after-headline">Оставьте заявку и&nbsp;мы&nbsp;вам перезвоним</p>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
-					</div>
-					<!-- +e.input-wrap-->
-					<button class="form-wrap__btn btn" type="submit"> 
-					</button>
-					<div class="form-wrap__polite">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Имя</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
 						</label>
 					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit">Оставить заявку
+					</button>
 				</form>
 			</div>
 		</div>

@@ -88,12 +88,13 @@ mixin sProdCard()
 								+icon('chevron-right')
 							.swiper-container.popular-objects-slider
 								.swiper-wrapper
-									+popularSlide('')
-									+popularSlide('')
-									+popularSlide(3)
-									+popularSlide(4)
-									+popularSlide(5)
-									+popularSlide(6)
+									+popularSlide('', 1)
+									+popularSlide('', 2)
+									+popularSlide(3, 3)
+									+popularSlide(4, 4)
+									+popularSlide(5, 5)
+									+popularSlide(6, 6)
+							.popular-slider-pugin.swiper-pugin-frame
 				.col-lg-4
 					+e.help-bl
 						+e.help-headline Нужна помощь специалиста?
@@ -120,6 +121,9 @@ mixin sProdCard()
 							+creditItem('Собственные средства', 0, 1000000, 1000, 50000)
 							+creditItem('Срок кредитования', 12, 240, 1, 240, ' мес.')
 							+creditItem('Процентная ставка', 1, 50, 1, 15, ' %')
+						+e.credit-result
+							+e.credit-res-title Ежемесячный платёж:
+							+e.credit-res-txt 50 000 ₽ / мес
 						+e.A.credit-get-btn(href='#') Получить ипотеку
 	// end sProdCard
 
@@ -139,7 +143,7 @@ mixin percentsItem(imgNum, txt='txt', date='от 28.05.2020')
 			+e.precents-txt=txt
 		+e.percents-date=date
 
-mixin popularSlide(slideNum='')
+mixin popularSlide(slideNum='', garleryNum)
 	.swiper-slide
 		+b.catalog-row
 			+e.item(class=itemModificator)
@@ -151,9 +155,9 @@ mixin popularSlide(slideNum='')
 					.catalog-item-pugin-js
 					.swiper-container.catalog-item-sl-js
 						.swiper-wrapper
-							+popularSubSlide(1)
-							+popularSubSlide(2)
-							+popularSubSlide(3)
+							+popularSubSlide(1, garleryNum)
+							+popularSubSlide(2, garleryNum)
+							+popularSubSlide(3, garleryNum)
 				+b.catalog-item-description
 					+e.price-bl
 						+e.price=`3 900 000 ₽${slideNum}`
@@ -171,9 +175,9 @@ mixin popularSlide(slideNum='')
 							+icon('phone')
 							span.d-none.d-sm-inline Показать телефон
 
-mixin popularSubSlide(imgNum)
+mixin popularSubSlide(imgNum, garleryNum)
 	.swiper-slide
-		+e.A.fancy-link(href=`img/@2x/prod-card-${imgNum}.jpg` data-fancybox=`popularSlideImg`)
+		+e.A.fancy-link(href=`img/@2x/prod-card-${imgNum}.jpg` data-fancybox=`popularSubSlide${garleryNum}`)
 			img(src=`img/@2x/prod-card-${imgNum}.jpg` alt="")
 			//-.swiper-lazy(src="#" data-
 

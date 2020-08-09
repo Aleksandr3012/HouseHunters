@@ -789,7 +789,9 @@ function eventHandler() {
 	})
 
 	//multiple select
-	$('.multiple-select-js').select2();
+	$('.multiple-select-js').select2({
+		dropdownCssClass: "checkbox-list",
+	});
 
 	//prod card slider
 	let prodCardThumb = new Swiper('.prod-card-thumb-js', {
@@ -838,7 +840,7 @@ function eventHandler() {
 		},
 		//pugination
 		pagination: {
-			el: $(this).find('.day-in-company-pugin'),
+			el: $(this).find('.popular-slider-pugin'),
 			clickable: true,
 		},
 	});
@@ -866,14 +868,8 @@ function eventHandler() {
 
 
 	/*
-	* 1. 03 pad bottom, finish calc
-	* popular slides fancygalery split
-	* 6. seek bugs
 	* 7. 03 modal
 	* 8. main page modal
-	* 9. main page with other pictures
-	* 10. 02 with other filters
-	* 11 fix width of top line
 	* */
 
 	//end luckyone JS
