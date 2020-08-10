@@ -13,6 +13,14 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var JSCCommon = {
+	CustomInputFile: function CustomInputFile() {
+		var file = $(".add-file input[type=file]");
+		file.change(function () {
+			var filename = $(this).val().replace(/.*\\/, "");
+			var name = $(".add-file__filename  ");
+			name.text(filename);
+		});
+	},
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
 	menuMobile: document.querySelector(".menu-mobile--js"),
@@ -244,7 +252,8 @@ function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.sendForm(); //JSCCommon.heightwindow();
 
-	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile();
+	JSCCommon.animateScroll();
+	JSCCommon.CustomInputFile(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
 	var screenName;
