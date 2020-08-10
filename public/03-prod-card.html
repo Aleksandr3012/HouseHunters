@@ -1849,14 +1849,71 @@
 						</label>
 					</div>
 					<!-- +e.input-wrap-->
-					<label class="custom-input"><input class="custom-input__input checked" type="checkbox" name="checkbox" checkbox="checkbox" Запомнить меня="Запомнить меня" remember="remember"/><span class="custom-input__lab"></span><span class="custom-input__text"></span>
-					</label>
+					<div class="row justify-content-between mb-3">
+						<div class="col-auto">
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="remember" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Запомнить меня</span>
+							</label>
+						</div>
+						<div class="col-auto"><a class="form-wrap__rememberPas link-modal" href="#modal-recpass">Забыли пароль?</a>
+						</div>
+					</div>
 					<button class="form-wrap__btn btn" type="submit">Войти
 					</button>
+					<div class="text-center">
+						<div class="form-wrap__textSignin"> <span>Или войти через социальные сети</span>
+						</div>
+					</div>
+					<div class="soc"><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-vk.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-insta.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-fb.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-odnokl.svg" alt=""/></a>
+					</div>
+					<div class="text-center">
+						<div class="form-wrap__notReg">Еще не зарегистрированы?
+						</div><a class="form-wrap__reg link-modal" href="#modal-reg">Регистрация</a>
+					</div>
 				</form>
 			</div>
 		</div>
 		<!-- /#modal-signin-->
+		<div class="modal-win" id="modal-reg" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<div class="text-center">
+						<div class="form-wrap__title-h">Регистрация
+						</div>
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Пароль</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Повторите пароль</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<label class="custom-input"><input class="custom-input__input" type="checkbox" name="remember" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Запомнить меня</span>
+					</label>
+					<button class="form-wrap__btn btn" type="submit">Войти
+					</button>
+					<div class="text-center">
+						<div class="form-wrap__textSignin"> <span>Или зарегистрироваться через социальные сети</span>
+						</div>
+					</div>
+					<div class="soc"><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-vk.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-insta.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-fb.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-odnokl.svg" alt=""/></a>
+					</div>
+					<div class="text-center">
+						<div class="form-wrap__notReg">Уже есть аккаунт?
+						</div><a class="form-wrap__reg link-modal" href="#modal-signin">Войти</a>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- /#modal-reg-->
 		<div class="modal-win modal-location" id="modal-location" style="display: none">
 			<div class="form-wrap">
 				<form>

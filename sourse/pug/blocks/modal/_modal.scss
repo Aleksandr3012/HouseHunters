@@ -96,6 +96,49 @@
 		textarea {
 			height: rem(113);
 		}
+
+		&__textSignin {
+			position: relative;
+			text-align: center;
+			margin-top: rem(40);
+			margin-bottom: rem(30);
+			z-index: 1;
+			font-weight: 500;
+			span {
+				padding: 0 rem(7);
+				background: #F8F7F7;
+				position: relative;
+				z-index: 2;
+			}
+			&::before {
+				content: '';
+				@include a-cent(y);
+				left: 0;
+				height: 2px;
+				width: 100%;
+				background: #C4C4C4;
+			}
+		}
+
+		.soc {
+			justify-content: center;
+			margin-bottom: rem(40);
+			 &__item {
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
+		&__notReg {
+			font-weight: 500;
+			margin-bottom: rem(20);
+		}
+
+		&__reg {
+			font-weight: 500;
+		}
+
 	}
 	&--addObject {
 		padding-top: rem(40) !important;
@@ -127,7 +170,10 @@
 			}
 		}
 	}
+}
 
+#modal-reg, #modal-signin {
+	max-width: 550px;
 }
 
 a {
