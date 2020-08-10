@@ -239,7 +239,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	let screenName;
-	screenName = '09.jpg';
+	screenName = '11-375.png';
 	screenName
 		? $(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`)
 		: '';
@@ -874,12 +874,82 @@ function eventHandler() {
 	});
 	//instance = $range.data("ionRangeSlider");
 
+	//11,12 .examples-slider-js
+	let examplesThumb = new Swiper('.examples-thumb-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 30,
 
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 9,
+		},
+	});
 
-	/*
-	* 7. 03 modal
-	* 8. main page modal
-	* */
+	let examplesSlider = new Swiper('.examples-slider-js', {
+		slidesPerView: 1,
+		spaceBetween: 30,
+		loop: true,
+
+		//
+		navigation: {
+			nextEl: '.examples-next',
+			prevEl: '.examples-prev',
+		},
+		thumbs: {
+			swiper: examplesThumb,
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2,
+		},
+		//pagination
+		pagination: {
+			el: $(this).find('.example-pugin'),
+			clickable: true,
+		},
+	});
+	//scroll-vanilla-js
+	function smoothScroll(qSelector){
+		let elements = document.querySelectorAll(qSelector);
+		if (elements.length === 0) return
+
+		for (let elem of elements){
+			elem.addEventListener('click', function () {
+				event.preventDefault();
+				let destinyID = this.getAttribute('href'); //this.attributes.href.nodeValue
+
+				let destinyElem = document.querySelector(destinyID);
+				if (!destinyElem) return
+
+				let destinyTop = getCoords(destinyElem).top;
+
+				window.scrollTo({
+					top: destinyTop - 100, //consider top nav height
+					behavior: "smooth"
+				});
+
+			});
+		}
+	}
+	smoothScroll('.scroll-vanilla-js');
+	function getCoords(elem) { // crossbrowser version
+		var box = elem.getBoundingClientRect();
+
+		var body = document.body;
+		var docEl = document.documentElement;
+
+		var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+		var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+		var clientTop = docEl.clientTop || body.clientTop || 0;
+		var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+		var top  = box.top +  scrollTop - clientTop;
+		var left = box.left + scrollLeft - clientLeft;
+
+		return { top: Math.round(top), left: Math.round(left) };
+	}
+
 
 	//end luckyone JS
 

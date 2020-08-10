@@ -102,7 +102,7 @@
 			<!-- end sAside-->
 			<!-- start header-->
 			<header class="header" id="header">
-				<div class="info-strip"><a class="info-strip__location-link d-lg-none" href="#">
+				<div class="info-strip"><a class="info-strip__location-link link-modal d-lg-none" href="#modal-location">
 					<svg class="icon icon-location ">
 						<use xlink:href="img/svg/sprite.svg#location"></use>
 					</svg><span>Санкт-Петербург</span>
@@ -126,7 +126,7 @@
 					<div class="top-nav__menu-btn burger-js d-xl-none"><span></span>
 					</div><a class="top-nav__logo" href="/">
 					<!--block--><img class="img-svg-js" src="img/svg/logo-svg.svg"/></a>
-					<div class="top-nav__container container"><a class="top-nav__location-link d-none d-lg-flex" href="#">
+					<div class="top-nav__container container"><a class="top-nav__location-link link-modal d-none d-lg-flex" href="#modal-location">
 						<svg class="icon icon-location ">
 							<use xlink:href="img/svg/sprite.svg#location"></use>
 						</svg><span>Санкт-Петербург</span>
@@ -138,7 +138,7 @@
 						</svg><span>agentstvo@gmail.com</span></a><a class="top-nav__phone-link d-none d-md-flex" href="tel:+79053454212">
 						<svg class="icon icon-phone ">
 							<use xlink:href="img/svg/sprite.svg#phone"></use>
-						</svg><span>+7 (905) 345-42-12</span></a><a class="top-nav__consult-btn d-none d-xl-inline-block" href="#">Бесплатная консультация</a>
+						</svg><span>+7 (905) 345-42-12</span></a><a class="top-nav__consult-btn link-modal d-none d-xl-inline-block" href="#modal-call" data-title="Бесплатная консультация" data-order="Оставьте заявку и мы вам перезвоним">Бесплатная консультация</a>
 						<div class="top-nav__icons-box"><a href="#">
 								<svg class="icon icon-heart ">
 									<use xlink:href="img/svg/sprite.svg#heart"></use>
@@ -777,6 +777,73 @@
 			</div>
 		</div>
 		<!-- /#modal-partnership-->
+		<div class="modal-win modal-location" id="modal-location" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<div class="text-center">
+						<div class="form-wrap__title-h">Ваше местоположение
+						</div>
+					</div>
+					<div class="tabs">
+						<div class="tabs__caption">
+							<div class="tabs__btn active">Указать на карте</div>
+							<div class="tabs__btn">Выбрать город</div>
+						</div>
+						<div class="form-wrap__searc-inp-cont">
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="" name="location" value="Санкт-Петербург"/>
+							</div>
+							<!-- +e.input-wrap-->
+							<button class="form-wrap__search-btn" type="submit">Выбрать
+							</button>
+						</div>
+						<div class="tabs__wrap">
+							<div class="tabs__content active">
+								<div class="form-wrap__map-cont"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10158.698586354934!2d30.460393000000003!3d50.465783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdd1bf50ff55%3A0x5449b859d7752573!2z0YPQuy4g0KHQtdC80YzQuCDQpdC-0YXQu9C-0LLRi9GFLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1596469991978!5m2!1sru!2sua" width="100%" height="360" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+								</div>
+							</div>
+							<div class="tabs__content">
+								<div class="form-wrap__city-list">
+									<ul>
+										<li><a href="#">Москва</a></li>
+										<li><a href="#">Санкт-Петербург</a></li>
+										<li><a href="#">Екатеринбург</a></li>
+										<li><a href="#">Краснодар</a></li>
+										<li><a href="#">Новосибирск</a></li>
+										<li><a href="#">Красноярск</a></li>
+										<li><a href="#">Челябинск</a></li>
+										<li><a href="#">Тюмень</a></li>
+										<li><a href="#">Ростов-на-Дону</a></li>
+										<li><a href="#">Уфа</a></li>
+										<li><a href="#">Казань</a></li>
+										<li><a href="#">Пермь</a></li>
+										<li><a href="#">Нижний Новгород</a></li>
+										<li><a href="#">Самара</a></li>
+										<li><a href="#">Омск</a></li>
+										<li><a href="#">Саратов</a></li>
+										<li><a href="#">Воронеж</a></li>
+										<li><a href="#">Волгоград</a></li>
+										<li><a href="#">Хабаровск</a></li>
+										<li><a href="#">Пятигорск</a></li>
+										<li><a href="#">Томск</a></li>
+										<li><a href="#">Иркутск</a></li>
+										<li><a href="#">Сочи</a></li>
+										<li><a href="#">Ярославль</a></li>
+										<li><a href="#">Сургут</a></li>
+										<li><a href="#">Подольск</a></li>
+										<li><a href="#">Мытищи</a></li>
+										<li><a href="#">Владивосток</a></li>
+										<li><a href="#">Калуга</a></li>
+										<li><a href="#">Балашиха</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- /#modal-location-->
 		<!-- end modals-->
 		<script src="js/lazy.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
