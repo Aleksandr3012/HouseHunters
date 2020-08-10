@@ -27,7 +27,7 @@ mixin top-nav()
 			//block
 			img.img-svg-js(src="img/svg/logo-svg.svg")
 		+e.container.container
-			+e.A.location-link.d-none.d-lg-flex(href="#")
+			+e.A.location-link.link-modal.d-none.d-lg-flex(href="#modal-location")
 				+icon('location')
 				span Санкт-Петербург
 				+icon('chevron-down')
@@ -49,7 +49,7 @@ mixin top-nav()
 
 mixin infoStrip()
 	+b.info-strip
-		+e.A.location-link.d-lg-none(href="#")
+		+e.A.location-link.link-modal.d-lg-none(href="#modal-location")
 			+icon('location')
 			span Санкт-Петербург
 			+icon('chevron-down')

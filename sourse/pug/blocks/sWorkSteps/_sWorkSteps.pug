@@ -1,0 +1,27 @@
+mixin sWorkSteps()
+	// start sWorkSteps
+	+b.SECTION.sWorkSteps.section#sWorkSteps&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Этапы работ
+			+e.row.row
+				+workStepItem('Вы оставляете заявку')
+					p Вы&nbsp;оставляете заявку,&nbsp;мы связываемся с&nbsp;Вами для уточнения подробностей, согласовываем дату и&nbsp;время встречи
+				+workStepItem('Заключение договора')
+					p Составляем договор, подготавливаем техническое задание на&nbsp;производство работ вместе с&nbsp;Вами
+				+workStepItem('Производство работ')
+					p Выполняем работы с поэтапным отчетом
+				+workStepItem('Прием работы')
+					p
+						| Вы&nbsp;осматриваете результат работ, в&nbsp;случае выявление недостатков мы&nbsp;их&nbsp;устраняем
+						br
+						| и&nbsp;предъявляем объект
+						br
+						| к&nbsp;приемке
+	// end sWorkSteps
+
+mixin workStepItem(txt)
+	+e.col.col-lg-3
+		+e.txt-block
+			+e.headline=txt
+			block

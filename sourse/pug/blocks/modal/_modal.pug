@@ -33,18 +33,56 @@ mixin modal()
 			+e.BUTTON.btn.btn(type="submit") Оставить заявку
 
 	// /#modal-partnership
-	
-	// end modals
-
-mixin modal()
-	//  start modals
-
-	+b.modal-win(id="modal-call" class=" " style="display: none" )
+	+b.modal-win.modal-location(id="modal-location" class=" " style="display: none")
 		+form-wrap
 			.text-center
-				+e.title-h Консультация
-				p.after-headline Оставьте заявку и&nbsp;мы&nbsp;вам перезвоним
-			+input("", "text", "Имя")
-			+input("", "tel", "Телефон")
-			+e.BUTTON.btn.btn(type="submit") Оставить заявку
-			//- +polite()
+				+e.title-h Ваше местоположение
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Указать на карте
+					.tabs__btn Выбрать город
+				+e.searc-inp-cont
+					+input('', 'text', undefined, 'location')(value='Санкт-Петербург')
+					+e.BUTTON.search-btn(type="submit") Выбрать
+				.tabs__wrap
+					.tabs__content.active
+						+e.map-cont
+							<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10158.698586354934!2d30.460393000000003!3d50.465783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdd1bf50ff55%3A0x5449b859d7752573!2z0YPQuy4g0KHQtdC80YzQuCDQpdC-0YXQu9C-0LLRi9GFLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1596469991978!5m2!1sru!2sua" width="100%" height="360" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					.tabs__content
+						+e.city-list
+							ul
+								li: a(href='#') Москва
+								li: a(href='#') Санкт-Петербург
+								li: a(href='#') Екатеринбург
+								li: a(href='#') Краснодар
+								li: a(href='#') Новосибирск
+								li: a(href='#') Красноярск
+								li: a(href='#') Челябинск
+								li: a(href='#') Тюмень
+								li: a(href='#') Ростов-на-Дону
+								li: a(href='#') Уфа
+
+								li: a(href='#') Казань
+								li: a(href='#') Пермь
+								li: a(href='#') Нижний Новгород
+								li: a(href='#') Самара
+								li: a(href='#') Омск
+								li: a(href='#') Саратов
+								li: a(href='#') Воронеж
+								li: a(href='#') Волгоград
+								li: a(href='#') Хабаровск
+								li: a(href='#') Пятигорск
+
+								li: a(href='#') Томск
+								li: a(href='#') Иркутск
+								li: a(href='#') Сочи
+								li: a(href='#') Ярославль
+								li: a(href='#') Сургут
+								li: a(href='#') Подольск
+								li: a(href='#') Мытищи
+								li: a(href='#') Владивосток
+								li: a(href='#') Калуга
+								li: a(href='#') Балашиха
+	// /#modal-location
+	// end modals
+

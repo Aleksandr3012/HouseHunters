@@ -248,7 +248,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 
 	var screenName;
-	screenName = '08.jpg';
+	screenName = '11-375.png';
 	screenName ? $(".main-wrapper").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>")) : ''; // /добавляет подложку для pixel perfect
 
 	function whenResize() {
@@ -852,12 +852,89 @@ function eventHandler() {
 		//onFinish: updateInputs
 
 	}); //instance = $range.data("ionRangeSlider");
+	//11,12 .examples-slider-js
 
-	/*
-	* 7. 03 modal
-	* 8. main page modal
-	* */
-	//end luckyone JS
+	var examplesThumb = new Swiper('.examples-thumb-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 9
+		}
+	});
+	var examplesSlider = new Swiper('.examples-slider-js', {
+		slidesPerView: 1,
+		spaceBetween: 30,
+		loop: true,
+		//
+		navigation: {
+			nextEl: '.examples-next',
+			prevEl: '.examples-prev'
+		},
+		thumbs: {
+			swiper: examplesThumb
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2
+		},
+		//pagination
+		pagination: {
+			el: $(this).find('.example-pugin'),
+			clickable: true
+		}
+	}); //scroll-vanilla-js
+
+	function smoothScroll(qSelector) {
+		var elements = document.querySelectorAll(qSelector);
+		if (elements.length === 0) return;
+
+		var _iterator4 = _createForOfIteratorHelper(elements),
+				_step4;
+
+		try {
+			for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+				var elem = _step4.value;
+				elem.addEventListener('click', function () {
+					event.preventDefault();
+					var destinyID = this.getAttribute('href'); //this.attributes.href.nodeValue
+
+					var destinyElem = document.querySelector(destinyID);
+					if (!destinyElem) return;
+					var destinyTop = getCoords(destinyElem).top;
+					window.scrollTo({
+						top: destinyTop - 100,
+						//consider top nav height
+						behavior: "smooth"
+					});
+				});
+			}
+		} catch (err) {
+			_iterator4.e(err);
+		} finally {
+			_iterator4.f();
+		}
+	}
+
+	smoothScroll('.scroll-vanilla-js');
+
+	function getCoords(elem) {
+		// crossbrowser version
+		var box = elem.getBoundingClientRect();
+		var body = document.body;
+		var docEl = document.documentElement;
+		var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+		var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+		var clientTop = docEl.clientTop || body.clientTop || 0;
+		var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+		var top = box.top + scrollTop - clientTop;
+		var left = box.left + scrollLeft - clientLeft;
+		return {
+			top: Math.round(top),
+			left: Math.round(left)
+		};
+	} //end luckyone JS
+
 }
 
 ;

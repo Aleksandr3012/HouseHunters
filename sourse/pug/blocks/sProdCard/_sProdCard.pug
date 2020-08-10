@@ -124,7 +124,7 @@ mixin sProdCard()
 						+e.credit-result
 							+e.credit-res-title Ежемесячный платёж:
 							+e.credit-res-txt 50 000 ₽ / мес
-						+e.A.credit-get-btn(href='#') Получить ипотеку
+						+e.A.credit-get-btn.link-modal(href="#modal-call" data-title='Получить ипотеку' data-order='Оставьте заявку и мы вам перезвоним') Получить ипотеку
 	// end sProdCard
 
 mixin creditItem(titleTxt, min='1', max='100', step='1', from=1, postFix=' ₽')
