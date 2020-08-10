@@ -1,9 +1,29 @@
 mixin sContact()
 	// start sContact
-	+b.SECTION.sContact.section#sContact&attributes(attributes)
+	+b.sContact#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			.row
+			+e.map
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.9934907183372!2d30.350879951992567!3d59.93225018178489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469631a447e736e3%3A0x6b209d23a9ef7b6f!2z0J3QtdCy0YHQutC40Lkg0L_RgC4sIDkwLTkyLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTEwMjU!5e0!3m2!1sru!2sua!4v1596998464825!5m2!1sru!2sua" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+			+e.row.row
+				+e.lcol.col-lg-7
+					+e.title 191025, Российская Федерация, г. Санкт-Петербург, проспект Невский, дом 90-92, литера А
+					+e.time ПН-ПТ с 10:00 до 20:00
+					+e.time СБ с 11:00 до 18:00
+					+e.time ВС по договоренности
+					+e.tel(href="tel:+78123335515")
+						+icon('phone')
+						| +7 812 333-55-15
+					+e.mail(href="mailto:Info@hh-r.ru")
+						+icon('mail')
+						| Info@hh-r.ru
+					+soc
+				+e.col.col
+					+form-wrap
+						.text-center
+							+e.title Остались вопросы?
+							+e.subtitle Оставьте заявку и мы свяжемся с вами!
+						+e.form
+							+input('Имя')
+							+input('Имя')
+							+e.btn(type="submit") Оставить заявку
 	// end sContact

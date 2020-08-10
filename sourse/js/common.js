@@ -596,8 +596,8 @@ function eventHandler() {
 	let reviewSlider = new Swiper('.review-slider-js', {
 		spaceBetween: 30,
 		slidesPerView: 1,
-		grabCursor: true,
-		centeredSlides: true,
+		// grabCursor: true,
+		// centeredSlides: true,
 
 		//breakpoints
 		breakpoints: {
@@ -605,7 +605,7 @@ function eventHandler() {
 			992 : {
 				slidesPerView: 3
 			},
-			576 : {
+			768 : {
 				slidesPerView: 2
 			},
 		},
@@ -614,7 +614,7 @@ function eventHandler() {
 		//lazy
 		lazy: {
 			loadPrevNext: true,
-			loadPrevNextAmount: 4,
+			loadPrevNextAmount: 2,
 		},
 		//nav
 		navigation: {
