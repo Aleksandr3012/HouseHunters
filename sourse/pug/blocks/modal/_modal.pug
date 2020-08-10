@@ -13,6 +13,7 @@ mixin modal()
 
 	// /#modal-call
 
+
 	+b.modal-win(id="modal-partnership" class=" " style="display: none" )
 		+form-wrap
 			.text-center
@@ -33,5 +34,29 @@ mixin modal()
 			+e.BUTTON.btn.btn(type="submit") Оставить заявку
 
 	// /#modal-partnership
+
+
+	+b.modal-win(id="modal-recpass" class=" " style="display: none" )
+		+form-wrap
+			.text-center
+				+e.title-h Восстановить пароль
+			+input("", "tel", "Телефон")
+			+e.BUTTON.btn.btn.recover(type="submit") Восстановить
+			+e.BUTTON.btn.btn.remembered(type="submit") Вспомнил пароль
+			
+	// /#modal-recpass
+
+
+	+b.modal-win(id="modal-signin" class=" " style="display: none" )
+		+form-wrap
+			.text-center
+				+e.title-h Вход
+			+input("", "tel", "Телефон")
+			+input("", "text", "Пароль")
+			+in-c.checked("checkbox", "Запомнить меня", "remember")
+			+e.BUTTON.btn.btn(type="submit") Войти
+			//- +polite()
+
+	// /#modal-signin
 	
 	// end modals

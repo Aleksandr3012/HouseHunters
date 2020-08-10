@@ -1,0 +1,44 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAside/_sAside.pug
+include ../blocks/sMainPage/_sMainPage.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/pageHead/_pageHead.pug
+
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '00-modal'
+	title= title
+block pagecontent
+	.main-wrapper
+		+Aside()(class='white-aside')
+		+header()
+			+infoStrip()
+			+top-nav()(class='with-white-aside')
+		+pageHead()
+			style.
+				@media (min-width: 576px) {
+					.pageHead {
+						background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), no-repeat center/cover url(img/@2x/05-page-head.jpg);
+					}
+				}
+			.container.text-center
+				+b.section-title
+					h1= title
+				
+		.container.pt-4.pb-4
+			.btn-1.mt-3.mb-2 Оставить заявку
+			.btn-pr.link-modal(href="#modal-call") Оставить заявку
+			.btn-2.mt-3.mb-2  Связаться
+			.btn-pr.link-modal(href="#modal-partnership") Связаться
+			.btn-3.mt-3.mb-2 Восстановить пароль
+			.btn-pr.link-modal(href="#modal-recpass") Восстановить/Вспомнил пароль
+			.btn-4.mt-3.mb-2 Вход
+			.btn-pr.link-modal(href="#modal-signin") Войти
+
+		+footer()

@@ -20,7 +20,28 @@
 		font-size: 16px;
 		line-height: (20 / 16);
 		margin-top: 5px;
- 	}
+	 }
+	 
+	.recover{
+		margin-bottom: 20px;
+		// &:hover {
+		// 	background-color: #2A7D03;
+		// 	color: #fff;
+		// }
+	}
+
+	.remembered{
+		background-color: #FFF;
+		border: 2px solid #2A7D03 !important;
+		box-sizing: border-box;
+		color: #2A7D03;
+		border-radius: 5px;
+		&:hover {
+			background-color: #2A7D03;
+			color: #fff;
+		}
+	}
+
  	label{
 		width: 100%;
 		display: block;
