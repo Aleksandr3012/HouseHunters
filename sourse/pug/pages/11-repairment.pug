@@ -1,0 +1,54 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sAside/_sAside.pug
+include ../blocks/sMainPage/_sMainPage.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/topBuy/_topBuy.pug
+include ../blocks/sChosenObj/_sChosenObj.pug
+include ../blocks/pageHead/_pageHead.pug
+include ../blocks/dayInCompany/_dayInCompany.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sCompanyMission/_sCompanyMission.pug
+include ../blocks/sCompanyTargets/_sCompanyTargets.pug
+include ../blocks/sDigits/_sDigits.pug
+include ../blocks/sOurEmployee/_sOurEmployee.pug
+include ../blocks/sOffice/_sOffice.pug
+include ../blocks/sWorkSteps/_sWorkSteps.pug
+include ../blocks/sExamples/_sExamples.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '11-repairment'
+	title= title
+block pagecontent
+	.main-wrapper
+		+Aside()(class='white-aside')
+		+header()
+			+infoStrip()
+			+top-nav()(class='with-white-aside')
+		//-+sChosenObj()
+		+pageHead()(class="pageHead--11")
+			style.
+				@media (min-width: 576px) {
+					.pageHead {
+						background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), no-repeat 0 0/cover url(img/@2x/repairment-bg.jpg);
+					}
+				}
+			.container.text-center
+				+b.section-title
+					h2
+						| Ремонт от компании
+						br
+						| HouseHunters
+				+b.repairment-page-head
+					+e.A.order-btn.link-modal(href="#modal-call" data-title='Заказать ремонт' data-order='Оставьте заявку и мы вам перезвоним') Заказать ремонт
+					+e.A.look-btn.scroll-vanilla-js(href="#sExamples") Посмотреть примеры
+		+sWorkSteps()
+		+sExamples()
+			+e.bottom-btns.justify-content-center
+				+e.A.order-btn.alone.link-modal(href="#modal-call" data-title='Заказать ремонт' data-order='Оставьте заявку и мы вам перезвоним') Заказать ремонт
+		+footer()

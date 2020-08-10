@@ -19,4 +19,6 @@
 1. <https://aleksandr3012.github.io/HouseHunters/public/07-vacancies.html> Вакансии
 1. <https://aleksandr3012.github.io/HouseHunters/public/08-reviews.html> Отзывы
 1. <https://aleksandr3012.github.io/HouseHunters/public/10-personal-cabinet.html> Личный кабинет / Избранное
+1. <https://aleksandr3012.github.io/HouseHunters/public/11-repairment.html> Ремонт
+1. <https://aleksandr3012.github.io/HouseHunters/public/12-design.html> Дизайн
 1. <https://aleksandr3012.github.io/HouseHunters/public/13-partnership.html> Сотрудничество

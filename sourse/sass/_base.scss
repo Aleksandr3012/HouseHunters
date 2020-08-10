@@ -17,7 +17,7 @@ html {
 	background-position: center 0;
 	// background-position: center 22px;
 	opacity: 0;
-	// opacity: 0.7;
+	//opacity: 0.7;
 }
 
 body,
@@ -601,7 +601,7 @@ body{
 	}
 
 	position: absolute;
-	z-index: 120;
+	z-index: 20;
 	top: 50%;
 
 	@include mt();
@@ -630,4 +630,28 @@ body{
 }
 .swiper-next-frame{
 	right: -60px;
+}
+
+.scroll-bar-frame{
+	&::-webkit-scrollbar {
+		width: 2px;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: $secondary;
+		//background: linear-gradient(90deg, $secondary 0%, $secondary 16.66%, rgba(255,255,255,0) 16.67%,  rgba(255,255,255,0) 100%);
+	}
+
+	.select-98-results__message[role="alert"]{
+		padding-left: 0 !important;
+		&:before, &:after{
+			content: none;
+		}
+	}
 }

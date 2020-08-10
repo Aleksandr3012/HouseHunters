@@ -1,0 +1,48 @@
+mixin sExamples()
+	// start sExamples
+	+b.SECTION.sExamples.section#sExamples&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Примеры наших работ
+			+e.slider
+				.examples-prev.swiper-prev-frame
+					+icon('chevron-left')
+				.examples-next.swiper-next-frame
+					+icon('chevron-right')
+				.swiper-container.examples-slider-js
+					.swiper-wrapper
+						+examplesSlide(1)
+						+examplesSlide(2)
+						+examplesSlide(3)
+						+examplesSlide(1)
+						+examplesSlide(2)
+						+examplesSlide(3)
+						+examplesSlide(1)
+						+examplesSlide(2)
+						+examplesSlide(3)
+				.example-pugin.swiper-pugin-frame.d-sm-none
+			+e.thumb-slider.d-none.d-sm-block
+				.swiper-container.examples-thumb-js
+					.swiper-wrapper
+						+examplesThumbSl(1)
+						+examplesThumbSl(2)
+						+examplesThumbSl(3)
+						+examplesThumbSl(1)
+						+examplesThumbSl(2)
+						+examplesThumbSl(3)
+						+examplesThumbSl(1)
+						+examplesThumbSl(2)
+						+examplesThumbSl(3)
+			block
+	// end sExamples
+
+mixin examplesSlide(imgNum)
+	.swiper-slide
+		+e.A.fancy-link(href=`img/@2x/sExamples-slide-${imgNum}.jpg` data-fancybox=`examplesImg`)
+			img(src=`img/@2x/sExamples-slide-${imgNum}.jpg` alt="")
+			//-.swiper-lazy(src="" data-
+
+mixin examplesThumbSl(imgNum)
+	.swiper-slide
+		+e.thumb-img
+			img.swiper-lazy(src="" data-src=`img/@2x/sExamples-slide-${imgNum}.jpg` alt="")

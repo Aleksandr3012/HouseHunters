@@ -378,27 +378,7 @@
 
 
 	.select2-results__options{
-		&::-webkit-scrollbar {
-			width: 2px;
-		}
-
-		/* Track */
-		&::-webkit-scrollbar-track {
-			background-color: transparent;
-		}
-
-		/* Handle */
-		&::-webkit-scrollbar-thumb {
-			background: $secondary;
-			//background: linear-gradient(90deg, $secondary 0%, $secondary 16.66%, rgba(255,255,255,0) 16.67%,  rgba(255,255,255,0) 100%);
-		}
-
-		.select-98-results__message[role="alert"]{
-			padding-left: 0 !important;
-			&:before, &:after{
-				content: none;
-			}
-		}
+		@extend .scroll-bar-frame;
 	}
 
 	//option
