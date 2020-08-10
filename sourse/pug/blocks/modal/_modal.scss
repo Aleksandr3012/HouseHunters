@@ -21,6 +21,113 @@
 		font-size: 40px;
 		font-weight: 100;
 	}
+
+	.form-wrap {
+		&__radio {
+			margin-top: 20px;
+			padding-bottom: 25px;
+			display: flex;
+			align-items: center;
+			input {
+				display: none;
+			}
+			span {
+				height: 52px;
+				border: 2px solid #F3F3F3;
+				background: #FFFFFF;
+				border-radius: $border-radius;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 5px;
+				@include media-breakpoint-up(sm) {
+					padding: rem(10);
+				}
+
+			}
+			label {
+				&:not(:last-child) {
+					margin-right: 3px;
+					@include media-breakpoint-up(sm) {
+						margin-right: rem(10);
+					}
+				}
+			}
+			input:checked + span {
+				background-color: $primary;
+				border-color: $primary;
+				color: #fff;
+			}
+		}
+
+		&__price{
+			margin-top: 5px;
+			display: flex;
+		}
+
+		&__inputWrap {
+			position: relative;
+			&:not(:last-child) {
+				margin-right: rem(12);
+			}
+
+			.form-wrap__title {
+				position: absolute;
+				color: #DDDDDD;
+				top: 35%;
+				right: 15px;
+			}
+
+			.form-wrap__input {
+				padding: 15px;
+			}
+		}
+
+		&__inputFile {
+		}
+
+		&__btn-place {
+			@extend .btn-pr;
+			font-weight: bold;
+			display: block;
+			width: 100%;
+		}
+
+		textarea {
+			height: rem(113);
+		}
+	}
+	&--addObject {
+		padding-top: rem(40) !important;
+		max-width: 1164px;
+	}
+
+
+	.add-file {
+		margin-top: 20px;
+		padding-bottom: 25px;
+		input{
+			display: none;
+		}
+		
+		&__btn-file {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 52px;
+			padding: 5px;
+			font-weight: bold;
+			border: solid 2px $primary;
+			border-radius: $border-radius;
+			color: $primary;
+			@include mt;
+			&:hover {
+				background-color: $primary;
+				color: #fff;
+			}
+		}
+	}
+
 }
 
 a {

@@ -138,5 +138,20 @@
 			color: #ffc107;
 		}
 	}
+
+	&--modal {
+		margin-top: 10px;
+		justify-content: flex-end;
+		.rating__item {
+			cursor: pointer;
+			&:not(:first-child) {
+				margin: 0 20px 0 0;
+			}
+		}
+
+		.icon {
+			font-size: rem(26);
+		}
+	}
 }
 

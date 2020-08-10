@@ -33,6 +33,96 @@ mixin modal()
 						+input("", "tel", "Телефон")
 			+e.BUTTON.btn.btn(type="submit") Оставить заявку
 
+	+b.modal-win(id="modal-addObject" class="modal-win--addObject" style="display: none" )
+		+form-wrap
+			.text-center
+				+e.title-h Добавить объект
+				//- p.after-headline Оставьте заявку и&nbsp;мы&nbsp;вам перезвоним
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Продать
+					.tabs__btn Сдать
+				.tabs__wrap
+					mixin content(t)
+						.row
+							.col-md-6.col-lg-4
+								+input('','','Город')
+							.col-md-6.col-lg-4
+								+input('','','Район')
+							.col-md-6.col-lg-4
+								+e.title Количество комнат
+								+e.radio
+									+topBtn('Студия','rooms')
+									+topBtn('1','rooms')
+									+topBtn('2','rooms')
+									+topBtn('3','rooms')
+									+topBtn('4','rooms')
+									+topBtn('4+','rooms')
+							.col-md-6.col-lg-4
+								+input('','','Этаж')
+							.col-md-6.col-lg-4
+								+e.title Состояние
+								+e.radio
+									+topBtn('Плохое','condition')
+									+topBtn('Хорошее','condition')
+									+topBtn('Отличное','condition')
+							.col-md-6.col-lg-4
+								+e.title= t
+								+e.price
+									+e.inputWrap
+										+input('От','numb','₽')
+									+e.inputWrap
+										+input('До','numb','₽')
+									//- +input('От','numb')
+									//- +input('До','numb')
+							.col-md-6.col-lg-4
+								+input('','','Фамилия')
+							.col-md-6.col-lg-4
+								+input('','','Имя')
+							.col-md-6.col-lg-4
+								+input('','','Отчество')
+							.col-md-6.col-lg-4
+								+input('','tel','Телефон')
+
+							.col-md-6.col-lg-4
+								+input('','email','Электронная почта')
+							.col-md-6.col-lg-4
+								+e.title Фото объекта
+								+b.add-file
+									label
+										+e.SPAN.btn-file Загрузить
+										input(type="file" name="file")
+									+e.filename
+							.col-md-6.col-lg-4
+							.col-md-6.col-lg-4
+							.col-md-6.col-lg-4
+								+e.btn-place(type="submit") Разместить объявление
+							
+					.tabs__content.active
+						+content('Стоимость продажи')
+					.tabs__content
+						+content('Стоимость арендных платежей')
+
+	+b.modal-win(id="modal-review" class=" " style="display: none" )
+		+form-wrap
+			.text-center
+				+e.title-h Оставить отзыв
+			+e.title Оцените качество работы
+			+b.rating.rating--modal(data-total-value="4")
+				+e.item(data-item-value="5")
+					+icon('star')
+				+e.item(data-item-value="4")
+					+icon('star')
+				+e.item(data-item-value="3")
+					+icon('star')
+				+e.item(data-item-value="2")
+					+icon('star')
+				+e.item(data-item-value="1")
+					+icon('star')
+			+input("", "textarea", "Текст отзыва")
+			+input("", "text", "Имя")
+			+input("", "tel", "Телефон")
+			+e.BUTTON.btn.btn(type="submit") Оставить отзыв
 	// /#modal-partnership
 
 

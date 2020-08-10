@@ -116,7 +116,7 @@
 						</div>
 						<div class="info-strip__shedule">ПН-ПТ с 9:00 до 20:00
 						</div>
-					</div><a class="info-strip__add-btn" href="#">
+					</div><a class="info-strip__add-btn link-modal" href="#modal-addObject">
 					<svg class="icon icon-plus ">
 						<use xlink:href="img/svg/sprite.svg#plus"></use>
 					</svg><span class="d-none d-sm-block">Добавить объект</span></a>
@@ -436,6 +436,354 @@
 						</div>
 					</div>
 					<button class="form-wrap__btn btn" type="submit">Оставить заявку
+					</button>
+				</form>
+			</div>
+		</div>
+		<div class="modal-win modal-win modal-win--addObject" id="modal-addObject" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<div class="text-center">
+						<div class="form-wrap__title-h">Добавить объект
+						</div>
+					</div>
+					<div class="tabs">
+						<div class="tabs__caption">
+							<div class="tabs__btn active">Продать</div>
+							<div class="tabs__btn">Сдать</div>
+						</div>
+						<div class="tabs__wrap">
+							<div class="tabs__content active">
+										<div class="row">
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Город</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Район</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__title">Количество комнат
+												</div>
+												<div class="form-wrap__radio">
+													<label>
+														<input type="radio" name="rooms" value="Студия"/><span>Студия</span>
+													</label>
+													<label>
+														<input type="radio" name="rooms" value="1"/><span>1</span>
+													</label>
+													<label>
+														<input type="radio" name="rooms" value="2"/><span>2</span>
+													</label>
+													<label>
+														<input type="radio" name="rooms" value="3"/><span>3</span>
+													</label>
+													<label>
+														<input type="radio" name="rooms" value="4"/><span>4</span>
+													</label>
+													<label>
+														<input type="radio" name="rooms" value="4+"/><span>4+</span>
+													</label>
+												</div>
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Этаж</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__title">Состояние
+												</div>
+												<div class="form-wrap__radio">
+													<label>
+														<input type="radio" name="condition" value="Плохое"/><span>Плохое</span>
+													</label>
+													<label>
+														<input type="radio" name="condition" value="Хорошее"/><span>Хорошее</span>
+													</label>
+													<label>
+														<input type="radio" name="condition" value="Отличное"/><span>Отличное</span>
+													</label>
+												</div>
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__title">Стоимость продажи
+												</div>
+												<div class="form-wrap__price">
+													<div class="form-wrap__inputWrap">
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__title">₽</span><input class="form-wrap__input form-control" type="numb" placeholder="От" name="numb"/>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+													<div class="form-wrap__inputWrap">
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__title">₽</span><input class="form-wrap__input form-control" type="numb" placeholder="До" name="numb"/>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Фамилия</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Имя</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Отчество</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Электронная почта</span><input class="form-wrap__input form-control" type="email" placeholder="" name="email"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__title">Фото объекта
+												</div>
+												<div class="add-file">
+													<label><span class="add-file__btn-file">Загрузить</span>
+														<input type="file" name="file"/>
+													</label>
+													<div class="add-file__filename">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-lg-4"></div>
+											<div class="col-md-6 col-lg-4"></div>
+											<div class="col-md-6 col-lg-4">
+												<button class="form-wrap__btn-place" type="submit">Разместить объявление
+												</button>
+											</div>
+										</div>
+							</div>
+							<div class="tabs__content">
+										<div class="row">
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Город</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Район</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__title">Количество комнат
+												</div>
+												<div class="form-wrap__radio">
+													<label>
+														<input type="radio" name="rooms" value="Студия"/><span>Студия</span>
+													</label>
+													<label>
+														<input type="radio" name="rooms" value="1"/><span>1</span>
+													</label>
+													<label>
+														<input type="radio" name="rooms" value="2"/><span>2</span>
+													</label>
+													<label>
+														<input type="radio" name="rooms" value="3"/><span>3</span>
+													</label>
+													<label>
+														<input type="radio" name="rooms" value="4"/><span>4</span>
+													</label>
+													<label>
+														<input type="radio" name="rooms" value="4+"/><span>4+</span>
+													</label>
+												</div>
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Этаж</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__title">Состояние
+												</div>
+												<div class="form-wrap__radio">
+													<label>
+														<input type="radio" name="condition" value="Плохое"/><span>Плохое</span>
+													</label>
+													<label>
+														<input type="radio" name="condition" value="Хорошее"/><span>Хорошее</span>
+													</label>
+													<label>
+														<input type="radio" name="condition" value="Отличное"/><span>Отличное</span>
+													</label>
+												</div>
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__title">Стоимость арендных платежей
+												</div>
+												<div class="form-wrap__price">
+													<div class="form-wrap__inputWrap">
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__title">₽</span><input class="form-wrap__input form-control" type="numb" placeholder="От" name="numb"/>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+													<div class="form-wrap__inputWrap">
+														<div class="form-wrap__input-wrap form-group">
+															<label><span class="form-wrap__title">₽</span><input class="form-wrap__input form-control" type="numb" placeholder="До" name="numb"/>
+															</label>
+														</div>
+														<!-- +e.input-wrap-->
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Фамилия</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Имя</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Отчество</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__input-wrap form-group">
+													<label><span class="form-wrap__title">Электронная почта</span><input class="form-wrap__input form-control" type="email" placeholder="" name="email"/>
+													</label>
+												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6 col-lg-4">
+												<div class="form-wrap__title">Фото объекта
+												</div>
+												<div class="add-file">
+													<label><span class="add-file__btn-file">Загрузить</span>
+														<input type="file" name="file"/>
+													</label>
+													<div class="add-file__filename">
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-lg-4"></div>
+											<div class="col-md-6 col-lg-4"></div>
+											<div class="col-md-6 col-lg-4">
+												<button class="form-wrap__btn-place" type="submit">Разместить объявление
+												</button>
+											</div>
+										</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="modal-win" id="modal-review" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<div class="text-center">
+						<div class="form-wrap__title-h">Оставить отзыв
+						</div>
+					</div>
+					<div class="form-wrap__title">Оцените качество работы
+					</div>
+					<div class="rating rating rating--modal" data-total-value="4">
+						<div class="rating__item" data-item-value="5">
+							<svg class="icon icon-star ">
+								<use xlink:href="img/svg/sprite.svg#star"></use>
+							</svg>
+						</div>
+						<div class="rating__item" data-item-value="4">
+							<svg class="icon icon-star ">
+								<use xlink:href="img/svg/sprite.svg#star"></use>
+							</svg>
+						</div>
+						<div class="rating__item" data-item-value="3">
+							<svg class="icon icon-star ">
+								<use xlink:href="img/svg/sprite.svg#star"></use>
+							</svg>
+						</div>
+						<div class="rating__item" data-item-value="2">
+							<svg class="icon icon-star ">
+								<use xlink:href="img/svg/sprite.svg#star"></use>
+							</svg>
+						</div>
+						<div class="rating__item" data-item-value="1">
+							<svg class="icon icon-star ">
+								<use xlink:href="img/svg/sprite.svg#star"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Текст отзыва</span><textarea class="form-wrap__input form-control" placeholder="" name="textarea"></textarea>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Имя</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit">Оставить отзыв
 					</button>
 				</form>
 			</div>
