@@ -4,7 +4,7 @@
 
 	--sPT: #{50px};
 	--sPB: #{60px};
-	--sTPB: #{2px};
+	--sTPB: #{30px};
 	@include media-breakpoint-up(md){
 		--sPT: #{rem(92px)};
 		--sPB: #{rem(90)};
@@ -54,6 +54,8 @@
 			}
 		}
 		&__input-wrap{
+			padding-bottom: 0;
+
 			margin-bottom: 20px;
 			@include media-breakpoint-up(md){
 				margin-bottom: 0;
@@ -61,7 +63,10 @@
 		}
 		&__input{
 			margin-bottom: 0;
+			margin-top: 0;
 
+			padding-left: 20px;
+			padding-right: 20px;
 			@include media-breakpoint-down(md){
 				padding: 10px 20px !important;
 				min-height: 40px;

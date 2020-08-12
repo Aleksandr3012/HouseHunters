@@ -203,7 +203,9 @@ mixin modal()
 				+e.title-h Ваше местоположение
 			.tabs
 				.tabs__caption
-					.tabs__btn.active Указать на карте
+					.tabs__btn.active
+						span.d-none.d-sm-inline Указать на карте
+						span.d-sm-none На карте
 					.tabs__btn Выбрать город
 				+e.searc-inp-cont
 					+input('', 'text', undefined, 'location')(value='Санкт-Петербург')

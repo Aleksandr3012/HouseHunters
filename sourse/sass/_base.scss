@@ -528,7 +528,9 @@ body{
 
 .container{
 	@include media-breakpoint-between(xl, xxl){
-		margin-left: var(--asideW);
+		//margin-left: var(--asideW);
+
+		margin-left: calc((100vw - 1080px - 180px) / 2 + 180px);
 	}
 
 }

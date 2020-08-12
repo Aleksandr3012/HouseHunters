@@ -69,6 +69,13 @@ mixin sProdCard()
 						+e.map-cont
 							+e.map-inner-cont
 								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10158.698586354934!2d30.460393000000003!3d50.465783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cdd1bf50ff55%3A0x5449b859d7752573!2z0YPQuy4g0KHQtdC80YzQuCDQpdC-0YXQu9C-0LLRi9GFLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1596469991978!5m2!1sru!2sua" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					+e.description
+						+e.headline Описание
+						+e.desctiption-txt.desctiption-txt-js
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi ut&nbsp;aliquip ex&nbsp;ea&nbsp;commodo consequat. Duis aute irure dolor in&nbsp;reprehenderit in&nbsp;voluptate velit esse cillum dolore eu&nbsp;fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in&nbsp;culpa qui officia deserunt mollit anim id&nbsp;est laborum.
+						+e.read-more-btn.read-more-btn-js.d-sm-none
+							span Читать полностью
+							+icon('chevron-down')
 					+e.chars-list
 						+e.headline Дополнительные характеристики
 						+charListItem('Этаж: ', '7')
@@ -103,7 +110,7 @@ mixin sProdCard()
 						+e.help-name Татьяна
 						+e.help-txt
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor
-						+e.A.order-help-btn(href="#") Заказать звонок
+						+e.A.order-help-btn.link-modal(href="#modal-call" data-title='Заказать звонок' data-order='Оставьте заявку и мы вам перезвоним') Заказать звонок
 						+e.A.help-show-btn(href='#')
 							+icon('phone')
 							span Показать телефон

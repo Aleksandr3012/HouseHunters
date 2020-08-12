@@ -45,7 +45,7 @@ mixin sMainPage()
 									+roomTypeItem('5+')
 									+e.room-long-cb
 										+roomLongChb('Студия')
-										+roomLongChb('Свобод. планировка')
+										//-+roomLongChb('Свобод. планировка')
 						//-3
 						+e.pop-up-wrap.pop-up-wrap-js.price-type
 							+e.pop-up-header.pop-up-header-js
@@ -59,14 +59,14 @@ mixin sMainPage()
 										+topBtn('За м²', 'price-checkbox')
 						//-
 						+input('Адрес', 'text', undefined, 'price')
-					+e.A.more-filters-btn.more-filters-btn-js.main-page-btn(href="#")
+					//-+e.A.more-filters-btn.more-filters-btn-js.main-page-btn(href="#")
 						span Больше фильтров
 						+icon('chevron-down')
-					+moreFiltersBlock()
+					//-+moreFiltersBlock()
 					+e.BUTTON.submit-btn(type='submit')
 						+icon('search')
 						span Показать 2327 объектов
-				+e.A.call-btn.d-none.d-md-flex(href="#")
+				+e.A.call-btn(href="#")
 					+icon('phone')
 	// end sMainPage
 mixin topBtn(Txt, name="top-btn")
