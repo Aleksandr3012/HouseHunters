@@ -189,7 +189,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="text-center"><a class="pageHead__default-btn" href="#">Сдать в управление</a>
+					<div class="text-center"><a class="pageHead__default-btn" href="#sForm">Сдать в управление</a>
 					</div>
 				</div>
 			</section>
@@ -254,7 +254,7 @@
 			</section>
 			<!-- end sWorkingComditions-->
 			<!-- start sForm-->
-			<section class="sForm section" id="sForm">
+			<section class="sForm sForm--04 section" id="sForm">
 				<div class="container">
 					<div class="section-title text-center">
 						<h2>Сдать объект в управление</h2>
@@ -1024,6 +1024,51 @@
 			</div>
 		</div>
 		<!-- /#modal-location-->
+		<div class="modal-win" id="modal-vacancies" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<div class="text-center">
+						<div class="form-wrap__title-h">Прислать резюме
+						</div>
+						<p class="after-headline">Оставьте заявку и&nbsp;мы&nbsp;вам перезвоним</p>
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Фамилия</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Имя</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Отчество</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Текст сопроводительного письма</span><textarea class="form-wrap__input form-control" placeholder="" name="textarea"></textarea>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="add-file">
+						<label><span class="add-file__btn-file">Прикрепить файл</span>
+							<input type="file" name="file"/>
+						</label>
+					</div>
+					<button class="form-wrap__btn btn" type="submit">Оставить заявку
+					</button>
+				</form>
+			</div>
+		</div>
+		<!-- /#modal-vacancies-->
 		<!-- end modals-->
 		<script src="js/lazy.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>

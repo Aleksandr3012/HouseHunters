@@ -248,5 +248,23 @@ mixin modal()
 								li: a(href='#') Калуга
 								li: a(href='#') Балашиха
 	// /#modal-location
+
+
+	+b.modal-win(id="modal-vacancies" class=" " style="display: none" )
+		+form-wrap
+			.text-center
+				+e.title-h Прислать резюме
+				p.after-headline Оставьте заявку и&nbsp;мы&nbsp;вам перезвоним
+			+input("", "text", "Фамилия")
+			+input("", "text", "Имя")
+			+input("", "text", "Отчество")
+			+input("", "tel", "Телефон")
+			+input("", "textarea", "Текст сопроводительного письма")
+			+b.add-file
+				label
+					+e.SPAN.btn-file Прикрепить файл
+					input(type="file" name="file")
+			+e.BUTTON.btn.btn(type="submit") Оставить заявку
+	// /#modal-vacancies
 	// end modals
 

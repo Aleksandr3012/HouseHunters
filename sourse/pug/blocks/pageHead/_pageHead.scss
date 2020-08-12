@@ -104,6 +104,17 @@
 		padding-bottom: calc(var(--sPB) / 1.5);
 	}
 
+	&--08 {
+		h1 {
+			@extend h2;
+		}
+
+		padding-bottom: calc(var(--sPB) / 4);
+		@include media-breakpoint-up(md) {
+			padding-bottom: calc(var(--sPB) / 1.5);
+		}
+	}
+
 	&--13{
 		h1{
 			@extend h2;
