@@ -86,10 +86,16 @@
 			}
 		}
 		&-prev {
-			right: calc(100% + 1.5vw);
+			right: 100%;
+			@media (min-width: 1340px) {
+				right: calc(100% + 1.5vw);
+			}
 		}
 		&-next{ 
-			left: calc(100% + 1.5vw);
+			left: 100%;
+			@media (min-width: 1340px) {
+				left: calc(100% + 1.5vw);
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}

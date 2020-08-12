@@ -91,6 +91,9 @@
 			font-weight: bold;
 			display: block;
 			width: 100%;
+			@include media-breakpoint-down(sm) {
+				padding: rem(25) rem(5);
+			}
 		}
 
 		textarea {
@@ -141,8 +144,17 @@
 
 	}
 	&--addObject {
-		padding-top: rem(40) !important;
-		max-width: 1164px;
+		max-width: 375px;
+		@include media-breakpoint-up(md) {
+			max-width: 700px;
+		}
+		@include media-breakpoint-down(xl) {
+			padding: rem(25);
+		}
+		@include media-breakpoint-up(xl) {
+			padding-top: rem(40) !important;
+			max-width: 1164px;
+		}
 	}
 
 

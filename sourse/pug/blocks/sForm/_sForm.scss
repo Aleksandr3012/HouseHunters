@@ -90,6 +90,21 @@
 		&__{}
 	}
 
+	&--04 {
+		input {
+			&::placeholder {
+				opacity: 1;
+				color: #2F2D2D;
+			}
+		}
+
+		.section-title {
+			@include media-breakpoint-down(sm) {
+				padding-bottom: calc(var(--sTPB) / 1.7);
+			}
+		}
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -115,18 +130,21 @@
 	@include media-breakpoint-down(xs) {} 
 
 	.widget .form-wrap__pop-up-wrap.object-type {
-		padding: rem(15) rem(20);
-		border: 1px solid #E8E8E8;
+		padding: rem(10) rem(20);
+		border: 1px solid #c4c4c4;
+		height: 52px;
+		border-radius: .3125rem;
 		@include media-breakpoint-up(md) {
 			border: none;
 		}
-		height: auto;
+
 		width: 100% !important;
 		span {
 			color: $body-color2;
 		}
 	}
 	.widget .form-wrap__inputs-strip {
+		border-radius: .3125rem;
 		padding: 0;
 		box-shadow: none;
 	}
@@ -135,6 +153,7 @@
 		margin-bottom: 0;
 	}
 	.widget .form-wrap__pop-up-content.object-type {
+		background-color: #fff;
 		@include media-breakpoint-down(md) {
 			display: none;
 			margin-top: 20px;
@@ -145,4 +164,9 @@
 			display: block;
 		}
 	}
+
+	.widget .form-wrap__long-ch-cont {
+		padding: 1.875rem;
+	}
+
 } // end.sForm
