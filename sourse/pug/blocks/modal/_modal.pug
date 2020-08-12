@@ -143,12 +143,59 @@ mixin modal()
 				+e.title-h Вход
 			+input("", "tel", "Телефон")
 			+input("", "text", "Пароль")
-			+in-c.checked("checkbox", "Запомнить меня", "remember")
+			.row.justify-content-between.mb-3
+				.col-auto
+					+in-c("checkbox", "Запомнить меня", "remember")(checked)
+				.col-auto
+					+e.rememberPas.link-modal(href="#modal-recpass") Забыли пароль?
 			+e.BUTTON.btn.btn(type="submit") Войти
+			.text-center
+				+e.textSignin 
+					span Или войти через социальные сети
+			+soc()
+				+e.A.item(href="#" target="_blank")
+					img.lazy(src="#" data-src='img/svg/soc-vk.svg' alt="")
+				+e.A.item(href="#" target="_blank")
+					img.lazy(src="#" data-src='img/svg/soc-insta.svg' alt="")
+				+e.A.item(href="#" target="_blank")
+					img.lazy(src="#" data-src='img/svg/soc-fb.svg' alt="")
+				+e.A.item(href="#" target="_blank")
+					img.lazy(src="#" data-src='img/svg/soc-odnokl.svg' alt="")
+			.text-center
+				+e.notReg Еще не зарегистрированы?
+				+e.reg.link-modal(href="#modal-reg") Регистрация
 			//- +polite()
 
 	// /#modal-signin
-	
+
+	+b.modal-win(id="modal-reg" class=" " style="display: none" )
+		+form-wrap
+			.text-center
+				+e.title-h Регистрация
+			+input("", "tel", "Телефон")
+			+input("", "text", "Пароль")
+			+input("", "text", "Повторите пароль")
+			+in-c("checkbox", "Запомнить меня", "remember")(checked)
+
+			+e.BUTTON.btn.btn(type="submit") Войти
+			.text-center
+				+e.textSignin 
+					span Или зарегистрироваться через социальные сети
+			+soc()
+				+e.A.item(href="#" target="_blank")
+					img.lazy(src="#" data-src='img/svg/soc-vk.svg' alt="")
+				+e.A.item(href="#" target="_blank")
+					img.lazy(src="#" data-src='img/svg/soc-insta.svg' alt="")
+				+e.A.item(href="#" target="_blank")
+					img.lazy(src="#" data-src='img/svg/soc-fb.svg' alt="")
+				+e.A.item(href="#" target="_blank")
+					img.lazy(src="#" data-src='img/svg/soc-odnokl.svg' alt="")
+			.text-center
+				+e.notReg Уже есть аккаунт?
+				+e.reg.link-modal(href="#modal-signin") Войти
+			//- +polite()
+
+	// /#modal-reg
 	
 	+b.modal-win.modal-location(id="modal-location" class=" " style="display: none")
 		+form-wrap
@@ -156,7 +203,9 @@ mixin modal()
 				+e.title-h Ваше местоположение
 			.tabs
 				.tabs__caption
-					.tabs__btn.active Указать на карте
+					.tabs__btn.active
+						span.d-none.d-sm-inline Указать на карте
+						span.d-sm-none На карте
 					.tabs__btn Выбрать город
 				+e.searc-inp-cont
 					+input('', 'text', undefined, 'location')(value='Санкт-Петербург')

@@ -6,19 +6,46 @@
 			margin-bottom: 0;
 
 			&__tb-top-strip{
-				display: flex;
-				flex-direction: column;
+				&.has-chb-goup{
+					display: flex;
+					flex-direction: column;
+					@include media-breakpoint-up(sm){
+						flex-direction: row-reverse;
+					}
+				}
 			}
 			&__top-chb-block{
 				width: 100%;
+				margin-bottom: 20px;
+				@include media-breakpoint-up(sm){
+					height: 40px;
+					margin-bottom: 0;
+				}
 				.tob-chb-list{
-					padding-left: 0;
-					padding-bottom: 20px !important;
+
+					//display: block;
+					@include media-breakpoint-up(sm){
+						height: 100%;
+						display: flex;
+						align-items: center;
+						padding: 0 10px;
+					}
+				}
+				.long-checkbox{
+					@include media-breakpoint-up(sm){
+						margin: 0 15px 0 0;
+						flex-grow: 0 !important;
+						width: auto !important;
+					}
 				}
 			}
 
 
 			&__tb-buy-btn{
+				@include media-breakpoint-up(lg){
+					flex-shrink: 0;
+				}
+
 				width: rem(160);
 				height: rem(39);
 				cursor: pointer;
@@ -78,6 +105,10 @@
 				&.room-type{
 					@include media-breakpoint-up(xxl){
 						width: 22.46%;
+					}
+
+					.form-wrap__room-long-cb{
+						padding-top: 0;
 					}
 				}
 				&.object-type{
@@ -331,7 +362,8 @@
 			@include mt();
 			color: $black !important;
 			font-size: 14px !important;
-			background-color: $warning !important;
+			//background-color: $warning !important;
+			background-color: lighten($primary, 7) !important;
 			margin-right: 8px !important;
 			width: 14px !important;
 			height: 14px !important;

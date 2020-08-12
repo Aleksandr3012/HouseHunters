@@ -139,10 +139,10 @@
 						<svg class="icon icon-phone ">
 							<use xlink:href="img/svg/sprite.svg#phone"></use>
 						</svg><span>+7 (905) 345-42-12</span></a><a class="top-nav__consult-btn link-modal d-none d-xl-inline-block" href="#modal-call" data-title="Бесплатная консультация" data-order="Оставьте заявку и мы вам перезвоним">Бесплатная консультация</a>
-						<div class="top-nav__icons-box"><a href="#">
+						<div class="top-nav__icons-box"><a class="icon-btn-frame" href="#">
 								<svg class="icon icon-heart ">
 									<use xlink:href="img/svg/sprite.svg#heart"></use>
-								</svg></a><a href="#">
+								</svg></a><a class="icon-btn-frame" href="#">
 								<svg class="icon icon-user ">
 									<use xlink:href="img/svg/sprite.svg#user"></use>
 								</svg></a>
@@ -164,7 +164,7 @@
 				</style>
 				<div class="container text-center">
 					<div class="section-title">
-						<h2>Ремонт от компании<br>HouseHunters</h2>
+						<h2>Дизайн от компании<br>HouseHunters</h2>
 					</div>
 					<div class="repairment-page-head"><a class="repairment-page-head__order-btn link-modal" href="#modal-call" data-title="Заказать дизайн" data-order="Оставьте заявку и мы вам перезвоним">Заказать дизайн</a><a class="repairment-page-head__look-btn scroll-vanilla-js" href="#sExamples">Посмотреть примеры</a>
 					</div>
@@ -216,84 +216,86 @@
 					<div class="section-title text-center">
 						<h2>Примеры наших работ</h2>
 					</div>
-					<div class="sExamples__slider">
-						<div class="examples-prev swiper-prev-frame">
-							<svg class="icon icon-chevron-left ">
-								<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-							</svg>
-						</div>
-						<div class="examples-next swiper-next-frame">
-							<svg class="icon icon-chevron-right ">
-								<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-							</svg>
-						</div>
-						<div class="swiper-container examples-slider-js">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-1.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-1.jpg" alt=""/></a>
-								</div>
-								<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-2.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-2.jpg" alt=""/></a>
-								</div>
-								<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-3.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-3.jpg" alt=""/></a>
-								</div>
-								<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-1.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-1.jpg" alt=""/></a>
-								</div>
-								<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-2.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-2.jpg" alt=""/></a>
-								</div>
-								<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-3.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-3.jpg" alt=""/></a>
-								</div>
-								<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-1.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-1.jpg" alt=""/></a>
-								</div>
-								<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-2.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-2.jpg" alt=""/></a>
-								</div>
-								<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-3.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-3.jpg" alt=""/></a>
-								</div>
+					<div class="sExamples__container">
+						<div class="sExamples__slider">
+							<div class="examples-prev swiper-prev-frame">
+								<svg class="icon icon-chevron-left ">
+									<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+								</svg>
 							</div>
-						</div>
-						<div class="example-pugin swiper-pugin-frame d-sm-none"></div>
-					</div>
-					<div class="sExamples__thumb-slider d-none d-sm-block">
-						<div class="swiper-container examples-thumb-js">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-1.jpg" alt=""/>
+							<div class="examples-next swiper-next-frame">
+								<svg class="icon icon-chevron-right ">
+									<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+								</svg>
+							</div>
+							<div class="swiper-container examples-slider-js">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-1.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-1.jpg" alt=""/></a>
 									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-2.jpg" alt=""/>
+									<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-2.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-2.jpg" alt=""/></a>
 									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-3.jpg" alt=""/>
+									<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-3.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-3.jpg" alt=""/></a>
 									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-1.jpg" alt=""/>
+									<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-1.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-1.jpg" alt=""/></a>
 									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-2.jpg" alt=""/>
+									<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-2.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-2.jpg" alt=""/></a>
 									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-3.jpg" alt=""/>
+									<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-3.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-3.jpg" alt=""/></a>
 									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-1.jpg" alt=""/>
+									<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-1.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-1.jpg" alt=""/></a>
 									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-2.jpg" alt=""/>
+									<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-2.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-2.jpg" alt=""/></a>
 									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-3.jpg" alt=""/>
+									<div class="swiper-slide"><a class="sExamples__fancy-link" href="img/@2x/sExamples-slide-3.jpg" data-fancybox="examplesImg"><img src="img/@2x/sExamples-slide-3.jpg" alt=""/></a>
 									</div>
 								</div>
 							</div>
+							<div class="example-pugin swiper-pugin-frame d-sm-none"></div>
 						</div>
-					</div>
-					<div class="sExamples__bottom-btns"><a class="sExamples__order-btn alone link-modal" href="#modal-call" data-title="Заказать дизайн" data-order="Оставьте заявку и мы вам перезвоним">Заказать дизайн</a><a class="sExamples__look-more-btn" href="#">Посмотреть больше</a>
+						<div class="sExamples__thumb-slider d-none d-sm-block">
+							<div class="swiper-container examples-thumb-js">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-1.jpg" alt=""/>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-2.jpg" alt=""/>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-3.jpg" alt=""/>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-1.jpg" alt=""/>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-2.jpg" alt=""/>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-3.jpg" alt=""/>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-1.jpg" alt=""/>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-2.jpg" alt=""/>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sExamples__thumb-img"><img class="swiper-lazy" src="" data-src="img/@2x/sExamples-slide-3.jpg" alt=""/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sExamples__bottom-btns"><a class="sExamples__order-btn alone link-modal" href="#modal-call" data-title="Заказать дизайн" data-order="Оставьте заявку и мы вам перезвоним">Заказать дизайн</a><a class="sExamples__look-more-btn" href="#">Посмотреть больше</a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -828,14 +830,71 @@
 						</label>
 					</div>
 					<!-- +e.input-wrap-->
-					<label class="custom-input"><input class="custom-input__input checked" type="checkbox" name="checkbox" checkbox="checkbox" Запомнить меня="Запомнить меня" remember="remember"/><span class="custom-input__lab"></span><span class="custom-input__text"></span>
-					</label>
+					<div class="row justify-content-between mb-3">
+						<div class="col-auto">
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="remember" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Запомнить меня</span>
+							</label>
+						</div>
+						<div class="col-auto"><a class="form-wrap__rememberPas link-modal" href="#modal-recpass">Забыли пароль?</a>
+						</div>
+					</div>
 					<button class="form-wrap__btn btn" type="submit">Войти
 					</button>
+					<div class="text-center">
+						<div class="form-wrap__textSignin"> <span>Или войти через социальные сети</span>
+						</div>
+					</div>
+					<div class="soc"><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-vk.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-insta.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-fb.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-odnokl.svg" alt=""/></a>
+					</div>
+					<div class="text-center">
+						<div class="form-wrap__notReg">Еще не зарегистрированы?
+						</div><a class="form-wrap__reg link-modal" href="#modal-reg">Регистрация</a>
+					</div>
 				</form>
 			</div>
 		</div>
 		<!-- /#modal-signin-->
+		<div class="modal-win" id="modal-reg" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<div class="text-center">
+						<div class="form-wrap__title-h">Регистрация
+						</div>
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Пароль</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Повторите пароль</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<label class="custom-input"><input class="custom-input__input" type="checkbox" name="remember" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Запомнить меня</span>
+					</label>
+					<button class="form-wrap__btn btn" type="submit">Войти
+					</button>
+					<div class="text-center">
+						<div class="form-wrap__textSignin"> <span>Или зарегистрироваться через социальные сети</span>
+						</div>
+					</div>
+					<div class="soc"><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-vk.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-insta.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-fb.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-odnokl.svg" alt=""/></a>
+					</div>
+					<div class="text-center">
+						<div class="form-wrap__notReg">Уже есть аккаунт?
+						</div><a class="form-wrap__reg link-modal" href="#modal-signin">Войти</a>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- /#modal-reg-->
 		<div class="modal-win modal-location" id="modal-location" style="display: none">
 			<div class="form-wrap">
 				<form>
@@ -846,7 +905,7 @@
 					</div>
 					<div class="tabs">
 						<div class="tabs__caption">
-							<div class="tabs__btn active">Указать на карте</div>
+							<div class="tabs__btn active"><span class="d-none d-sm-inline">Указать на карте</span><span class="d-sm-none">На карте</span></div>
 							<div class="tabs__btn">Выбрать город</div>
 						</div>
 						<div class="form-wrap__searc-inp-cont">

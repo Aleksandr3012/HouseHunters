@@ -139,10 +139,10 @@
 						<svg class="icon icon-phone ">
 							<use xlink:href="img/svg/sprite.svg#phone"></use>
 						</svg><span>+7 (905) 345-42-12</span></a><a class="top-nav__consult-btn link-modal d-none d-xl-inline-block" href="#modal-call" data-title="Бесплатная консультация" data-order="Оставьте заявку и мы вам перезвоним">Бесплатная консультация</a>
-						<div class="top-nav__icons-box"><a href="#">
+						<div class="top-nav__icons-box"><a class="icon-btn-frame" href="#">
 								<svg class="icon icon-heart ">
 									<use xlink:href="img/svg/sprite.svg#heart"></use>
-								</svg></a><a href="#">
+								</svg></a><a class="icon-btn-frame" href="#">
 								<svg class="icon icon-user ">
 									<use xlink:href="img/svg/sprite.svg#user"></use>
 								</svg></a>
@@ -170,14 +170,16 @@
 			</section>
 			<!-- end pageHead-->
 			<div class="container pt-4 pb-4">
-				<div class="btn-1 mt-3 mb-2">Оставить заявку</div>
+				<h5 class="mt-3 mb-3">Оставить заявку</h5>
 				<div class="btn-pr link-modal" href="#modal-call">Оставить заявку</div>
-				<div class="btn-2 mt-3 mb-2"> Связаться</div>
+				<h5 class="mt-3 mb-3">Связаться</h5>
 				<div class="btn-pr link-modal" href="#modal-partnership">Связаться</div>
-				<div class="btn-3 mt-3 mb-2">Восстановить пароль</div>
+				<h5 class="mt-3 mb-3">Восстановить пароль</h5>
 				<div class="btn-pr link-modal" href="#modal-recpass">Восстановить/Вспомнил пароль</div>
-				<div class="btn-4 mt-3 mb-2">Вход</div>
+				<h5 class="mt-3 mb-3">Вход</h5>
 				<div class="btn-pr link-modal" href="#modal-signin">Войти</div>
+				<h5 class="mt-3 mb-3">Регистрация</h5>
+				<div class="btn-pr link-modal" href="#modal-reg">Регистрация</div>
 			</div>
 			<footer class="footer block-with-lazy">
 				<div class="footer__container container"><a class="footer__mob-logo d-sm-none" href="#">HouseHunters</a>
@@ -709,14 +711,71 @@
 						</label>
 					</div>
 					<!-- +e.input-wrap-->
-					<label class="custom-input"><input class="custom-input__input checked" type="checkbox" name="checkbox" checkbox="checkbox" Запомнить меня="Запомнить меня" remember="remember"/><span class="custom-input__lab"></span><span class="custom-input__text"></span>
-					</label>
+					<div class="row justify-content-between mb-3">
+						<div class="col-auto">
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="remember" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Запомнить меня</span>
+							</label>
+						</div>
+						<div class="col-auto"><a class="form-wrap__rememberPas link-modal" href="#modal-recpass">Забыли пароль?</a>
+						</div>
+					</div>
 					<button class="form-wrap__btn btn" type="submit">Войти
 					</button>
+					<div class="text-center">
+						<div class="form-wrap__textSignin"> <span>Или войти через социальные сети</span>
+						</div>
+					</div>
+					<div class="soc"><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-vk.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-insta.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-fb.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-odnokl.svg" alt=""/></a>
+					</div>
+					<div class="text-center">
+						<div class="form-wrap__notReg">Еще не зарегистрированы?
+						</div><a class="form-wrap__reg link-modal" href="#modal-reg">Регистрация</a>
+					</div>
 				</form>
 			</div>
 		</div>
 		<!-- /#modal-signin-->
+		<div class="modal-win" id="modal-reg" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<div class="text-center">
+						<div class="form-wrap__title-h">Регистрация
+						</div>
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Пароль</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Повторите пароль</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<label class="custom-input"><input class="custom-input__input" type="checkbox" name="remember" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Запомнить меня</span>
+					</label>
+					<button class="form-wrap__btn btn" type="submit">Войти
+					</button>
+					<div class="text-center">
+						<div class="form-wrap__textSignin"> <span>Или зарегистрироваться через социальные сети</span>
+						</div>
+					</div>
+					<div class="soc"><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-vk.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-insta.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-fb.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-odnokl.svg" alt=""/></a>
+					</div>
+					<div class="text-center">
+						<div class="form-wrap__notReg">Уже есть аккаунт?
+						</div><a class="form-wrap__reg link-modal" href="#modal-signin">Войти</a>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- /#modal-reg-->
 		<div class="modal-win modal-location" id="modal-location" style="display: none">
 			<div class="form-wrap">
 				<form>
@@ -727,7 +786,7 @@
 					</div>
 					<div class="tabs">
 						<div class="tabs__caption">
-							<div class="tabs__btn active">Указать на карте</div>
+							<div class="tabs__btn active"><span class="d-none d-sm-inline">Указать на карте</span><span class="d-sm-none">На карте</span></div>
 							<div class="tabs__btn">Выбрать город</div>
 						</div>
 						<div class="form-wrap__searc-inp-cont">
