@@ -88,6 +88,12 @@ mixin objectTypeItem(itemTxt='itemTxt')
 			+icon('check')
 		.long-chb-txt=itemTxt
 
+mixin objectTypeItemRadio(itemTxt='itemTxt', name="radioGroup")
+	+b.LABEL.long-radio
+		input(type='radio' name=name)&attributes(attributes)
+		.checkbox
+		.long-chb-txt=itemTxt
+
 mixin roomTypeItem(itemTxt='itemTxt')
 	+e.square-checkbox-cont
 		+e.LABEL.square-checkbox
