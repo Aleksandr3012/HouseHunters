@@ -45,11 +45,11 @@ mixin modal()
 				.tabs__wrap
 					mixin content(t)
 						.row
-							.col-md-6.col-lg-4
+							.col-md-6.col-xl-4
 								+input('','','Город')
-							.col-md-6.col-lg-4
+							.col-md-6.col-xl-4
 								+input('','','Район')
-							.col-md-6.col-lg-4
+							.col-md-6.col-xl-4
 								+e.title Количество комнат
 								+e.radio
 									+topBtn('Студия','rooms')
@@ -58,15 +58,15 @@ mixin modal()
 									+topBtn('3','rooms')
 									+topBtn('4','rooms')
 									+topBtn('4+','rooms')
-							.col-md-6.col-lg-4
+							.col-md-6.col-xl-4
 								+input('','','Этаж')
-							.col-md-6.col-lg-4
+							.col-md-6.col-xl-4
 								+e.title Состояние
 								+e.radio
 									+topBtn('Плохое','condition')
 									+topBtn('Хорошее','condition')
 									+topBtn('Отличное','condition')
-							.col-md-6.col-lg-4
+							.col-md-6.col-xl-4
 								+e.title= t
 								+e.price
 									+e.inputWrap
@@ -75,27 +75,27 @@ mixin modal()
 										+input('До','numb','₽')
 									//- +input('От','numb')
 									//- +input('До','numb')
-							.col-md-6.col-lg-4
+							.col-md-6.col-xl-4
 								+input('','','Фамилия')
-							.col-md-6.col-lg-4
+							.col-md-6.col-xl-4
 								+input('','','Имя')
-							.col-md-6.col-lg-4
+							.col-md-6.col-xl-4
 								+input('','','Отчество')
-							.col-md-6.col-lg-4
+							.col-md-6.col-xl-4
 								+input('','tel','Телефон')
 
-							.col-md-6.col-lg-4
+							.col-md-6.col-xl-4
 								+input('','email','Электронная почта')
-							.col-md-6.col-lg-4
+							.col-md-6.col-xl-4
 								+e.title Фото объекта
 								+b.add-file
 									label
 										+e.SPAN.btn-file Загрузить
 										input(type="file" name="file")
 									+e.filename
-							.col-md-6.col-lg-4
-							.col-md-6.col-lg-4
-							.col-md-6.col-lg-4
+							.col-md-6.col-xl-4
+							.col-md-6.col-xl-4
+							.col-xl-4
 								+e.btn-place(type="submit") Разместить объявление
 							
 					.tabs__content.active
