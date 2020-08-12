@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Главная</title>
+		<title>00-modal</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
@@ -29,7 +29,7 @@
 	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
 			<!-- start sAside-->
-			<aside class="sAside black-aside" id="sAside">
+			<aside class="sAside white-aside" id="sAside">
 				<div class="sAside__iconed-menu">
 					<ul>
 						<li><a href="#">
@@ -122,7 +122,7 @@
 					</svg><span class="d-none d-sm-block">Добавить объект</span></a>
 				</div>
 				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy with-black-aside">
+				<div class="top-nav block-with-lazy with-white-aside">
 					<div class="top-nav__menu-btn burger-js d-xl-none"><span></span>
 					</div><a class="top-nav__logo" href="/">
 					<!--block--><img class="img-svg-js" src="img/svg/logo-svg.svg"/></a>
@@ -139,10 +139,10 @@
 						<svg class="icon icon-phone ">
 							<use xlink:href="img/svg/sprite.svg#phone"></use>
 						</svg><span>+7 (905) 345-42-12</span></a><a class="top-nav__consult-btn link-modal d-none d-xl-inline-block" href="#modal-call" data-title="Бесплатная консультация" data-order="Оставьте заявку и мы вам перезвоним">Бесплатная консультация</a>
-						<div class="top-nav__icons-box"><a class="icon-btn-frame" href="#">
+						<div class="top-nav__icons-box"><a href="#">
 								<svg class="icon icon-heart ">
 									<use xlink:href="img/svg/sprite.svg#heart"></use>
-								</svg></a><a class="icon-btn-frame" href="#">
+								</svg></a><a href="#">
 								<svg class="icon icon-user ">
 									<use xlink:href="img/svg/sprite.svg#user"></use>
 								</svg></a>
@@ -153,526 +153,99 @@
 				<!-- end top-nav-->
 			</header>
 			<!-- end header-->
-			<!-- start sMainPage-->
-			<section class="sMainPage section bg-wrap" id="sMainPage">
+			<!-- start pageHead-->
+			<section class="pageHead section" id="pageHead">
 				<style>
 					@media (min-width: 576px) {
-						.sMainPage {
-							background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), no-repeat center/cover url(img/@2x/main-page-bg-5.jpg);
+						.pageHead {
+							background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), no-repeat center/cover url(img/@2x/05-page-head.jpg);
 						}
 					}
 				</style>
-				<div class="container">
-					<div class="section-title d-none d-sm-block">
-						<h2>Недвижимость в Санкт-Петербурге</h2>
-					</div>
-					<div class="widget">
-						<div class="form-wrap">
-							<form>
-								<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-								<div class="form-wrap__top-btns">
-									<label>
-										<input type="radio" name="top-btn" value="Купить" checked="checked"/><span>Купить</span>
-									</label>
-									<label>
-										<input type="radio" name="top-btn" value="Продать"/><span>Продать</span>
-									</label>
-									<label>
-										<input type="radio" name="top-btn" value="Снять"/><span>Снять</span>
-									</label>
-									<label>
-										<input type="radio" name="top-btn" value="Сдать"/><span>Сдать</span>
-									</label>
-								</div>
-								<div class="form-wrap__inputs-strip">
-									<div class="form-wrap__pop-up-wrap pop-up-wrap-js object-type">
-										<div class="form-wrap__pop-up-header pop-up-header-js"><span>Тип объекта</span>
-											<svg class="icon icon-chevron-down ">
-												<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-											</svg>
-										</div>
-										<div class="form-wrap__pop-up-content object-type pop-up-content-js">
-											<div class="form-wrap__long-ch-cont">
-												<label class="long-checkbox">
-													<input type="checkbox" name=""/>
-													<div class="checkbox">
-														<svg class="icon icon-check ">
-															<use xlink:href="img/svg/sprite.svg#check"></use>
-														</svg>
-													</div>
-													<div class="long-chb-txt">Квартиры</div>
-												</label>
-												<label class="long-checkbox">
-													<input type="checkbox" name=""/>
-													<div class="checkbox">
-														<svg class="icon icon-check ">
-															<use xlink:href="img/svg/sprite.svg#check"></use>
-														</svg>
-													</div>
-													<div class="long-chb-txt">Комнаты</div>
-												</label>
-												<label class="long-checkbox">
-													<input type="checkbox" name=""/>
-													<div class="checkbox">
-														<svg class="icon icon-check ">
-															<use xlink:href="img/svg/sprite.svg#check"></use>
-														</svg>
-													</div>
-													<div class="long-chb-txt">Дома, дачи, коттеджи</div>
-												</label>
-												<label class="long-checkbox">
-													<input type="checkbox" name=""/>
-													<div class="checkbox">
-														<svg class="icon icon-check ">
-															<use xlink:href="img/svg/sprite.svg#check"></use>
-														</svg>
-													</div>
-													<div class="long-chb-txt">Коммерческая недвижимость</div>
-												</label>
-												<label class="long-checkbox">
-													<input type="checkbox" name=""/>
-													<div class="checkbox">
-														<svg class="icon icon-check ">
-															<use xlink:href="img/svg/sprite.svg#check"></use>
-														</svg>
-													</div>
-													<div class="long-chb-txt">Земельные участки</div>
-												</label>
-												<label class="long-checkbox">
-													<input type="checkbox" name=""/>
-													<div class="checkbox">
-														<svg class="icon icon-check ">
-															<use xlink:href="img/svg/sprite.svg#check"></use>
-														</svg>
-													</div>
-													<div class="long-chb-txt">Гаражи и машиноместа</div>
-												</label>
-												<label class="long-checkbox">
-													<input type="checkbox" name=""/>
-													<div class="checkbox">
-														<svg class="icon icon-check ">
-															<use xlink:href="img/svg/sprite.svg#check"></use>
-														</svg>
-													</div>
-													<div class="long-chb-txt">Новостройки</div>
-												</label>
-											</div>
-										</div>
-									</div>
-									<div class="form-wrap__pop-up-wrap pop-up-wrap-js room-type">
-										<div class="form-wrap__pop-up-header pop-up-header-js"><span>Комнатность</span>
-											<svg class="icon icon-chevron-down ">
-												<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-											</svg>
-										</div>
-										<div class="form-wrap__pop-up-content room-type pop-up-content-js">
-											<div class="form-wrap__squsre-ch-cont">
-												<div class="form-wrap__square-checkbox-cont">
-													<label class="form-wrap__square-checkbox">
-														<input type="checkbox" name=""/>
-														<div class="checkbox">1</div>
-													</label>
-												</div>
-												<div class="form-wrap__square-checkbox-cont">
-													<label class="form-wrap__square-checkbox">
-														<input type="checkbox" name=""/>
-														<div class="checkbox">1E</div>
-													</label>
-												</div>
-												<div class="form-wrap__square-checkbox-cont">
-													<label class="form-wrap__square-checkbox">
-														<input type="checkbox" name=""/>
-														<div class="checkbox">2</div>
-													</label>
-												</div>
-												<div class="form-wrap__square-checkbox-cont">
-													<label class="form-wrap__square-checkbox">
-														<input type="checkbox" name=""/>
-														<div class="checkbox">2E</div>
-													</label>
-												</div>
-												<div class="form-wrap__square-checkbox-cont">
-													<label class="form-wrap__square-checkbox">
-														<input type="checkbox" name=""/>
-														<div class="checkbox">3</div>
-													</label>
-												</div>
-												<div class="form-wrap__square-checkbox-cont">
-													<label class="form-wrap__square-checkbox">
-														<input type="checkbox" name=""/>
-														<div class="checkbox">3E</div>
-													</label>
-												</div>
-												<div class="form-wrap__square-checkbox-cont">
-													<label class="form-wrap__square-checkbox">
-														<input type="checkbox" name=""/>
-														<div class="checkbox">4</div>
-													</label>
-												</div>
-												<div class="form-wrap__square-checkbox-cont">
-													<label class="form-wrap__square-checkbox">
-														<input type="checkbox" name=""/>
-														<div class="checkbox">4E</div>
-													</label>
-												</div>
-												<div class="form-wrap__square-checkbox-cont">
-													<label class="form-wrap__square-checkbox">
-														<input type="checkbox" name=""/>
-														<div class="checkbox">5+</div>
-													</label>
-												</div>
-												<div class="form-wrap__room-long-cb">
-													<label class="form-wrap__room-long-checkbox">
-														<input type="checkbox" name=""/>
-														<div class="checkbox">
-															<svg class="icon icon-check ">
-																<use xlink:href="img/svg/sprite.svg#check"></use>
-															</svg>
-														</div>
-														<div class="long-chb-txt">Студия</div>
-													</label>
-													<label class="form-wrap__room-long-checkbox">
-														<input type="checkbox" name=""/>
-														<div class="checkbox">
-															<svg class="icon icon-check ">
-																<use xlink:href="img/svg/sprite.svg#check"></use>
-															</svg>
-														</div>
-														<div class="long-chb-txt">Свобод. планировка</div>
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="form-wrap__pop-up-wrap pop-up-wrap-js price-type">
-										<div class="form-wrap__pop-up-header pop-up-header-js"><span>Цена</span>
-											<svg class="icon icon-chevron-down ">
-												<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-											</svg>
-										</div>
-										<div class="form-wrap__pop-up-content pop-up-content-js price-type">
-											<div class="form-wrap__price-pp-cont">
-												<div class="range-wrap price_slider_amount with-symbol">
-													<div class="row">
-														<div class="col-6">
-															<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
-																<div class="money-symb">₽</div>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
-																<div class="money-symb">₽</div>
-															</div>
-														</div>
-													</div>
-													<input class="range-slider slider-js" type="text" data-min="10000" data-max="999999"/>
-												</div>
-												<div class="form-wrap__bottom-radio">
-													<label>
-														<input type="radio" name="price-checkbox" value="За все" checked="checked"/><span>За все</span>
-													</label>
-													<label>
-														<input type="radio" name="price-checkbox" value="За м²"/><span>За м²</span>
-													</label>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Адрес" name="price"/>
-									</div>
-									<!-- +e.input-wrap-->
-								</div><a class="form-wrap__more-filters-btn more-filters-btn-js main-page-btn" href="#"><span>Больше фильтров</span>
-								<svg class="icon icon-chevron-down ">
-									<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-								</svg></a>
-								<div class="more-filters-cont">
-									<div class="more-filters-cont__row row">
-										<div class="col-sm-6 col-lg-4 col-xl-3">
-											<div class="more-filters-cont__item">
-												<div class="more-filters-cont__header">Площадь кухни, м²
-												</div>
-												<div class="range-wrap price_slider_amount">
-													<div class="row">
-														<div class="col-6">
-															<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
-															</div>
-														</div>
-													</div>
-													<input class="range-slider slider-js" type="text" data-min="6" data-max="78"/>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6 col-lg-4 col-xl-3">
-											<div class="more-filters-cont__item">
-												<div class="more-filters-cont__header">Жилая площадь, м²
-												</div>
-												<div class="range-wrap price_slider_amount">
-													<div class="row">
-														<div class="col-6">
-															<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
-															</div>
-														</div>
-													</div>
-													<input class="range-slider slider-js" type="text" data-min="30" data-max="278"/>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6 col-lg-4 col-xl-3">
-											<div class="more-filters-cont__item">
-												<div class="more-filters-cont__header">Этаж
-												</div>
-												<div class="range-wrap price_slider_amount">
-													<div class="row">
-														<div class="col-6">
-															<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
-															</div>
-														</div>
-													</div>
-													<input class="range-slider slider-js" type="text" data-min="1" data-max="40"/>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6 col-lg-4 col-xl-3">
-											<div class="more-filters-cont__item">
-												<div class="more-filters-cont__header">Этажность
-												</div>
-												<div class="range-wrap price_slider_amount">
-													<div class="row">
-														<div class="col-6">
-															<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
-															</div>
-														</div>
-													</div>
-													<input class="range-slider slider-js" type="text" data-min="1" data-max="40"/>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6 col-lg-4 col-xl-3">
-											<div class="more-filters-cont__item">
-												<div class="more-filters-cont__header">Материал стен
-												</div>
-												<div class="select2-multiple">
-													<select class="multiple-select-js" name="selectName" multiple="multiple">
-														<option value="Кирпич">Кирпич</option>
-														<option value="Брус">Брус</option>
-														<option value="Бревно">Бревно</option>
-														<option value="Металл">Металл</option>
-														<option value="Сэндвич-панели">Сэндвич-панели</option>
-														<option value="Кирпич2">Кирпич2</option>
-														<option value="Кирпич3">Кирпич3</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6 col-lg-4 col-xl-3">
-											<div class="more-filters-cont__item">
-												<div class="more-filters-cont__header">Тип комнат
-												</div>
-												<div class="select2-multiple">
-													<select class="multiple-select-js" name="selectName" multiple="multiple">
-														<option value="Смежные">Смежные</option>
-														<option value="Изолированные">Изолированные</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6 col-lg-4 col-xl-3">
-											<div class="more-filters-cont__item">
-												<div class="more-filters-cont__header">Состояние
-												</div>
-												<div class="select2-multiple">
-													<select class="multiple-select-js" name="selectName" multiple="multiple">
-														<option value="Хорошее">Хорошее</option>
-														<option value="Отличное">Отличное</option>
-														<option value="Нормальное">Нормальное</option>
-														<option value="Плохое">Плохое</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6 col-lg-4 col-xl-3">
-											<div class="more-filters-cont__item">
-												<div class="more-filters-cont__header">Ремонт
-												</div>
-												<div class="select2-multiple">
-													<select class="multiple-select-js" name="selectName" multiple="multiple">
-														<option value="Евро">Евро</option>
-														<option value="Дизайнерский">Дизайнерский</option>
-														<option value="Частичный ремонт">Частичный ремонт</option>
-														<option value="Хороший">Хороший</option>
-														<option value="С отделкой">С отделкой</option>
-														<option value="HE Хороший">HE Хороший</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6 col-lg-4 col-xl-3">
-											<div class="more-filters-cont__item">
-												<div class="more-filters-cont__header">Пассажирский лифт
-												</div>
-												<div class="select2-multiple">
-													<select class="multiple-select-js" name="selectName" multiple="multiple">
-														<option value="Есть">Есть</option>
-														<option value="Нет">Нет</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6 col-lg-4 col-xl-3">
-											<div class="more-filters-cont__item">
-												<div class="more-filters-cont__header">Грузовой лифт
-												</div>
-												<div class="select2-multiple">
-													<select class="multiple-select-js" name="selectName" multiple="multiple">
-														<option value="Есть">Есть</option>
-														<option value="Нет">Нет</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6 col-lg-4 col-xl-3">
-											<div class="more-filters-cont__item">
-												<div class="more-filters-cont__header">Высота потолков
-												</div>
-												<div class="range-wrap price_slider_amount">
-													<div class="row">
-														<div class="col-6">
-															<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
-															</div>
-														</div>
-													</div>
-													<input class="range-slider slider-js" type="text" data-min="1" data-max="8"/>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6 col-lg-4 col-xl-3">
-											<div class="more-filters-cont__item">
-												<div class="more-filters-cont__header">Вид из окна
-												</div>
-												<div class="select2-multiple">
-													<select class="multiple-select-js" name="selectName" multiple="multiple">
-														<option value="Во двор">Во двор</option>
-														<option value="На улицу">На улицу</option>
-														<option value="Во двор и улицу">Во двор и улицу</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6 col-lg-4 col-xl-3">
-											<div class="more-filters-cont__item">
-												<div class="more-filters-cont__header">Санузел
-												</div>
-												<div class="select2-multiple">
-													<select class="multiple-select-js" name="selectName" multiple="multiple">
-														<option value="Совместный">Совместный</option>
-														<option value="Раздельный">Раздельный</option>
-														<option value="Более одного">Более одного</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6 col-lg-4 col-xl-3">
-											<div class="more-filters-cont__item">
-												<div class="more-filters-cont__header">Грузовой лифт
-												</div>
-												<div class="select2-multiple">
-													<select class="multiple-select-js" name="selectName" multiple="multiple">
-														<option value="Есть">Есть</option>
-														<option value="Нет">Нет</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="col-sm-6 col-lg-4 col-xl-3">
-											<div class="more-filters-cont__item">
-												<div class="more-filters-cont__header">Расстояние от метро
-												</div>
-												<div class="range-wrap price_slider_amount">
-													<div class="row">
-														<div class="col-6">
-															<div class="form-group"><input class="input_from form-control form-control-sm" type="text"/>
-															</div>
-														</div>
-														<div class="col-6">
-															<div class="form-group"><input class="input_to form-control form-control-sm" type="text"/>
-															</div>
-														</div>
-													</div>
-													<input class="range-slider slider-js" type="text" data-min="1" data-max="8"/>
-												</div>
-												<label class="long-checkbox">
-													<input type="checkbox" name=""/>
-													<div class="checkbox">
-														<svg class="icon icon-check ">
-															<use xlink:href="img/svg/sprite.svg#check"></use>
-														</svg>
-													</div>
-													<div class="long-chb-txt">Пешком</div>
-												</label>
-												<label class="long-checkbox">
-													<input type="checkbox" name=""/>
-													<div class="checkbox">
-														<svg class="icon icon-check ">
-															<use xlink:href="img/svg/sprite.svg#check"></use>
-														</svg>
-													</div>
-													<div class="long-chb-txt">На общественном транспорте</div>
-												</label>
-												<label class="long-checkbox">
-													<input type="checkbox" name=""/>
-													<div class="checkbox">
-														<svg class="icon icon-check ">
-															<use xlink:href="img/svg/sprite.svg#check"></use>
-														</svg>
-													</div>
-													<div class="long-chb-txt">На машине</div>
-												</label>
-											</div>
-										</div>
-									</div>
-									<div class="more-filters-cont__bottom-btns text-right">
-										<button class="more-filters-cont__clean-btn" type="">Очистить
-										</button>
-										<button class="more-filters-cont__accept-btn" type="">Применить фильтр
-										</button>
-									</div>
-								</div>
-								<button class="form-wrap__submit-btn" type="submit">
-									<svg class="icon icon-search ">
-										<use xlink:href="img/svg/sprite.svg#search"></use>
-									</svg><span>Показать 2327 объектов</span>
-								</button>
-							</form>
-						</div><a class="widget__call-btn d-none d-md-flex" href="#">
-						<svg class="icon icon-phone ">
-							<use xlink:href="img/svg/sprite.svg#phone"></use>
-						</svg></a>
+				<div class="container text-center">
+					<div class="section-title">
+						<h1>00-modal</h1>
 					</div>
 				</div>
 			</section>
-			<!-- end sMainPage-->
+			<!-- end pageHead-->
+			<div class="container pt-4 pb-4">
+				<h5 class="mt-3 mb-3">Оставить заявку</h5>
+				<div class="btn-pr link-modal" href="#modal-call">Оставить заявку</div>
+				<h5 class="mt-3 mb-3">Связаться</h5>
+				<div class="btn-pr link-modal" href="#modal-partnership">Связаться</div>
+				<h5 class="mt-3 mb-3">Восстановить пароль</h5>
+				<div class="btn-pr link-modal" href="#modal-recpass">Восстановить/Вспомнил пароль</div>
+				<h5 class="mt-3 mb-3">Вход</h5>
+				<div class="btn-pr link-modal" href="#modal-signin">Войти</div>
+				<h5 class="mt-3 mb-3">Регистрация</h5>
+				<div class="btn-pr link-modal" href="#modal-reg">Регистрация</div>
+			</div>
+			<footer class="footer block-with-lazy">
+				<div class="footer__container container"><a class="footer__mob-logo d-sm-none" href="#">HouseHunters</a>
+					<div class="footer__row row d-none d-sm-flex">
+						<div class="footer__col col-sm-6 col-lg-3">
+							<div class="footer__headline">Меню
+							</div>
+							<ul>
+								<li><a href="#">Купить</a></li>
+								<li><a href="#">Продать</a></li>
+								<li><a href="#">Сдать</a></li>
+								<li><a href="#">Снять</a></li>
+								<li><a href="#">Без агента</a></li>
+							</ul>
+						</div>
+						<div class="footer__col col-sm-6 col-lg-3">
+							<div class="footer__headline">Наша компания
+							</div>
+							<ul>
+								<li><a href="#">О компании</a></li>
+								<li><a href="#">Вакансии</a></li>
+								<li><a href="#">Отзывы</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+						<div class="footer__col col-sm-6 col-lg-3">
+							<div class="footer__headline">Услуги
+							</div>
+							<ul>
+								<li><a href="#">Ремонт</a></li>
+								<li><a href="#">Дизайн</a></li>
+							</ul>
+						</div>
+						<div class="footer__col col-sm-6 col-lg-3">
+							<div class="footer__headline">Сотрудничество
+							</div>
+							<ul>
+								<li><a href="#">Сотрудничество</a></li>
+								<li><a href="#">Сдать в управление</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__lower-row row">
+						<div class="footer__lower-col col-sm-6 col-lg-auto">
+							<div class="soc"><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-vk.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-insta.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-youtube.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-fb.svg" alt=""/></a><a class="soc__item" href="#" target="_blank"><img class="lazy" src="#" data-src="img/svg/soc-odnokl.svg" alt=""/></a>
+							</div>
+						</div>
+						<div class="footer__lower-col col-sm-6 col-lg-auto d-none d-sm-block"><a class="footer__mail-link" href="mailto:Info@hh-r.ru">
+							<svg class="icon icon-mail ">
+								<use xlink:href="img/svg/sprite.svg#mail"></use>
+							</svg><span>Info@hh-r.ru</span></a>
+						</div>
+						<div class="footer__lower-col col-sm-6 col-lg-auto d-none d-sm-block"><a class="footer__phone-link" href="tel:">
+							<svg class="icon icon-phone ">
+								<use xlink:href="img/svg/sprite.svg#phone"></use>
+							</svg><span>+7 812 333-55-15</span></a>
+						</div>
+						<div class="footer__lower-col col-sm-6 col-lg-auto">
+							<div class="footer__all-rights-txt"><span class="d-none d-xxl-inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br/>tempor incididunt ut  magna aliqua.  /
+									</span><span>@2020. Все права защищены</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
 		</div>
-		<!--+footer()-->
 		<!--  start modals-->
 		<div class="modal-win" id="modal-call" style="display: none">
 			<div class="form-wrap">

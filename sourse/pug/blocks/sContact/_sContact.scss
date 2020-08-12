@@ -1,6 +1,8 @@
 // start .sContact
 .sContact {
-	padding-top: var(--sPT);
+	@include media-breakpoint-up(sm) {
+		padding-top: var(--sPT);
+	}
 	padding-bottom: calc(var(--sPB) * 1.2);
 	background-color: $light;
 

@@ -13,6 +13,7 @@ mixin modal()
 
 	// /#modal-call
 
+
 	+b.modal-win(id="modal-partnership" class=" " style="display: none" )
 		+form-wrap
 			.text-center
@@ -32,7 +33,170 @@ mixin modal()
 						+input("", "tel", "Телефон")
 			+e.BUTTON.btn.btn(type="submit") Оставить заявку
 
+	+b.modal-win(id="modal-addObject" class="modal-win--addObject" style="display: none" )
+		+form-wrap
+			.text-center
+				+e.title-h Добавить объект
+				//- p.after-headline Оставьте заявку и&nbsp;мы&nbsp;вам перезвоним
+			.tabs
+				.tabs__caption
+					.tabs__btn.active Продать
+					.tabs__btn Сдать
+				.tabs__wrap
+					mixin content(t)
+						.row
+							.col-md-6.col-lg-4
+								+input('','','Город')
+							.col-md-6.col-lg-4
+								+input('','','Район')
+							.col-md-6.col-lg-4
+								+e.title Количество комнат
+								+e.radio
+									+topBtn('Студия','rooms')
+									+topBtn('1','rooms')
+									+topBtn('2','rooms')
+									+topBtn('3','rooms')
+									+topBtn('4','rooms')
+									+topBtn('4+','rooms')
+							.col-md-6.col-lg-4
+								+input('','','Этаж')
+							.col-md-6.col-lg-4
+								+e.title Состояние
+								+e.radio
+									+topBtn('Плохое','condition')
+									+topBtn('Хорошее','condition')
+									+topBtn('Отличное','condition')
+							.col-md-6.col-lg-4
+								+e.title= t
+								+e.price
+									+e.inputWrap
+										+input('От','numb','₽')
+									+e.inputWrap
+										+input('До','numb','₽')
+									//- +input('От','numb')
+									//- +input('До','numb')
+							.col-md-6.col-lg-4
+								+input('','','Фамилия')
+							.col-md-6.col-lg-4
+								+input('','','Имя')
+							.col-md-6.col-lg-4
+								+input('','','Отчество')
+							.col-md-6.col-lg-4
+								+input('','tel','Телефон')
+
+							.col-md-6.col-lg-4
+								+input('','email','Электронная почта')
+							.col-md-6.col-lg-4
+								+e.title Фото объекта
+								+b.add-file
+									label
+										+e.SPAN.btn-file Загрузить
+										input(type="file" name="file")
+									+e.filename
+							.col-md-6.col-lg-4
+							.col-md-6.col-lg-4
+							.col-md-6.col-lg-4
+								+e.btn-place(type="submit") Разместить объявление
+							
+					.tabs__content.active
+						+content('Стоимость продажи')
+					.tabs__content
+						+content('Стоимость арендных платежей')
+
+	+b.modal-win(id="modal-review" class=" " style="display: none" )
+		+form-wrap
+			.text-center
+				+e.title-h Оставить отзыв
+			+e.title Оцените качество работы
+			+b.rating.rating--modal(data-total-value="4")
+				+e.item(data-item-value="5")
+					+icon('star')
+				+e.item(data-item-value="4")
+					+icon('star')
+				+e.item(data-item-value="3")
+					+icon('star')
+				+e.item(data-item-value="2")
+					+icon('star')
+				+e.item(data-item-value="1")
+					+icon('star')
+			+input("", "textarea", "Текст отзыва")
+			+input("", "text", "Имя")
+			+input("", "tel", "Телефон")
+			+e.BUTTON.btn.btn(type="submit") Оставить отзыв
 	// /#modal-partnership
+
+
+	+b.modal-win(id="modal-recpass" class=" " style="display: none" )
+		+form-wrap
+			.text-center
+				+e.title-h Восстановить пароль
+			+input("", "tel", "Телефон")
+			+e.BUTTON.btn.btn.recover(type="submit") Восстановить
+			+e.BUTTON.btn.btn.remembered(type="submit") Вспомнил пароль
+			
+	// /#modal-recpass
+
+
+	+b.modal-win(id="modal-signin" class=" " style="display: none" )
+		+form-wrap
+			.text-center
+				+e.title-h Вход
+			+input("", "tel", "Телефон")
+			+input("", "text", "Пароль")
+			.row.justify-content-between.mb-3
+				.col-auto
+					+in-c("checkbox", "Запомнить меня", "remember")(checked)
+				.col-auto
+					+e.rememberPas.link-modal(href="#modal-recpass") Забыли пароль?
+			+e.BUTTON.btn.btn(type="submit") Войти
+			.text-center
+				+e.textSignin 
+					span Или войти через социальные сети
+			+soc()
+				+e.A.item(href="#" target="_blank")
+					img.lazy(src="#" data-src='img/svg/soc-vk.svg' alt="")
+				+e.A.item(href="#" target="_blank")
+					img.lazy(src="#" data-src='img/svg/soc-insta.svg' alt="")
+				+e.A.item(href="#" target="_blank")
+					img.lazy(src="#" data-src='img/svg/soc-fb.svg' alt="")
+				+e.A.item(href="#" target="_blank")
+					img.lazy(src="#" data-src='img/svg/soc-odnokl.svg' alt="")
+			.text-center
+				+e.notReg Еще не зарегистрированы?
+				+e.reg.link-modal(href="#modal-reg") Регистрация
+			//- +polite()
+
+	// /#modal-signin
+
+	+b.modal-win(id="modal-reg" class=" " style="display: none" )
+		+form-wrap
+			.text-center
+				+e.title-h Регистрация
+			+input("", "tel", "Телефон")
+			+input("", "text", "Пароль")
+			+input("", "text", "Повторите пароль")
+			+in-c("checkbox", "Запомнить меня", "remember")(checked)
+
+			+e.BUTTON.btn.btn(type="submit") Войти
+			.text-center
+				+e.textSignin 
+					span Или зарегистрироваться через социальные сети
+			+soc()
+				+e.A.item(href="#" target="_blank")
+					img.lazy(src="#" data-src='img/svg/soc-vk.svg' alt="")
+				+e.A.item(href="#" target="_blank")
+					img.lazy(src="#" data-src='img/svg/soc-insta.svg' alt="")
+				+e.A.item(href="#" target="_blank")
+					img.lazy(src="#" data-src='img/svg/soc-fb.svg' alt="")
+				+e.A.item(href="#" target="_blank")
+					img.lazy(src="#" data-src='img/svg/soc-odnokl.svg' alt="")
+			.text-center
+				+e.notReg Уже есть аккаунт?
+				+e.reg.link-modal(href="#modal-signin") Войти
+			//- +polite()
+
+	// /#modal-reg
+	
 	+b.modal-win.modal-location(id="modal-location" class=" " style="display: none")
 		+form-wrap
 			.text-center
