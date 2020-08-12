@@ -951,6 +951,13 @@ function eventHandler() {
 	}
 
 
+	//prod card description js
+	$('.read-more-btn-js').click(function () {
+		$(this).fadeOut(function () {
+			$('.desctiption-txt-js').addClass('active');
+		})
+	});
+
 	//end luckyone JS
 
 };

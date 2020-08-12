@@ -13,6 +13,11 @@
 	--sPB: #{rem(30)};
 	--sTPB: #{rem(24)};
 	@include media-breakpoint-up(xl){
+		--sPT: #{200px};
+		--sPB: #{rem(30)};
+		--sTPB: #{rem(24)};
+	}
+	@include media-breakpoint-up(xxl){
 		--sPT: #{296px};
 		--sPB: #{rem(30)};
 		--sTPB: #{rem(24)};
@@ -54,7 +59,10 @@
 
 .widget{
 	.form-wrap{
-		@include media-breakpoint-up(md){
+		@include media-breakpoint-up(sm){
+			margin-bottom: 20px;
+		}
+		@include media-breakpoint-up(xxl){
 			margin-bottom: rem(97);
 		}
 		&__top-btns{
@@ -354,7 +362,8 @@
 			}
 			input:checked + .checkbox{
 				background-color: $primary;
-				box-shadow: 0 0 0 0 $primary;
+				//box-shadow: 0 0 0 0 $primary;
+				border: 2px solid $primary;
 				color: $white;
 
 				font-weight: 500;
@@ -362,7 +371,8 @@
 
 			&:hover{
 				.checkbox{
-					box-shadow: inset 0 0 0 2px $primary;
+					box-shadow: inset 0 0 0 1px $primary;
+					border: 2px solid $primary;
 				}
 			}
 			.checkbox{
@@ -384,7 +394,8 @@
 				text-align: center;
 
 				background-color: $white;
-				box-shadow: inset 0 0 0 2px $secondary;
+				//box-shadow: inset 0 0 0 2px $secondary;
+				border: 2px solid $secondary;
 				color: $body-color;
 
 				font-size: 14px;
@@ -395,7 +406,7 @@
 		&__room-long-cb{
 			width: 100%;
 
-			padding-top: 20px;
+			//padding-top: 20px;
 			display: flex;
 			flex-wrap: wrap;
 			align-items: stretch;
@@ -725,6 +736,17 @@
 
 	//call btn
 	&__call-btn{
+		position: fixed;
+		z-index: 100;
+		bottom: 15px;
+		right: 15px;
+		@include media-breakpoint-up(sm){
+			z-index: 0;
+			position: static;
+			bottom: unset;
+			right: unset;
+		}
+
 		@extend .btn-pr;
 
 		margin-left: auto;
@@ -736,9 +758,17 @@
 		align-items: center;
 		justify-content: center;
 
+		@include media-breakpoint-down(sm){
+			background-color: $white !important;
+			border: 2px solid $primary !important;
+		}
+
 		.icon{
 			font-size: rem(30);
-			color: $white;
+			color: $primary;
+			@include media-breakpoint-up(sm){
+				color: $white;
+			}
 		}
 	}
 }

@@ -385,7 +385,8 @@
 	left: 0;
 	@include media-breakpoint-up(xl){
 		width: 1080px;
-		left: var(--asideW);
+		//left: var(--asideW);
+		left: calc((100vw - 1080px - 180px) / 2 + 180px);
 	}
 	@include media-breakpoint-up(xxl){
 		width: 1140px;

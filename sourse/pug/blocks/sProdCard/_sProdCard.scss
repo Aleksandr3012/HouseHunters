@@ -308,6 +308,58 @@
 		border-radius: $border-radius;
 
 	}
+	//description
+	&__description{
+		.sProdCard__headline{
+			margin-bottom: 25px;
+		}
+
+		padding-bottom: 30px;
+		@include media-breakpoint-up(sm){
+			padding-bottom: 40px;
+			border-bottom: 1px solid $secondary;
+			margin-bottom: 40px;
+		}
+	}
+	&__desctiption-txt{
+		max-height: 140px;
+		overflow: hidden;
+		margin-bottom: 26px;
+
+		&.active{
+			max-height: 100%;
+		}
+
+		@include media-breakpoint-up(sm){
+			margin-bottom: 0;
+			max-height: 100% !important;
+		}
+
+		p{
+			font-size: 16px;
+			line-height: 1.5;
+			color: $body-color2;
+		}
+
+		p:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__read-more-btn{
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+
+		color: $primary;
+		span{
+			font-weight: 500;
+			font-size: 16px;
+			margin-right: 5px;
+		}
+		.icon{
+			font-size: 10px;
+		}
+	}
 
 	//popular-objects
 	&__popular-objects{

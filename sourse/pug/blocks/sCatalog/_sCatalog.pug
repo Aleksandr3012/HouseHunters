@@ -11,7 +11,7 @@ mixin sCatalog()
 					+icon('close')
 			+catalogRow()
 			+e.A.show-more-btn(href="#") Показать ещё
-			+e.A.help-btn(href="#") Нужна помощь специалиста?
+			+e.A.help-btn.link-modal(href="#modal-call" data-title='Бесплатная консультация' data-order='Оставьте заявку и мы вам перезвоним') Нужна помощь специалиста?
 	// end sCatalog
 
 mixin catalogRow(itemModificator, iconLinkClasses, iconName='heart')

@@ -139,10 +139,10 @@
 						<svg class="icon icon-phone ">
 							<use xlink:href="img/svg/sprite.svg#phone"></use>
 						</svg><span>+7 (905) 345-42-12</span></a><a class="top-nav__consult-btn link-modal d-none d-xl-inline-block" href="#modal-call" data-title="Бесплатная консультация" data-order="Оставьте заявку и мы вам перезвоним">Бесплатная консультация</a>
-						<div class="top-nav__icons-box"><a href="#">
+						<div class="top-nav__icons-box"><a class="icon-btn-frame" href="#">
 								<svg class="icon icon-heart ">
 									<use xlink:href="img/svg/sprite.svg#heart"></use>
-								</svg></a><a href="#">
+								</svg></a><a class="icon-btn-frame" href="#">
 								<svg class="icon icon-user ">
 									<use xlink:href="img/svg/sprite.svg#user"></use>
 								</svg></a>
@@ -312,15 +312,6 @@
 																</svg>
 															</div>
 															<div class="long-chb-txt">Студия</div>
-														</label>
-														<label class="form-wrap__room-long-checkbox">
-															<input type="checkbox" name=""/>
-															<div class="checkbox">
-																<svg class="icon icon-check ">
-																	<use xlink:href="img/svg/sprite.svg#check"></use>
-																</svg>
-															</div>
-															<div class="long-chb-txt">Свобод. планировка</div>
 														</label>
 													</div>
 												</div>
@@ -829,6 +820,18 @@
 									</div>
 								</div>
 							</div>
+							<div class="sProdCard__description">
+								<div class="sProdCard__headline">Описание
+								</div>
+								<div class="sProdCard__desctiption-txt desctiption-txt-js">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor incididunt ut&nbsp;labore et&nbsp;dolore magna aliqua. Ut&nbsp;enim ad&nbsp;minim veniam, quis nostrud exercitation ullamco laboris nisi ut&nbsp;aliquip ex&nbsp;ea&nbsp;commodo consequat. Duis aute irure dolor in&nbsp;reprehenderit in&nbsp;voluptate velit esse cillum dolore eu&nbsp;fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in&nbsp;culpa qui officia deserunt mollit anim id&nbsp;est laborum.</p>
+								</div>
+								<div class="sProdCard__read-more-btn read-more-btn-js d-sm-none"><span>Читать полностью</span>
+									<svg class="icon icon-chevron-down ">
+										<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+									</svg>
+								</div>
+							</div>
 							<div class="sProdCard__chars-list">
 								<div class="sProdCard__headline">Дополнительные характеристики
 								</div>
@@ -1223,7 +1226,7 @@
 								</div>
 								<div class="sProdCard__help-txt">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do&nbsp;eiusmod tempor</p>
-								</div><a class="sProdCard__order-help-btn" href="#">Заказать звонок</a><a class="sProdCard__help-show-btn" href="#">
+								</div><a class="sProdCard__order-help-btn link-modal" href="#modal-call" data-title="Заказать звонок" data-order="Оставьте заявку и мы вам перезвоним">Заказать звонок</a><a class="sProdCard__help-show-btn" href="#">
 								<svg class="icon icon-phone ">
 									<use xlink:href="img/svg/sprite.svg#phone"></use>
 								</svg><span>Показать телефон</span></a>
@@ -1924,7 +1927,7 @@
 					</div>
 					<div class="tabs">
 						<div class="tabs__caption">
-							<div class="tabs__btn active">Указать на карте</div>
+							<div class="tabs__btn active"><span class="d-none d-sm-inline">Указать на карте</span><span class="d-sm-none">На карте</span></div>
 							<div class="tabs__btn">Выбрать город</div>
 						</div>
 						<div class="form-wrap__searc-inp-cont">

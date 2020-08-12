@@ -39,7 +39,7 @@ mixin topBuy()
 									+roomTypeItem('5+')
 									+e.room-long-cb
 										+roomLongChb('Студия')
-										+roomLongChb('Свобод. планировка')
+										//-+roomLongChb('Свобод. планировка')
 						//-3
 						+e.pop-up-wrap.pop-up-wrap-js.price-type
 							+e.pop-up-header.pop-up-header-js
@@ -132,7 +132,7 @@ mixin topBuyGarage()
 	+b.widget.top-buy#topBuy&attributes(attributes)
 		.container
 			+form-wrap()
-				+e.tb-top-strip
+				+e.tb-top-strip.has-chb-goup
 					+e.top-chb-block
 						+e.long-ch-cont.tob-chb-list
 							+objectTypeItem('Прямая продажа')
@@ -199,7 +199,7 @@ mixin topBuyEarth()
 	+b.widget.top-buy#topBuy&attributes(attributes)
 		.container
 			+form-wrap()
-				+e.tb-top-strip
+				+e.tb-top-strip.has-chb-goup
 					+e.top-chb-block
 						+e.long-ch-cont.tob-chb-list
 							+objectTypeItem('Прямая продажа')
@@ -269,7 +269,7 @@ mixin topBuyCommerce()
 	+b.widget.top-buy#topBuy&attributes(attributes)
 		.container
 			+form-wrap()
-				+e.tb-top-strip
+				+e.tb-top-strip.has-chb-goup
 					+e.top-chb-block
 						+e.long-ch-cont.tob-chb-list
 							+objectTypeItem('Прямая продажа')
@@ -336,7 +336,7 @@ mixin topBuyHouses()
 	+b.widget.top-buy#topBuy&attributes(attributes)
 		.container
 			+form-wrap()
-				+e.tb-top-strip
+				+e.tb-top-strip.has-chb-goup
 					+e.top-chb-block
 						+e.long-ch-cont.tob-chb-list
 							+objectTypeItem('Прямая продажа')
