@@ -97,6 +97,12 @@
 				color: #2F2D2D;
 			}
 		}
+
+		.section-title {
+			@include media-breakpoint-down(sm) {
+				padding-bottom: calc(var(--sTPB) / 1.7);
+			}
+		}
 	}
 
 	@include media-breakpoint-up(xl) {}
