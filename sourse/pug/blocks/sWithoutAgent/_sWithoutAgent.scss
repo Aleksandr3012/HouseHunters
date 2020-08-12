@@ -4,8 +4,10 @@
 		background-color: $gray-100;
 
 		&__col{
-			margin-bottom: 30px;
-
+			@include media-breakpoint-up(md) {
+				margin-bottom: 30px;
+			}
+			margin-bottom: 25px;
 		}
 
 		&__item {
