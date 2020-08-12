@@ -27,10 +27,12 @@ mixin top-nav()
 			//block
 			img.img-svg-js(src="img/svg/logo-svg.svg")
 		+e.container.container
-			+e.A.location-link.link-modal.d-none.d-lg-flex(href="#modal-location")
-				+icon('location')
-				span Санкт-Петербург
-				+icon('chevron-down')
+			+e.location-link.d-none.d-lg-flex
+				.location-link-inner.location-link-js
+					+icon('location')
+					span Санкт-Петербург
+					+icon('chevron-down')
+				+yourCityPopUp()
 			+e.A.mail-link.d-none.d-md-flex(href='mailto:agentstvo@gmail.com')
 				+icon('mail')
 				span agentstvo@gmail.com
@@ -46,13 +48,22 @@ mixin top-nav()
 				//location
 	// end top-nav
 
+mixin yourCityPopUp()
+	+b.your-city.active
+		+e.city Санкт-Петербург
+		+e.txt Продолжить поиск в этом городе?
+		+e.btns-bl
+			+e.yes-btn Да, в этом
+			+e.no-btn.link-modal(href="#modal-location") Нет, в другом
 
 mixin infoStrip()
 	+b.info-strip
-		+e.A.location-link.link-modal.d-lg-none(href="#modal-location")
-			+icon('location')
-			span Санкт-Петербург
-			+icon('chevron-down')
+		+e.location-link.d-lg-none
+			.location-link-inner.location-link-js
+				+icon('location')
+				span Санкт-Петербург
+				+icon('chevron-down')
+			+yourCityPopUp()
 		+e.address-block.d-none.d-lg-flex
 			+e.address-gray Адрес офиса:
 			+e.address Санкт-Петербург, Воскресенская 12
