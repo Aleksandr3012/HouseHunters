@@ -532,6 +532,10 @@ body{
 
 		margin-left: calc((100vw - 1080px - 180px) / 2 + 180px);
 	}
+	@include media-breakpoint-between(xxl, base){
+		margin-left: calc((100vw - 1140px - 180px) / 2 + 180px);
+	}
+
 
 }
 

@@ -474,15 +474,18 @@
 		font-size: 16px;
 		line-height: (20/16);
 		margin-bottom: 20px;
+
+		padding: 20px;
 	}
 	&__help-show-btn{
 		@extend .btn-pr-empty;
 
 		min-width: 100%;
 
-		padding: 12px 18px;
+		padding: rem(18);
+		//padding: 12px 18px;
 		@include media-breakpoint-up(sm){
-			padding: rem(18);
+			//padding: rem(18);
 		}
 
 		display: flex;

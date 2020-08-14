@@ -606,7 +606,11 @@
 				width: 100%;
 				font-size: rem(14px);
 				line-height: (18/14);
-				padding: rem(14px) rem(13px);
+				//padding: rem(14px) rem(13px);
+				padding: 10px 13px;
+
+				//height: 100%;
+				height: auto;
 
 				box-shadow: none;
 				outline: none !important;
@@ -620,7 +624,6 @@
 				}
 			}
 		}
-
 
 		//
 		&__submit-btn{

@@ -199,17 +199,17 @@
 							<form>
 								<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
 								<div class="form-wrap__top-btns">
-									<label>
+									<label checked="checked">
 										<input type="radio" name="top-btn" value="Купить" checked="checked"/><span>Купить</span>
 									</label>
-									<label>
-										<input type="radio" name="top-btn" value="Продать"/><span>Продать</span>
+									<label class="link-modal" href="#modal-addObject">
+										<input class="link-modal" type="radio" name="top-btn" value="Продать" href="#modal-addObject"/><span>Продать</span>
 									</label>
 									<label>
 										<input type="radio" name="top-btn" value="Снять"/><span>Снять</span>
 									</label>
-									<label>
-										<input type="radio" name="top-btn" value="Сдать"/><span>Сдать</span>
+									<label class="link-modal" href="#modal-addObject">
+										<input class="link-modal" type="radio" name="top-btn" value="Сдать" href="#modal-addObject"/><span>Сдать</span>
 									</label>
 								</div>
 								<div class="form-wrap__inputs-strip">
@@ -387,7 +387,7 @@
 													<input class="range-slider slider-js" type="text" data-min="10000" data-max="999999"/>
 												</div>
 												<div class="form-wrap__bottom-radio">
-													<label>
+													<label checked="checked">
 														<input type="radio" name="price-checkbox" value="За все" checked="checked"/><span>За все</span>
 													</label>
 													<label>

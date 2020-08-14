@@ -9,9 +9,9 @@ mixin sMainPage()
 				+form-wrap()
 					+e.top-btns
 						+topBtn('Купить')(checked)
-						+topBtn('Продать')
+						+topBtn('Продать')(class='link-modal' href="#modal-addObject")
 						+topBtn('Снять')
-						+topBtn('Сдать')
+						+topBtn('Сдать')(class='link-modal' href="#modal-addObject")
 					+e.inputs-strip
 						//-1
 						+e.pop-up-wrap.pop-up-wrap-js.object-type
@@ -70,7 +70,7 @@ mixin sMainPage()
 					+icon('phone')
 	// end sMainPage
 mixin topBtn(Txt, name="top-btn")
-	label
+	label&attributes(attributes)
 		input(type="radio" name=name value=Txt)&attributes(attributes)
 		span=Txt
 

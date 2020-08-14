@@ -393,6 +393,10 @@
 	}
 	@include media-breakpoint-up(xxl){
 		width: 1140px;
+		left: calc((100vw - 1140px - 180px) / 2 + 180px);
+	}
+	@include media-breakpoint-up(base){
+		width: 1140px;
 		left: calc(-1 * (1140px - 100vw) / 2);
 	}
 

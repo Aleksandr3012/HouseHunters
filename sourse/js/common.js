@@ -346,6 +346,9 @@ function eventHandler() {
 				fixedStrip.style.top = '';
 			}
 		});
+		window.setTimeout(function () {
+			toggleFixedStrip(fixedStrip);
+		}, 0);
 	}
 	fixedStip();
 	function toggleFixedStrip(fixedStrip){

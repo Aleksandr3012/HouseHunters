@@ -3,8 +3,13 @@
 	background-color: $light;
 
 	--sPT: #{196px};//226
-	--sPB: #{rem(90)};
+	--sPB: #{50px};
 	--sTPB: #{rem(25)};
+	@include media-breakpoint-up(xl){
+		--sPT: #{196px};//226
+		--sPB: #{rem(90)};
+		--sTPB: #{rem(25)};
+	}
 
 
 	.section-title{

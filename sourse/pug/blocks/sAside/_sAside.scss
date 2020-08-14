@@ -41,7 +41,7 @@
 		a{
 			color: $body-color2 !important;
 			&:hover{
-				color: lighten($primary, 15);
+				color: $primary;
 			}
 		}
 	}
@@ -58,11 +58,11 @@
 		a{
 			color: $white;
 			&:hover{
-				color: lighten($primary, 15);
+				color: $primary;
 
 				.img-svg-js{
 					path{
-						fill: lighten($primary, 15) !important;
+						fill: $primary !important;
 					}
 				}
 			}
@@ -91,10 +91,10 @@
 		a{
 			color: $body-color2;
 			&:hover{
-				color: lighten($primary, 15);
+				color: $primary;
 				.img-svg-js{
 					path{
-						fill: lighten($primary, 15) !important;
+						fill: $primary !important;
 					}
 				}
 			}
