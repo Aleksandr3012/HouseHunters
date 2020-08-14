@@ -205,8 +205,14 @@
 					</div>
 					<div class="row align-items-center">
 						<div class="col-lg-6">
-							<div class="sAdvantages__imgWrap"><img class="lazy" src="#" data-src="img/@2x/advantages.jpg" alt=""/>
-							</div>
+							<!-- picture-->
+							<picture class="lazy"> 
+								<source srcset="#" data-srcset="img/@2x/webp/advantages.webp" type="image/webp" media="(min-width:576px)"/>
+								<source srcset="#" data-srcset="img/@1x/webp/advantages.webp" type="image/webp"/>
+								<source srcset="#" data-srcset="img/@2x/advantages.jpg" type="image/jpg" media="(min-width:576px)"/>
+								<source srcset="#" data-srcset="img/@1x/advantages.jpg" type="image/jpg"/><img src="#" data-src="img/@2x/advantages.jpg" alt=""/>
+							</picture>
+							<!-- /picture-->
 						</div>
 						<div class="col-lg-6">
 							<div class="section-title d-none d-lg-block">
