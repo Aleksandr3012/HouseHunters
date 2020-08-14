@@ -32,7 +32,7 @@
 		}
 	}
 
-	picture {
+	&__imgWrap {
 		@include block(540,397);
 		@include media-breakpoint-down(lg) {
 			border-radius: 10px;

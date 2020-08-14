@@ -93,7 +93,8 @@
 	}
 
 	&--04 {
-		input {
+		.form-wrap__input {
+			min-height: rem(46) !important;
 			&::placeholder {
 				opacity: 1;
 				color: #2F2D2D;
@@ -104,6 +105,10 @@
 			@include media-breakpoint-down(sm) {
 				padding-bottom: calc(var(--sTPB) / 1.7);
 			}
+		}
+
+		.form-wrap__row {
+			padding-bottom: 1rem !important;
 		}
 	}
 
@@ -134,7 +139,7 @@
 	.widget .form-wrap__pop-up-wrap.object-type {
 		padding: rem(10) rem(20);
 		border: 1px solid #c4c4c4;
-		height: 52px;
+		height: 46px;
 		border-radius: .3125rem;
 		@include media-breakpoint-up(md) {
 			border: none;

@@ -7,7 +7,11 @@ mixin sAdvantages()
 				h2 Преимущества работы в&nbsp;HouseHunters
 			.row.align-items-center
 				.col-lg-6
-					+pic('advantages')
+					//- +pic('advantages')
+					+e.imgWrap
+						img.lazy(src="#" data-src="img/@2x/advantages.jpg" alt="")
+						//- source.lazy(srcset="#" data-srcset='img/@2x/webp/advantages.webp' type="image/webp")
+						//- img.lazy(src="#" data-src='img/@2x/advantages.jpg' alt="")
 				.col-lg-6
 					+b.section-title.d-none.d-lg-block
 						h2 Преимущества работы в&nbsp;HouseHunters
@@ -25,4 +29,4 @@ mixin sAdvantages()
 						+item('6','Информационные базы')
 					
 
-	// end sAdvantages
+	// end sadvantages

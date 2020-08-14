@@ -90,6 +90,14 @@
 			@include media-breakpoint-up(md) {
 				max-width: rem(920);
 			}
+			@include media-breakpoint-between(xl, xxl){
+				//margin-left: var(--asideW);
+		
+				margin-left: calc((100vw - 1080px - 180px) / 2 + 260px);
+			}
+			@include media-breakpoint-between(xxl, base){
+				margin-left: calc((100vw - 1140px - 180px) / 2 + 300px);
+			}
 		}
 
 		.section-title {
@@ -111,7 +119,10 @@
 			@extend h2;
 		}
 
-		padding-bottom: calc(var(--sPB) / 1.5);
+		padding-bottom: calc(var(--sPB) / 2.4);
+		@include media-breakpoint-up(sm) {
+			padding-bottom: calc(var(--sPB) / 1.5);
+		}
 	}
 
 	&--08 {
