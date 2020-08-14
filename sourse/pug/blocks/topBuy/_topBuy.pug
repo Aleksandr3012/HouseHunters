@@ -106,9 +106,13 @@ mixin moreFiltersBlock()
 				+multipleSelect(['Есть', 'Нет'])
 			+moreFiltersItem('Расстояние от метро')
 				+range(1, 8)
-				+objectTypeItem('Пешком')
-				+objectTypeItem('На общественном транспорте')
-				+objectTypeItem('На машине')
+				+objectTypeItemRadio('Пешком')
+				+objectTypeItemRadio('На общественном транспорте')
+				+objectTypeItemRadio('На машине')
+				//-
+					+objectTypeItem('Пешком')
+					+objectTypeItem('На общественном транспорте')
+					+objectTypeItem('На машине')
 		+e.bottom-btns.text-right
 			+e.BUTTON.clean-btn(type='') Очистить
 			+e.BUTTON.accept-btn(type='') Применить фильтр

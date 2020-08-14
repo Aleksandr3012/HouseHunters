@@ -6,9 +6,15 @@
 	}
 
 	.section-title {
+
 		padding-top: rem(25);
 		h2 {
 			line-height: 1.15;
+			@include media-breakpoint-down(lg) {
+				text-align: center;
+				font-weight: bold;
+	
+			}
 		}
 	}
 

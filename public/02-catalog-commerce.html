@@ -102,13 +102,27 @@
 			<!-- end sAside-->
 			<!-- start header-->
 			<header class="header" id="header">
-				<div class="info-strip"><a class="info-strip__location-link link-modal d-lg-none" href="#modal-location">
-					<svg class="icon icon-location ">
-						<use xlink:href="img/svg/sprite.svg#location"></use>
-					</svg><span>Санкт-Петербург</span>
-					<svg class="icon icon-chevron-down ">
-						<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-					</svg></a>
+				<div class="info-strip">
+					<div class="info-strip__location-link d-lg-none">
+						<div class="location-link-inner location-link-js">
+							<svg class="icon icon-location ">
+								<use xlink:href="img/svg/sprite.svg#location"></use>
+							</svg><span>Санкт-Петербург</span>
+							<svg class="icon icon-chevron-down ">
+								<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+							</svg>
+						</div>
+						<div class="your-city active">
+							<div class="your-city__city">Санкт-Петербург
+							</div>
+							<div class="your-city__txt">Продолжить поиск в этом городе?
+							</div>
+							<div class="your-city__btns-bl">
+								<div class="your-city__yes-btn">Да, в этом
+								</div><a class="your-city__no-btn link-modal" href="#modal-location">Нет, в другом</a>
+							</div>
+						</div>
+					</div>
 					<div class="info-strip__address-block d-none d-lg-flex">
 						<div class="info-strip__address-gray">Адрес офиса:
 						</div>
@@ -126,13 +140,27 @@
 					<div class="top-nav__menu-btn burger-js d-xl-none"><span></span>
 					</div><a class="top-nav__logo" href="/">
 					<!--block--><img class="img-svg-js" src="img/svg/logo-svg.svg"/></a>
-					<div class="top-nav__container container"><a class="top-nav__location-link link-modal d-none d-lg-flex" href="#modal-location">
-						<svg class="icon icon-location ">
-							<use xlink:href="img/svg/sprite.svg#location"></use>
-						</svg><span>Санкт-Петербург</span>
-						<svg class="icon icon-chevron-down ">
-							<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
-						</svg></a><a class="top-nav__mail-link d-none d-md-flex" href="mailto:agentstvo@gmail.com">
+					<div class="top-nav__container container">
+						<div class="top-nav__location-link d-none d-lg-flex">
+							<div class="location-link-inner location-link-js">
+								<svg class="icon icon-location ">
+									<use xlink:href="img/svg/sprite.svg#location"></use>
+								</svg><span>Санкт-Петербург</span>
+								<svg class="icon icon-chevron-down ">
+									<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+								</svg>
+							</div>
+							<div class="your-city active">
+								<div class="your-city__city">Санкт-Петербург
+								</div>
+								<div class="your-city__txt">Продолжить поиск в этом городе?
+								</div>
+								<div class="your-city__btns-bl">
+									<div class="your-city__yes-btn">Да, в этом
+									</div><a class="your-city__no-btn link-modal" href="#modal-location">Нет, в другом</a>
+								</div>
+							</div>
+						</div><a class="top-nav__mail-link d-none d-md-flex" href="mailto:agentstvo@gmail.com">
 						<svg class="icon icon-mail ">
 							<use xlink:href="img/svg/sprite.svg#mail"></use>
 						</svg><span>agentstvo@gmail.com</span></a><a class="top-nav__phone-link d-none d-md-flex" href="tel:+79053454212">
@@ -142,7 +170,7 @@
 						<div class="top-nav__icons-box"><a class="icon-btn-frame" href="#">
 								<svg class="icon icon-heart ">
 									<use xlink:href="img/svg/sprite.svg#heart"></use>
-								</svg></a><a class="icon-btn-frame" href="#">
+								</svg></a><a class="icon-btn-frame link-modal" href="#modal-signin">
 								<svg class="icon icon-user ">
 									<use xlink:href="img/svg/sprite.svg#user"></use>
 								</svg></a>
@@ -583,31 +611,19 @@
 													</div>
 													<input class="range-slider slider-js" type="text" data-min="1" data-max="8"/>
 												</div>
-												<label class="long-checkbox">
-													<input type="checkbox" name=""/>
-													<div class="checkbox">
-														<svg class="icon icon-check ">
-															<use xlink:href="img/svg/sprite.svg#check"></use>
-														</svg>
-													</div>
+												<label class="long-radio">
+													<input type="radio" name="radioGroup"/>
+													<div class="checkbox"></div>
 													<div class="long-chb-txt">Пешком</div>
 												</label>
-												<label class="long-checkbox">
-													<input type="checkbox" name=""/>
-													<div class="checkbox">
-														<svg class="icon icon-check ">
-															<use xlink:href="img/svg/sprite.svg#check"></use>
-														</svg>
-													</div>
+												<label class="long-radio">
+													<input type="radio" name="radioGroup"/>
+													<div class="checkbox"></div>
 													<div class="long-chb-txt">На общественном транспорте</div>
 												</label>
-												<label class="long-checkbox">
-													<input type="checkbox" name=""/>
-													<div class="checkbox">
-														<svg class="icon icon-check ">
-															<use xlink:href="img/svg/sprite.svg#check"></use>
-														</svg>
-													</div>
+												<label class="long-radio">
+													<input type="radio" name="radioGroup"/>
+													<div class="checkbox"></div>
 													<div class="long-chb-txt">На машине</div>
 												</label>
 											</div>
@@ -1310,21 +1326,21 @@
 						<div class="tabs__wrap">
 							<div class="tabs__content active">
 										<div class="row">
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__title">Город</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__title">Район</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__title">Количество комнат
 												</div>
 												<div class="form-wrap__radio">
@@ -1348,14 +1364,14 @@
 													</label>
 												</div>
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__title">Этаж</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__title">Состояние
 												</div>
 												<div class="form-wrap__radio">
@@ -1370,7 +1386,7 @@
 													</label>
 												</div>
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__title">Стоимость продажи
 												</div>
 												<div class="form-wrap__price">
@@ -1390,42 +1406,42 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__title">Фамилия</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__title">Имя</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__title">Отчество</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__title">Телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__title">Электронная почта</span><input class="form-wrap__input form-control" type="email" placeholder="" name="email"/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__title">Фото объекта
 												</div>
 												<div class="add-file">
@@ -1436,9 +1452,9 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-6 col-lg-4"></div>
-											<div class="col-md-6 col-lg-4"></div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4"></div>
+											<div class="col-md-6 col-xl-4"></div>
+											<div class="col-xl-4">
 												<button class="form-wrap__btn-place" type="submit">Разместить объявление
 												</button>
 											</div>
@@ -1446,21 +1462,21 @@
 							</div>
 							<div class="tabs__content">
 										<div class="row">
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__title">Город</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__title">Район</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__title">Количество комнат
 												</div>
 												<div class="form-wrap__radio">
@@ -1484,14 +1500,14 @@
 													</label>
 												</div>
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__title">Этаж</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__title">Состояние
 												</div>
 												<div class="form-wrap__radio">
@@ -1506,7 +1522,7 @@
 													</label>
 												</div>
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__title">Стоимость арендных платежей
 												</div>
 												<div class="form-wrap__price">
@@ -1526,42 +1542,42 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__title">Фамилия</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__title">Имя</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__title">Отчество</span><input class="form-wrap__input form-control" type="text" placeholder="" name=""/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__title">Телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__input-wrap form-group">
 													<label><span class="form-wrap__title">Электронная почта</span><input class="form-wrap__input form-control" type="email" placeholder="" name="email"/>
 													</label>
 												</div>
 												<!-- +e.input-wrap-->
 											</div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4">
 												<div class="form-wrap__title">Фото объекта
 												</div>
 												<div class="add-file">
@@ -1572,9 +1588,9 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-6 col-lg-4"></div>
-											<div class="col-md-6 col-lg-4"></div>
-											<div class="col-md-6 col-lg-4">
+											<div class="col-md-6 col-xl-4"></div>
+											<div class="col-md-6 col-xl-4"></div>
+											<div class="col-xl-4">
 												<button class="form-wrap__btn-place" type="submit">Разместить объявление
 												</button>
 											</div>
@@ -1814,6 +1830,51 @@
 			</div>
 		</div>
 		<!-- /#modal-location-->
+		<div class="modal-win" id="modal-vacancies" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<div class="text-center">
+						<div class="form-wrap__title-h">Прислать резюме
+						</div>
+						<p class="after-headline">Оставьте заявку и&nbsp;мы&nbsp;вам перезвоним</p>
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Фамилия</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Имя</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Отчество</span><input class="form-wrap__input form-control" type="text" placeholder="" name="text"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Телефон</span><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__title">Текст сопроводительного письма</span><textarea class="form-wrap__input form-control" placeholder="" name="textarea"></textarea>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="add-file">
+						<label><span class="add-file__btn-file">Прикрепить файл</span>
+							<input type="file" name="file"/>
+						</label>
+					</div>
+					<button class="form-wrap__btn btn" type="submit">Оставить заявку
+					</button>
+				</form>
+			</div>
+		</div>
+		<!-- /#modal-vacancies-->
 		<!-- end modals-->
 		<script src="js/lazy.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>

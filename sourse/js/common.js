@@ -239,7 +239,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	let screenName;
-	screenName = '11-375.png';
+	screenName = '08-mob.jpg';
 	screenName
 		? $(".main-wrapper").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`)
 		: '';
@@ -957,6 +957,51 @@ function eventHandler() {
 			$('.desctiption-txt-js').addClass('active');
 		})
 	});
+
+
+	//your city js
+	$('.location-link-js').click(function () {
+		//prevent multiple listeners
+		document.body.removeEventListener('click', locationPupUpMissclick);
+
+		//regular toggle
+		$(this.parentElement).find('.your-city').fadeToggle(function () {
+			$(this).toggleClass('active');
+		});
+
+		//tiny bug fix
+		event.stopPropagation();
+
+		//close on missclick
+		document.body.addEventListener('click', locationPupUpMissclick);
+	});
+
+	//close on btn clicks
+	$('.your-city__yes-btn, .your-city__no-btn').click(function () {
+
+		$(this.closest('.your-city')).fadeOut(function () {
+			$(this).removeClass('active');
+		});
+	})
+
+	//close on missclick
+	function locationPupUpMissclick(){
+		if (!event.target.closest('.your-city')) {
+			document.body.removeEventListener('click', locationPupUpMissclick);
+
+			closeAllLocationPopUps();
+		}
+	}
+
+	//close on resize, scroll
+	window.addEventListener('resize', closeAllLocationPopUps, {passive: true});
+	window.addEventListener('scroll', closeAllLocationPopUps, {passive: true});
+	function closeAllLocationPopUps() {
+		$('.your-city').fadeOut(function () {
+			$(this).removeClass('active');
+		});
+	}
+
 
 	//end luckyone JS
 
