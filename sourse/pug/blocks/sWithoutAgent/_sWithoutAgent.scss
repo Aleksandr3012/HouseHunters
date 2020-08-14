@@ -1,6 +1,10 @@
 	// start .sWithoutAgent
 	.sWithoutAgent {
 
+		@include media-breakpoint-up(sm) {
+			padding-top: 80px;
+		}
+		padding-top: 0;
 		background-color: $gray-100;
 
 		&__col{
