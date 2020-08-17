@@ -403,6 +403,12 @@ a {
 				list-style: none;
 				margin: 0;
 				overflow: auto;
+
+				gap: 0;
+				@include media-breakpoint-up(lg){
+					gap: 10px;
+				}
+
 				@include media-breakpoint-up(sm){
 					max-height: 300px;
 				}
@@ -410,15 +416,20 @@ a {
 
 				display: flex;
 				flex-wrap: wrap;
-				gap: 10px;
 			}
 			li{
 				width: 100%;
+				margin-bottom: 10px;
 				@include media-breakpoint-up(sm){
 					width: calc(50% - (10px * 1 / 2));
+
+					&:nth-child(2n + 1){
+						margin-right: 10px;
+					}
 				}
 				@include media-breakpoint-up(lg){
 					width: calc(33.3% - (10px * 2 / 3));
+					margin: 0 !important;
 				}
 			}
 			a{
