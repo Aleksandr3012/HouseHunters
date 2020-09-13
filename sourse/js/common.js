@@ -332,7 +332,7 @@ function eventHandler() {
 	});
 
 	//stop sidebar before footer
-	function fixedStip(){
+	/*function fixedStip(){
 		let footer = document.querySelector('.footer');
 		if (!footer) return;
 
@@ -355,8 +355,7 @@ function eventHandler() {
 		let footerTop = $('.footer')[0].getBoundingClientRect().top + $(window)['scrollTop']();
 		let windowHeight = calcVh(100);
 
-		//console.log(footerTop);
-		if (windowHeight + window.scrollY > footerTop){
+		if (windowHeight + window.scrollY > footerTop && (footerTop - fixedStrip.offsetHeight) >= 70){
 			$(fixedStrip).addClass('absolute');
 			fixedStrip.style.top = (footerTop - fixedStrip.offsetHeight) + 'px';
 		}
@@ -369,7 +368,7 @@ function eventHandler() {
 	function calcVh(v) {
 		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 		return (v * h) / 100;
-	}
+	}*/
 
 	// custom select
 	$('.custom-select2').select2({

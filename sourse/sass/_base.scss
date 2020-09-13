@@ -115,9 +115,16 @@ body {
 
 .main-wrapper {
 	position: relative;
+
+	//here
+	display: flex;
+	flex-direction: column;
+	//end here
+
 	overflow: hidden;
 	min-height: 100vh;
 	min-height: calc(var(--vh, 1vh) * 100);
+
 }
 
 .slick-slide img {
