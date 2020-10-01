@@ -334,9 +334,11 @@ function eventHandler() {
 	/*function fixedStip(){
 		let footer = document.querySelector('.footer');
 		if (!footer) return;
-			let fixedStrip = document.querySelector('.sAside');
+	
+		let fixedStrip = document.querySelector('.sAside');
 		if(!fixedStrip) return
-			window.addEventListener("scroll", toggleFixedStrip.bind(undefined, fixedStrip), {passive:  true});
+	
+		window.addEventListener("scroll", toggleFixedStrip.bind(undefined, fixedStrip), {passive:  true});
 		window.addEventListener('resize', function () {
 			if (window.matchMedia("(max-width: 1280px)").matches) {
 				$(fixedStrip).removeClass('absolute');
@@ -351,7 +353,8 @@ function eventHandler() {
 	function toggleFixedStrip(fixedStrip){
 		let footerTop = $('.footer')[0].getBoundingClientRect().top + $(window)['scrollTop']();
 		let windowHeight = calcVh(100);
-			if (windowHeight + window.scrollY > footerTop && (footerTop - fixedStrip.offsetHeight) >= 70){
+	
+		if (windowHeight + window.scrollY > footerTop && (footerTop - fixedStrip.offsetHeight) >= 70){
 			$(fixedStrip).addClass('absolute');
 			fixedStrip.style.top = (footerTop - fixedStrip.offsetHeight) + 'px';
 		}
@@ -360,7 +363,8 @@ function eventHandler() {
 			fixedStrip.style.top = '';
 		}
 	}
-		function calcVh(v) {
+	
+	function calcVh(v) {
 		var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 		return (v * h) / 100;
 	}*/

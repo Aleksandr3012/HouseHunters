@@ -340,7 +340,39 @@
 	&__{}
 	&__{}
 	&__{}
-
+	.icons-box{
+		position: relative;
+		z-index: 10;
+		
+	}
+ 
+	&__logout{
+		visibility: hidden;
+		transform: scaleY(0);
+		transform-origin: 0 0;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		padding: rem(20) rem(20);
+		background-color: #ffffff;
+		box-shadow: 0 5px 15px -10px rgba(0, 0, 0, .3);
+		border-radius: 0 0 .3125rem .3125rem;
+		@include mt;
+		// width: rem(200);
+	}
+	&__dropdown-wrap{
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		position: relative;
+	}
+	&__dropdown-wrap:hover &__logout {
+		transform: scaleY(1);
+		visibility: visible;
+	}
+	&__btn{
+		@extend .btn;  
+		width: auto !important;
+	}
 	// 
 	@include media-breakpoint-up(xl) {}
 

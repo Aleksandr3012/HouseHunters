@@ -43,8 +43,11 @@ mixin top-nav()
 			+e.icons-box
 				a.icon-btn-frame(href="#")
 					+icon('heart')
-				a.icon-btn-frame.link-modal(href="#modal-signin")
-					+icon('user')
+				+e.dropdown-wrap
+					a.icon-btn-frame.link-modal(href="#modal-signin")
+						+icon('user')
+					+e.logout
+						+e.btn.btn-secondary(href="#") Выйти
 				//location
 	// end top-nav
 

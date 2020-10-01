@@ -176,31 +176,35 @@
 				height: 60px;
 				border-right: 1px solid $secondary;
 			}
+			@mixin w($ww) {
+				width: $ww;
+				flex: 0 0 $ww;
+			}	
 			&.price-type{
 
 				@include media-breakpoint-up(md){
-					width: 20%;
+					@include w(20%);
 					margin-right: 15px;
 				}
 				@include media-breakpoint-up(xl){
-					width: 12.8%;
+					@include w(12.8%);
 					margin-right: 15px;
 				}
 			}
 			&.room-type{
 				@include media-breakpoint-up(md){
-					width: 25%;
+					@include w(25%);
 				}
 				@include media-breakpoint-up(xl){
-					width: 17.8%;
+					@include w(17.8%);
 				}
 			}
 			&.object-type{
 				@include media-breakpoint-up(md){
-					width: 25%;
+					@include w(25%);
 				}
 				@include media-breakpoint-up(xl){
-					width: 34%;
+					@include w(34%);
 				}
 			}
 		}
